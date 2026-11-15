@@ -1,0 +1,34 @@
+{
+  "nango": {
+    "getMetadata": {
+      "team_id": "1639747348117609063"
+    },
+    "batchSave": {
+      "Project": [
+        {
+          "id": "604829489",
+          "name": "Team project"
+        }
+      ]
+    },
+    "batchDelete": {
+      "Project": []
+    }
+  },
+  "api": {
+    "get": {
+      "/v2/teams/1639747348117609063/folders": {
+        "response": {
+          "name": "Nango Developer's team",
+          "folders": [
+            {
+              "id": "604829489",
+              "name": "Team project"
+            }
+          ]
+        },
+        "status": 200
+      }
+    }
+  }
+}

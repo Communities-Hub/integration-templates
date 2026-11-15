@@ -1,0 +1,147 @@
+{
+  "nango": {
+    "batchSave": {
+      "Worker": [
+        {
+          "id": "000001",
+          "personnelNumber": "000001",
+          "partyNumber": "000000401",
+          "name": "Devin Daniels",
+          "nameAlias": "Devin Daniels",
+          "firstName": "Devin",
+          "middleName": "",
+          "lastName": "Daniels",
+          "knownAs": "",
+          "birthDate": "1900-01-01T12:00:00Z",
+          "gender": "None",
+          "maritalStatus": "None",
+          "workerStatus": "Employed",
+          "workerType": "Employee",
+          "originalHireDateTime": "1900-01-01T00:00:00Z",
+          "anniversaryDateTime": "1900-01-01T00:00:00Z",
+          "seniorityDate": "1900-01-01T00:00:00Z",
+          "isDisabled": false,
+          "isFulltimeStudent": false,
+          "allowRehire": false,
+          "deceasedDate": "1900-01-01T12:00:00Z",
+          "primaryContactEmail": "",
+          "primaryContactEmailDescription": "",
+          "primaryContactPhone": "",
+          "primaryContactPhoneDescription": "",
+          "primaryContactPhoneExtension": "",
+          "primaryContactPhoneIsMobile": false,
+          "addressCity": "",
+          "addressState": "",
+          "addressCountryRegionId": "",
+          "addressZipCode": "",
+          "addressStreet": "",
+          "officeLocation": "",
+          "officeLocationId": "",
+          "titleId": "",
+          "professionalTitle": "",
+          "personalTitle": "",
+          "languageId": "en-US",
+          "nativeLanguageId": "",
+          "user": "",
+          "objectId": "00000000-0000-0000-0000-000000000000",
+          "identityEmail": "",
+          "identityProvider": "",
+          "numberOfDependents": 0,
+          "nationalityCountryRegion": "",
+          "citizenshipCountryRegion": ""
+        }
+      ]
+    },
+    "batchDelete": {
+      "Worker": []
+    }
+  },
+  "api": {
+    "get": {
+      "/data/Workers": {
+        "response": {
+          "@odata.context": "https://test-na-cc6dd90d.operations.dynamics.com/data/$metadata#Workers(PersonnelNumber,PartyNumber,Name,NameAlias,FirstName,MiddleName,LastName,KnownAs,BirthDate,Gender,MaritalStatus,WorkerStatus,WorkerType,OriginalHireDateTime,AnniversaryDateTime,SeniorityDate,IsDisabled,IsFulltimeStudent,AllowRehire,DeceasedDate,PrimaryContactEmail,PrimaryContactEmailDescription,PrimaryContactPhone,PrimaryContactPhoneDescription,PrimaryContactPhoneExtension,PrimaryContactPhoneIsMobile,AddressCity,AddressState,AddressCountryRegionId,AddressZipCode,AddressStreet,OfficeLocation,OfficeLocationId,TitleId,ProfessionalTitle,PersonalTitle,LanguageId,NativeLanguageId,User,ObjectId,IdentityEmail,IdentityProvider,NumberOfDependents,NationalityCountryRegion,CitizenshipCountryRegion)",
+          "value": [
+            {
+              "@odata.etag": "W/\"JzEsNTYzNzE0NDU3NjsxLDU2MzcxNDc1NzY7MCwwOzAsMDswLDA7MCwwOzAsMCc=\"",
+              "PersonnelNumber": "000001",
+              "PartyNumber": "000000401",
+              "Name": "Devin Daniels",
+              "NameAlias": "Devin Daniels",
+              "FirstName": "Devin",
+              "MiddleName": "",
+              "LastName": "Daniels",
+              "KnownAs": "",
+              "BirthDate": "1900-01-01T12:00:00Z",
+              "Gender": "None",
+              "MaritalStatus": "None",
+              "WorkerStatus": "Employed",
+              "WorkerType": "Employee",
+              "OriginalHireDateTime": "1900-01-01T00:00:00Z",
+              "AnniversaryDateTime": "1900-01-01T00:00:00Z",
+              "SeniorityDate": "1900-01-01T00:00:00Z",
+              "IsDisabled": "No",
+              "IsFulltimeStudent": "No",
+              "AllowRehire": "No",
+              "DeceasedDate": "1900-01-01T12:00:00Z",
+              "PrimaryContactEmail": "",
+              "PrimaryContactEmailDescription": "",
+              "PrimaryContactPhone": "",
+              "PrimaryContactPhoneDescription": "",
+              "PrimaryContactPhoneExtension": "",
+              "PrimaryContactPhoneIsMobile": "No",
+              "AddressCity": "",
+              "AddressState": "",
+              "AddressCountryRegionId": "",
+              "AddressZipCode": "",
+              "AddressStreet": "",
+              "OfficeLocation": "",
+              "OfficeLocationId": "",
+              "TitleId": "",
+              "ProfessionalTitle": "",
+              "PersonalTitle": "",
+              "LanguageId": "en-US",
+              "NativeLanguageId": "",
+              "User": "",
+              "ObjectId": "00000000-0000-0000-0000-000000000000",
+              "IdentityEmail": "",
+              "IdentityProvider": "",
+              "NumberOfDependents": 0,
+              "NationalityCountryRegion": "",
+              "CitizenshipCountryRegion": ""
+            }
+          ]
+        },
+        "status": 200,
+        "headers": {
+          "date": "Thu, 30 Jul 2026 08:32:13 GMT",
+          "content-type": "application/json; odata.metadata=minimal",
+          "content-length": "2062",
+          "connection": "keep-alive",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "x-download-options": "noopen",
+          "x-frame-options": "SAMEORIGIN",
+          "x-dns-prefetch-control": "off",
+          "strict-transport-security": "max-age=5184000; includeSubDomains",
+          "content-security-policy-report-only": "default-src 'self' https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/;child-src 'self';connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://app.nango.dev https://api.nango.dev wss://api.nango.dev/ https://connect.nango.dev https://connect.nango.dev/ https://*.posthog.com https://*.stripe.com https://*.plain.com wss://*.plain.com https://raw.githubusercontent.com;font-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.cdn-plain.com;frame-src 'self' https://accounts.google.com https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/ https://www.youtube.com https://*.stripe.com;img-src 'self' data: blob: https://app.nango.dev https://api.nango.dev https://*.google-analytics.com https://*.googleapis.com https://*.posthog.com https://img.logo.dev https://*.ytimg.com https://*.plain.com;manifest-src 'self';media-src 'self';object-src 'self';script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.nango.dev https://api.nango.dev https://*.stripe.com https://*.google-analytics.com https://*.googleapis.com https://apis.google.com https://*.posthog.com https://www.youtube.com https://*.cdn-plain.com;style-src blob: 'self' 'unsafe-inline' https://*.googleapis.com https://app.nango.dev https://api.nango.dev;worker-src blob: 'self' https://app.nango.dev https://api.nango.dev https://*.googleapis.com https://*.posthog.com;base-uri 'self';form-action 'self';frame-ancestors 'self';script-src-attr 'none';upgrade-insecure-requests",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Authorization, Etag, Content-Type, Content-Length, X-Nango-Signature, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+          "x-ratelimit-limit": "2000",
+          "x-ratelimit-remaining": "1997",
+          "x-ratelimit-reset": "1785400389",
+          "etag": "W/\"80e-0WlUTX/v/kb/djM9ziYJSGYYdzI\""
+        },
+        "hash": "b0a6cbd9d335d27655961e30b95deb779dfa61c4",
+        "request": {
+          "params": {
+            "$orderby": "PersonnelNumber asc",
+            "$select": "PersonnelNumber,PartyNumber,Name,NameAlias,FirstName,MiddleName,LastName,KnownAs,BirthDate,Gender,MaritalStatus,WorkerStatus,WorkerType,OriginalHireDateTime,AnniversaryDateTime,SeniorityDate,IsDisabled,IsFulltimeStudent,AllowRehire,DeceasedDate,PrimaryContactEmail,PrimaryContactEmailDescription,PrimaryContactPhone,PrimaryContactPhoneDescription,PrimaryContactPhoneExtension,PrimaryContactPhoneIsMobile,AddressCity,AddressState,AddressCountryRegionId,AddressZipCode,AddressStreet,OfficeLocation,OfficeLocationId,TitleId,ProfessionalTitle,PersonalTitle,LanguageId,NativeLanguageId,User,ObjectId,IdentityEmail,IdentityProvider,NumberOfDependents,NationalityCountryRegion,CitizenshipCountryRegion",
+            "$skip": "0",
+            "$top": "1000"
+          }
+        }
+      }
+    }
+  }
+}

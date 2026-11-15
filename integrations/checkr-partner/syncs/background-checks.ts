@@ -1,0 +1,46 @@
+import { createSync } from 'nango';
+import { constructRequest } from '../helpers/construct-request.js';
+import { toBackgroundCheck } from '../mappers/to-background-check.js';
+
+import { BackgroundCheck } from '../models.js';
+import { z } from 'zod';
+
+const sync = createSync({
+    description: 'Fetch all the background checks',
+    version: '2.1.1',
+    frequency: 'every hour',
+    autoStart: true,
+    syncType: 'full',
+    scopes: ['read_write'],
+
+    endpoints: [
+        {
+            method: 'GET',
+            path: '/background-checks'
+        }
+    ],
+
+    models: {
+        BackgroundCheck: BackgroundCheck
+    },
+
+    metadata: z.object({}),
+
+    exec: async (nango) => {
+        // No checkpoint is used because the invitations endpoint is only offset-paginated and does not expose a changed-since filter.
+        const config = await constructRequest(nango, '/v1/invitations');
+        await nango.trackDeletesStart('BackgroundCheck');
+
+        for await (const invitations of nango.paginate(config)) {
+            const backgroundChecks = invitations.map((invitation) => {
+                return toBackgroundCheck(invitation);
+            });
+            await nango.batchSave(backgroundChecks, 'BackgroundCheck');
+        }
+
+        await nango.trackDeletesEnd('BackgroundCheck');
+    }
+});
+
+export type NangoSyncLocal = Parameters<(typeof sync)['exec']>[0];
+export default sync;

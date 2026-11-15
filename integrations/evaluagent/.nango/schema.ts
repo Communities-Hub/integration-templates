@@ -1,0 +1,35 @@
+export interface SyncMetadata_evaluagent_groups {
+};
+
+export interface EvaluAgentGroup {
+  id: string;
+  name: string;
+  level: string;
+  active: boolean;
+  parent: string;
+  hasChildren: boolean;
+  isCustomReportingGroup: boolean;
+};
+
+export interface SyncMetadata_evaluagent_roles {
+};
+
+export interface EvaluAgentRole {
+  id: string;
+  title: string;
+  name: string;
+};
+
+export interface SyncMetadata_evaluagent_users {
+};
+
+export interface EvaluAgentUser {
+  id: string;
+  forename: string;
+  surname: string;
+  email: string;
+  username: string;
+  startDate: Date;
+  active: boolean;
+  thirdPartyId: string | number;
+};

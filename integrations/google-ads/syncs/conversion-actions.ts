@@ -1,0 +1,189 @@
+import { createHash } from 'node:crypto';
+import { createSync } from 'nango';
+import { getDeveloperToken } from '../helpers/get-developer-token.js';
+import { z } from 'zod';
+
+const ConversionActionSchema = z.object({
+    id: z.string(),
+    name: z.string().optional(),
+    type: z.string().optional(),
+    category: z.string().optional(),
+    status: z.string().optional(),
+    valueSettings: z
+        .object({
+            defaultValue: z.number().optional().nullable(),
+            alwaysUseDefaultValue: z.boolean().optional().nullable(),
+            currencyCode: z.string().optional().nullable(),
+            defaultCurrencyCode: z.string().optional().nullable()
+        })
+        .optional()
+        .nullable()
+});
+
+const MetadataSchema = z.object({
+    customerIds: z.array(z.string()).min(1),
+    loginCustomerId: z.string().optional()
+});
+
+const GoogleAdsRowSchema = z.object({
+    conversionAction: z
+        .object({
+            resourceName: z.string(),
+            id: z.string().optional(),
+            name: z.string().optional().nullable(),
+            type: z.string().optional().nullable(),
+            category: z.string().optional().nullable(),
+            status: z.string().optional().nullable(),
+            valueSettings: z
+                .object({
+                    defaultValue: z.number().optional().nullable(),
+                    alwaysUseDefaultValue: z.boolean().optional().nullable(),
+                    currencyCode: z.string().optional().nullable(),
+                    defaultCurrencyCode: z.string().optional().nullable()
+                })
+                .optional()
+                .nullable()
+        })
+        .optional()
+        .nullable()
+});
+
+const SearchStreamChunkSchema = z.object({
+    results: z.array(GoogleAdsRowSchema).optional(),
+    fieldMask: z.string().optional(),
+    requestId: z.string().optional()
+});
+
+const CheckpointSchema = z.object({
+    customer_ids_hash: z.string(),
+    customer_index: z.number().int().nonnegative()
+});
+
+const sync = createSync({
+    description: 'Sync conversion actions configured on customer accounts in scope',
+    version: '1.0.5',
+    frequency: 'every hour',
+    autoStart: false,
+    scopes: ['https://www.googleapis.com/auth/adwords'],
+    metadata: MetadataSchema,
+    checkpoint: CheckpointSchema,
+    models: {
+        ConversionAction: ConversionActionSchema
+    },
+
+    exec: async (nango) => {
+        const rawMetadata = await nango.getMetadata();
+        const metadataResult = MetadataSchema.safeParse(rawMetadata);
+        if (!metadataResult.success) {
+            throw new Error('Invalid metadata: ' + metadataResult.error.message);
+        }
+        const metadata = metadataResult.data;
+
+        const developerToken = await getDeveloperToken(nango);
+        if (!developerToken) {
+            throw new Error('developer_token is required in connection config');
+        }
+
+        const customerIdsHash = createHash('sha256').update(JSON.stringify(metadata.customerIds)).digest('hex');
+        const checkpointResult = CheckpointSchema.safeParse(await nango.getCheckpoint());
+        const startIndex =
+            checkpointResult.success &&
+            checkpointResult.data.customer_ids_hash === customerIdsHash &&
+            checkpointResult.data.customer_index <= metadata.customerIds.length
+                ? checkpointResult.data.customer_index
+                : 0;
+
+        // Blocker: Google Ads SearchStream does not support incremental filters,
+        // resumable cursor pagination, or a deleted-record endpoint for conversion_action.
+        // Conversion actions are a small, low-cardinality, long-lived reference set,
+        // so full refresh with trackDeletes is appropriate.
+        await nango.trackDeletesStart('ConversionAction');
+
+        for (let i = startIndex; i < metadata.customerIds.length; i++) {
+            const customerId = metadata.customerIds[i];
+            if (!customerId) {
+                throw new Error(`Missing customerId at index ${i}`);
+            }
+
+            // https://developers.google.com/google-ads/api/docs/reporting/streaming
+            const response = await nango.post({
+                endpoint: `v25/customers/${encodeURIComponent(customerId)}/googleAds:searchStream`,
+                headers: {
+                    'developer-token': developerToken,
+                    ...(metadata.loginCustomerId && {
+                        'login-customer-id': metadata.loginCustomerId
+                    })
+                },
+                data: {
+                    query: 'SELECT conversion_action.id, conversion_action.name, conversion_action.type, conversion_action.category, conversion_action.status, conversion_action.value_settings.default_value, conversion_action.value_settings.always_use_default_value FROM conversion_action'
+                },
+                retries: 3
+            });
+
+            const rawData = response.data;
+            const chunks = [];
+            if (Array.isArray(rawData)) {
+                for (const chunk of rawData) {
+                    const parsed = SearchStreamChunkSchema.safeParse(chunk);
+                    if (!parsed.success) {
+                        throw new Error('Failed to parse searchStream chunk: ' + parsed.error.message);
+                    }
+                    chunks.push(parsed.data);
+                }
+            } else {
+                const parsed = SearchStreamChunkSchema.safeParse(rawData);
+                if (!parsed.success) {
+                    throw new Error('Failed to parse searchStream response: ' + parsed.error.message);
+                }
+                chunks.push(parsed.data);
+            }
+
+            const records = [];
+            for (const chunk of chunks) {
+                for (const row of chunk.results ?? []) {
+                    if (!row.conversionAction) {
+                        throw new Error('Missing conversionAction in searchStream row');
+                    }
+                    const ca = row.conversionAction;
+                    const record = {
+                        id: ca.resourceName,
+                        ...(ca.name != null && { name: ca.name }),
+                        ...(ca.type != null && { type: ca.type }),
+                        ...(ca.category != null && { category: ca.category }),
+                        ...(ca.status != null && { status: ca.status }),
+                        ...(ca.valueSettings != null && {
+                            valueSettings: {
+                                ...(ca.valueSettings.defaultValue != null && {
+                                    defaultValue: ca.valueSettings.defaultValue
+                                }),
+                                ...(ca.valueSettings.alwaysUseDefaultValue != null && {
+                                    alwaysUseDefaultValue: ca.valueSettings.alwaysUseDefaultValue
+                                }),
+                                ...(ca.valueSettings.currencyCode != null && {
+                                    currencyCode: ca.valueSettings.currencyCode
+                                }),
+                                ...(ca.valueSettings.defaultCurrencyCode != null && {
+                                    defaultCurrencyCode: ca.valueSettings.defaultCurrencyCode
+                                })
+                            }
+                        })
+                    };
+                    records.push(record);
+                }
+            }
+
+            if (records.length > 0) {
+                await nango.batchSave(records, 'ConversionAction');
+            }
+
+            // Persist progress so a resumed run skips already-processed customers.
+            await nango.saveCheckpoint({ customer_ids_hash: customerIdsHash, customer_index: i + 1 });
+        }
+
+        await nango.clearCheckpoint();
+        await nango.trackDeletesEnd('ConversionAction');
+    }
+});
+
+export type NangoSyncLocal = Parameters<(typeof sync)['exec']>[0];
+export default sync;

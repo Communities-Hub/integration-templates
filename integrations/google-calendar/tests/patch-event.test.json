@@ -1,0 +1,106 @@
+{
+  "input": {
+    "calendarId": "primary",
+    "eventId": "9ckmapvu57oi2nvstt1da1uu48",
+    "summary": "Patched Test Event",
+    "description": "Patched via Nango dryrun"
+  },
+  "output": {
+    "id": "9ckmapvu57oi2nvstt1da1uu48",
+    "calendarId": "primary",
+    "summary": "Patched Test Event",
+    "description": "Patched via Nango dryrun",
+    "location": "Virtual",
+    "start": {
+      "date": "2024-03-25"
+    },
+    "end": {
+      "date": "2024-03-26"
+    },
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=OWNrbWFwdnU1N29pMm52c3R0MWRhMXV1NDggYXBpQG5hbmdvLmRldg",
+    "created": "2026-03-19T14:56:46.000Z",
+    "updated": "2026-08-11T21:35:37.990Z",
+    "organizer": {
+      "email": "api@nango.dev",
+      "self": true
+    },
+    "creator": {
+      "email": "api@nango.dev",
+      "self": true
+    }
+  },
+  "nango": {},
+  "api": {
+    "patch": {
+      "/calendar/v3/calendars/primary/events/9ckmapvu57oi2nvstt1da1uu48": {
+        "response": {
+          "kind": "calendar#event",
+          "etag": "\"3572968275981022\"",
+          "id": "9ckmapvu57oi2nvstt1da1uu48",
+          "status": "confirmed",
+          "htmlLink": "https://www.google.com/calendar/event?eid=OWNrbWFwdnU1N29pMm52c3R0MWRhMXV1NDggYXBpQG5hbmdvLmRldg",
+          "created": "2026-03-19T14:56:46.000Z",
+          "updated": "2026-08-11T21:35:37.990Z",
+          "summary": "Patched Test Event",
+          "description": "Patched via Nango dryrun",
+          "location": "Virtual",
+          "creator": {
+            "email": "api@nango.dev",
+            "self": true
+          },
+          "organizer": {
+            "email": "api@nango.dev",
+            "self": true
+          },
+          "start": {
+            "date": "2024-03-25"
+          },
+          "end": {
+            "date": "2024-03-26"
+          },
+          "iCalUID": "9ckmapvu57oi2nvstt1da1uu48@google.com",
+          "sequence": 0,
+          "reminders": {
+            "useDefault": false
+          },
+          "eventType": "default"
+        },
+        "status": 200,
+        "headers": {
+          "date": "Tue, 11 Aug 2026 21:35:38 GMT",
+          "content-type": "application/json; charset=UTF-8",
+          "transfer-encoding": "chunked",
+          "connection": "keep-alive",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "x-download-options": "noopen",
+          "x-frame-options": "SAMEORIGIN",
+          "x-dns-prefetch-control": "off",
+          "strict-transport-security": "max-age=5184000; includeSubDomains",
+          "content-security-policy-report-only": "default-src 'self' https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/;child-src 'self';connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://app.nango.dev https://api.nango.dev wss://api.nango.dev/ https://connect.nango.dev https://connect.nango.dev/ https://*.posthog.com https://*.stripe.com https://*.plain.com wss://*.plain.com https://raw.githubusercontent.com;font-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.cdn-plain.com;frame-src 'self' https://accounts.google.com https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/ https://www.youtube.com https://*.stripe.com;img-src 'self' data: blob: https://app.nango.dev https://api.nango.dev https://*.google-analytics.com https://*.googleapis.com https://*.posthog.com https://img.logo.dev https://*.ytimg.com https://*.plain.com;manifest-src 'self';media-src 'self';object-src 'self';script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.nango.dev https://api.nango.dev https://*.stripe.com https://*.google-analytics.com https://*.googleapis.com https://apis.google.com https://*.posthog.com https://www.youtube.com https://*.cdn-plain.com;style-src blob: 'self' 'unsafe-inline' https://*.googleapis.com https://app.nango.dev https://api.nango.dev;worker-src blob: 'self' https://app.nango.dev https://api.nango.dev https://*.googleapis.com https://*.posthog.com;base-uri 'self';form-action 'self';frame-ancestors 'self';script-src-attr 'none';upgrade-insecure-requests",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Authorization, Etag, Content-Type, Content-Length, X-Nango-Signature, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+          "x-ratelimit-limit": "2000",
+          "x-ratelimit-remaining": "1972",
+          "x-ratelimit-reset": "1786484186",
+          "vary": "Origin,X-Origin,Referer",
+          "etag": "\"3572968275981022\"",
+          "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+          "pragma": "no-cache",
+          "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+          "server": "ESF",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "x-l2-request-path": "l2-managed-14"
+        },
+        "hash": "e0677d198767f28a8e65552b0b9546d101246c5c",
+        "request": {
+          "data": {
+            "summary": "Patched Test Event",
+            "description": "Patched via Nango dryrun"
+          }
+        }
+      }
+    }
+  }
+}

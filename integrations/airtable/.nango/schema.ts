@@ -1,0 +1,93 @@
+export interface SyncMetadata_airtable_bases {
+};
+
+export interface Base {
+  id: string;
+  name: string;
+  permissionLevel: 'none' | 'read' | 'comment' | 'edit' | 'create';
+};
+
+export interface SyncMetadata_airtable_tables {
+};
+
+export interface Table {
+  baseId: string;
+  baseName: string;
+  id: string;
+  name: string;
+  views: ({  id: string;
+  name: string;
+  type: string;})[];
+  fields: ({  id: string;
+  description: string;
+  name: string;
+  type: string;
+  options?: {} | undefined;})[];
+  primaryFieldId: string;
+};
+
+export interface ActionInput_airtable_createwebhook {
+  baseId: string;
+  specification: {  options: {  filters: {  recordChangeScope?: string | undefined;
+  dataTypes: string[];
+  changeTypes: string[];
+  fromSources: string[];
+  sourceOptions?: {  formPageSubmission?: {  pageId: string;} | undefined;
+  formSubmission?: {  viewId: string;} | undefined;};
+  watchDataInFieldIds: string[];
+  watchSchemasOfFieldIds: string[];};
+  includes?: {  includeCellValuesInFieldIds?: string[] | 'all' | undefined;
+  "includePreviousCellValues:"?: boolean | undefined;
+  includePreviousFieldDefinitions?: boolean | undefined;};};};
+};
+
+export interface ActionOutput_airtable_createwebhook {
+  id: string;
+  expirationTime: string;
+};
+
+export interface ActionInput_airtable_deletewebhook {
+  baseId: string;
+  webhookId: string;
+};
+
+export interface ActionOutput_airtable_deletewebhook {
+  success: boolean;
+};
+
+export interface ActionInput_airtable_listwebhooks {
+  baseId: string;
+};
+
+export interface ActionOutput_airtable_listwebhooks {
+  webhooks: ({  id: string;
+  areNotificationsEnabled: boolean;
+  cursorForNextPayload: number;
+  isHookEnabled: boolean;
+  lastSuccessfulNotificationTime: string | null;
+  expirationTime?: string | undefined;
+  specification: {  options: {  filters: {  recordChangeScope?: string | undefined;
+  dataTypes: string[];
+  changeTypes: string[];
+  fromSources: string[];
+  sourceOptions?: {  formPageSubmission?: {  pageId: string;} | undefined;
+  formSubmission?: {  viewId: string;} | undefined;};
+  watchDataInFieldIds: string[];
+  watchSchemasOfFieldIds: string[];};
+  includes?: {  includeCellValuesInFieldIds?: string[] | 'all' | undefined;
+  "includePreviousCellValues:"?: boolean | undefined;
+  includePreviousFieldDefinitions?: boolean | undefined;};};};
+  lastNotificationResult: {  success: boolean;
+  error?: {  message: string;} | undefined;
+  completionTimestamp?: string | undefined;
+  durationMs?: number | undefined;
+  retryNumber?: number | undefined;
+  willBeRetried?: boolean | undefined;} | null;})[];
+};
+
+export type ActionInput_airtable_whoami = void
+
+export interface ActionOutput_airtable_whoami {
+  id: string;
+  email: string | null;
+};

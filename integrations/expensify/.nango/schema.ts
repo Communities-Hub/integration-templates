@@ -1,0 +1,60 @@
+export interface SyncMetadata_expensify_users {
+};
+
+export interface ExpsensifyNullableUser {
+  id: string;
+  firstName: string | null;
+  lastName: string | null;
+  email: string;
+};
+
+export interface ActionInput_expensify_createuser {
+  firstName: string;
+  lastName: string;
+  email: string;
+};
+
+export interface ActionOutput_expensify_createuser {
+  id: string;
+  firstName: string | null;
+  lastName: string | null;
+  email: string;
+};
+
+export interface ActionInput_expensify_disableuser {
+  id: string;
+  email: string;
+};
+
+export interface ActionOutput_expensify_disableuser {
+  success: boolean;
+};
+
+export type ActionInput_expensify_listpolicies = void
+
+export interface ActionOutput_expensify_listpolicies {
+  policies: ({  id: string;
+  type: string;
+  name: string;
+  shouldShowAutoApprovalOptions: boolean;
+  role: string;
+  areCompanyCardsEnabled: boolean;
+  shouldShowCustomReportTitleOption: boolean;
+  areExpensifyCardsEnabled: boolean;
+  areRulesEnabled: boolean;
+  areConnectionsEnabled: boolean;
+  approvalMode: string;
+  areCategoriesEnabled: boolean;
+  areReportFieldsEnabled: boolean;
+  areWorkflowsEnabled: boolean;
+  outputCurrency: string;
+  owner: string;
+  areInvoicesEnabled: boolean;
+  createdAt: string;
+  eReceipts: boolean;
+  shouldShowAutoReimbursementLimitOption: boolean;
+  areDistanceRatesEnabled: boolean;
+  isPolicyExpenseChatEnabled: string;
+  ownerAccountID: number;
+  areTagsEnabled: boolean;})[];
+};

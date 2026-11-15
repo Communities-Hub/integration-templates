@@ -1,0 +1,85 @@
+export interface StandardEmployee {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  displayName: string;
+  employeeNumber?: string | undefined;
+  title?: string | undefined;
+  department: {  id: string;
+  name: string;};
+  employmentType: 'FULL_TIME' | 'PART_TIME' | 'CONTRACTOR' | 'INTERN' | 'TEMPORARY' | 'OTHER';
+  employmentStatus: 'ACTIVE' | 'TERMINATED' | 'ON_LEAVE' | 'SUSPENDED' | 'PENDING';
+  startDate: string;
+  terminationDate?: string | undefined;
+  manager?: {  id?: string | undefined;
+  firstName?: string | undefined;
+  lastName?: string | undefined;
+  email?: string | undefined;};
+  workLocation: {  name: string;
+  type: 'OFFICE' | 'REMOTE' | 'HYBRID';
+  primaryAddress?: {  street?: string | undefined;
+  city?: string | undefined;
+  state?: string | undefined;
+  country?: string | undefined;
+  postalCode?: string | undefined;
+  type: 'WORK' | 'HOME';};};
+  addresses: ({  street?: string | undefined;
+  city?: string | undefined;
+  state?: string | undefined;
+  country?: string | undefined;
+  postalCode?: string | undefined;
+  type: 'WORK' | 'HOME';})[];
+  phones: ({  type: 'WORK' | 'HOME' | 'MOBILE';
+  number: string;})[];
+  emails: ({  type: 'WORK' | 'PERSONAL';
+  address: string;})[];
+  providerSpecific: {};
+  createdAt: string;
+  updatedAt: string;
+};
+
+export interface SyncMetadata_hibob_service_user_employees {
+};
+
+export interface HibobEmployee {
+  id: string;
+  firstName: string;
+  surname: string;
+  email: string;
+  displayName: string;
+  work?: {  title?: string | undefined;
+  department?: {  id: string;
+  name: string;} | undefined;
+  employmentType?: string | undefined;
+  status?: string | undefined;
+  startDate?: string | undefined;
+  terminationDate?: string | undefined;
+  reportsTo?: {  id: string;
+  firstName: string;
+  surname: string;
+  email: string;} | undefined;
+  site?: string | undefined;
+  siteType?: string | undefined;
+  address?: {  street: string;
+  city: string;
+  state: string;
+  country: string;
+  postalCode: string;} | undefined;
+  customFields?: {} | undefined;};
+  personal?: {  addresses?: ({  street: string;
+  city: string;
+  state: string;
+  country: string;
+  postalCode: string;
+  type: string;})[] | undefined;
+  workPhone?: string | undefined;
+  homePhone?: string | undefined;
+  mobilePhone?: string | undefined;
+  email?: string | undefined;};
+  about?: {  createdAt?: string | undefined;
+  updatedAt?: string | undefined;};
+};
+
+export interface SyncMetadata_hibob_service_user_unifiedemployees {
+};

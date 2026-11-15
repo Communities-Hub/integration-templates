@@ -1,0 +1,127 @@
+{
+  "input": {
+    "owner": "nango-provisioned-apps",
+    "repo": "nango",
+    "path": "NANGO_REGISTRY_TEST_1.md",
+    "message": "Update NANGO_REGISTRY_TEST_1.md via nango registry test",
+    "content": "TmFuZ28gcmVnaXN0cnkgdGVzdCBwZXJtYW5lbnQgc2VlZCBmaWxlIDEK",
+    "branch": "master",
+    "sha": "fa1dd213f78d785cfd4db08944d32825a52e3c64"
+  },
+  "output": {
+    "content": {
+      "name": "NANGO_REGISTRY_TEST_1.md",
+      "path": "NANGO_REGISTRY_TEST_1.md",
+      "sha": "fa1dd213f78d785cfd4db08944d32825a52e3c64",
+      "size": 42,
+      "html_url": "https://github.com/nango-provisioned-apps/nango/blob/master/NANGO_REGISTRY_TEST_1.md",
+      "download_url": "https://raw.githubusercontent.com/nango-provisioned-apps/nango/master/NANGO_REGISTRY_TEST_1.md"
+    },
+    "commit": {
+      "sha": "a764b391b5837274a4aa2ec80d969a3dfb2a3b8a",
+      "message": "Update NANGO_REGISTRY_TEST_1.md via nango registry test",
+      "html_url": "https://github.com/nango-provisioned-apps/nango/commit/a764b391b5837274a4aa2ec80d969a3dfb2a3b8a"
+    }
+  },
+  "nango": {},
+  "api": {
+    "put": {
+      "/repos/nango-provisioned-apps/nango/contents/NANGO_REGISTRY_TEST_1.md": {
+        "response": {
+          "content": {
+            "name": "NANGO_REGISTRY_TEST_1.md",
+            "path": "NANGO_REGISTRY_TEST_1.md",
+            "sha": "fa1dd213f78d785cfd4db08944d32825a52e3c64",
+            "size": 42,
+            "url": "https://api.github.com/repos/nango-provisioned-apps/nango/contents/NANGO_REGISTRY_TEST_1.md?ref=master",
+            "html_url": "https://github.com/nango-provisioned-apps/nango/blob/master/NANGO_REGISTRY_TEST_1.md",
+            "git_url": "https://api.github.com/repos/nango-provisioned-apps/nango/git/blobs/fa1dd213f78d785cfd4db08944d32825a52e3c64",
+            "download_url": "https://raw.githubusercontent.com/nango-provisioned-apps/nango/master/NANGO_REGISTRY_TEST_1.md",
+            "type": "file",
+            "_links": {
+              "self": "https://api.github.com/repos/nango-provisioned-apps/nango/contents/NANGO_REGISTRY_TEST_1.md?ref=master",
+              "git": "https://api.github.com/repos/nango-provisioned-apps/nango/git/blobs/fa1dd213f78d785cfd4db08944d32825a52e3c64",
+              "html": "https://github.com/nango-provisioned-apps/nango/blob/master/NANGO_REGISTRY_TEST_1.md"
+            }
+          },
+          "commit": {
+            "sha": "a764b391b5837274a4aa2ec80d969a3dfb2a3b8a",
+            "node_id": "C_kwDOT1NNv9oAKGE3NjRiMzkxYjU4MzcyNzRhNGFhMmVjODBkOTY5YTNkZmIyYTNiOGE",
+            "url": "https://api.github.com/repos/nango-provisioned-apps/nango/git/commits/a764b391b5837274a4aa2ec80d969a3dfb2a3b8a",
+            "html_url": "https://github.com/nango-provisioned-apps/nango/commit/a764b391b5837274a4aa2ec80d969a3dfb2a3b8a",
+            "author": {
+              "name": "nango-oauth-app[bot]",
+              "email": "318402831+nango-oauth-app[bot]@users.noreply.github.com",
+              "date": "2026-09-28T16:18:18Z"
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "date": "2026-09-28T16:18:18Z"
+            },
+            "tree": {
+              "sha": "2dd9b7a8e79bb19b94f20b49b5b0b776714e6532",
+              "url": "https://api.github.com/repos/nango-provisioned-apps/nango/git/trees/2dd9b7a8e79bb19b94f20b49b5b0b776714e6532"
+            },
+            "message": "Update NANGO_REGISTRY_TEST_1.md via nango registry test",
+            "parents": [
+              {
+                "sha": "30dcbdd85088f1047868bfedbe2f194b2ee71dcf",
+                "url": "https://api.github.com/repos/nango-provisioned-apps/nango/git/commits/30dcbdd85088f1047868bfedbe2f194b2ee71dcf",
+                "html_url": "https://github.com/nango-provisioned-apps/nango/commit/30dcbdd85088f1047868bfedbe2f194b2ee71dcf"
+              }
+            ],
+            "verification": {
+              "verified": true,
+              "reason": "valid",
+              "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqupNKCRC1aQ7uu5UhlAAADKQQAINeWVXFakiTzeqUSY9ODBDg\nAMCWweS2KU91lJasH34GB+bj7pJvGML5U8fBrtarj6YY9y4oQB84CLk+GSKpYl/w\nyMlj2OB74bWfxa+gukBEDhrlRdbv3mLwBwM997XFXULKO8gaxOvNHouYqY2LKa6H\nEO9ytOvm8yZGsuV328q32CV++i/o1aKOOvUGubVaeuLGMHRU64ekHApqojwrCV2f\nLjTVNHHSU8UeX5WjWt0D5BcttMIX5Bex1LWffyFYwpwnBpg/6YIfXkKqS/Rn/hG/\nS+ZG0ayDqcdOzEtc0onM9+bN/z/XNwTCIIaTWmGOfCXBr8NhbCLYADtq5v31bx8B\nJ92wGmBded+uG8+kUt9y5yP9IpaV+RxLNPDPF1g7LiCyrg3HdQra1XhBYHiYikRg\nVo+V9IXWfU+SUrQcoM0V9AJlWmCrlA+cB52mnuL328j01tSo90T2FV4bE6MEXQJB\nbknPfnMfm+lnync7ZmXeY1/Lt5GdxNv4RawJmkQXpanyhKWXGi0NJ5sbyxLBuPVC\nTxYAXTyG0boXXHb9BIxruid0cp7JE4Q1R2fSfgWtBT3fO0Tb68eW63VWbAStlXie\nfqWGoyKS41d+iNlmx70YWM8wwxtHmoctxbismZENrEpr55thKb/hox8p/5T035rk\nTCHHOQgXPjDRSXJ6hvFq\n=rwfp\n-----END PGP SIGNATURE-----\n",
+              "payload": "tree 2dd9b7a8e79bb19b94f20b49b5b0b776714e6532\nparent 30dcbdd85088f1047868bfedbe2f194b2ee71dcf\nauthor nango-oauth-app[bot] <318402831+nango-oauth-app[bot]@users.noreply.github.com> 1790612298 +0000\ncommitter GitHub <noreply@github.com> 1790612298 +0000\n\nUpdate NANGO_REGISTRY_TEST_1.md via nango registry test",
+              "verified_at": "2026-09-28T16:18:19Z"
+            }
+          }
+        },
+        "status": 200,
+        "headers": {
+          "date": "Mon, 28 Sep 2026 16:18:19 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "transfer-encoding": "chunked",
+          "connection": "keep-alive",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "x-download-options": "noopen",
+          "x-frame-options": "deny",
+          "x-dns-prefetch-control": "off",
+          "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+          "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+          "content-security-policy-report-only": "default-src 'self' https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/;child-src 'self';connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://app.nango.dev https://api.nango.dev wss://api.nango.dev/ https://connect.nango.dev https://connect.nango.dev/ https://api.nango.dev https://*.posthog.com https://*.stripe.com https://*.plain.com wss://*.plain.com https://raw.githubusercontent.com;font-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.cdn-plain.com;form-action 'self' https://api.nango.dev;frame-src 'self' https://accounts.google.com https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/ https://www.youtube.com https://*.stripe.com;img-src 'self' data: blob: https://app.nango.dev https://api.nango.dev https://*.google-analytics.com https://*.googleapis.com https://*.posthog.com https://img.logo.dev https://*.ytimg.com https://*.plain.com;manifest-src 'self';media-src 'self';object-src 'self';script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.nango.dev https://api.nango.dev https://*.stripe.com https://*.google-analytics.com https://*.googleapis.com https://apis.google.com https://*.posthog.com https://www.youtube.com https://*.cdn-plain.com;style-src blob: 'self' 'unsafe-inline' https://*.googleapis.com https://app.nango.dev https://api.nango.dev;worker-src blob: 'self' https://app.nango.dev https://api.nango.dev https://*.googleapis.com https://*.posthog.com;base-uri 'self';frame-ancestors 'self';script-src-attr 'none';upgrade-insecure-requests",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Authorization, Etag, Content-Type, Content-Length, X-Nango-Signature, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+          "x-ratelimit-limit": "5000",
+          "x-ratelimit-remaining": "4978",
+          "x-ratelimit-reset": "1790615002",
+          "cache-control": "private, max-age=60, s-maxage=60",
+          "vary": "Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With",
+          "etag": "W/\"44bf56e206841d3a07b782bf9a926bce53a99759aac55b90f29f0ada0474cfdc\"",
+          "x-github-media-type": "github.v3",
+          "x-accepted-github-permissions": "contents=write; contents=write,workflows=write",
+          "x-github-api-version-selected": "2022-11-28",
+          "content-security-policy": "default-src 'none'",
+          "server": "github.com",
+          "x-ratelimit-used": "22",
+          "x-ratelimit-resource": "core",
+          "x-github-request-id": "08D0:305886:9BCE98:A15D61:6ABA934A",
+          "x-github-edge-region": "sea"
+        },
+        "hash": "933b34591489fcbda685cb35d9b6c1ea2e19391d",
+        "request": {
+          "data": {
+            "message": "Update NANGO_REGISTRY_TEST_1.md via nango registry test",
+            "content": "TmFuZ28gcmVnaXN0cnkgdGVzdCBwZXJtYW5lbnQgc2VlZCBmaWxlIDEK",
+            "branch": "master",
+            "sha": "fa1dd213f78d785cfd4db08944d32825a52e3c64"
+          }
+        }
+      }
+    }
+  }
+}

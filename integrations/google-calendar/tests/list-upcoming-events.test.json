@@ -1,0 +1,925 @@
+{
+  "input": {
+    "timeMin": "2026-08-11T21:34:19.400Z"
+  },
+  "output": {
+    "events": [
+      {
+        "id": "6eb01k6ii55n54hcpvg5bpvj8k_20260811T213511Z",
+        "summary": "Nango Test Recurring Event",
+        "start": {
+          "dateTime": "2026-08-11T18:35:11-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-11T19:35:11-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NmViMDFrNmlpNTVuNTRoY3B2ZzVicHZqOGtfMjAyNjA4MTFUMjEzNTExWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:35:11.000Z",
+        "updated": "2026-08-11T21:35:12.211Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "6eb01k6ii55n54hcpvg5bpvj8k",
+        "eventType": "default"
+      },
+      {
+        "id": "sahnf496juql3am7ac5p1bvsts",
+        "summary": "Nango Test Event - Add Attendee Prerequisite",
+        "start": {
+          "dateTime": "2026-08-11T18:39:58-03:00",
+          "timeZone": "America/Sao_Paulo"
+        },
+        "end": {
+          "dateTime": "2026-08-11T19:09:58-03:00",
+          "timeZone": "America/Sao_Paulo"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=c2FobmY0OTZqdXFsM2FtN2FjNXAxYnZzdHMgYXBpQG5hbmdvLmRldg",
+        "created": "2026-08-11T21:34:58.000Z",
+        "updated": "2026-08-11T21:34:58.500Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "eventType": "default"
+      },
+      {
+        "id": "bih9pvn3704kf6l68cf7tu84fk_20260812T100000Z",
+        "summary": "Test Recurring Event from Nango",
+        "start": {
+          "dateTime": "2026-08-12T07:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-12T08:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=YmloOXB2bjM3MDRrZjZsNjhjZjd0dTg0ZmtfMjAyNjA4MTJUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:34:33.000Z",
+        "updated": "2026-08-11T21:34:33.351Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "bih9pvn3704kf6l68cf7tu84fk",
+        "eventType": "default"
+      },
+      {
+        "id": "cnlpnm9l2uufcqnemej8tm1t60_20260812T100000Z",
+        "summary": "Test Recurring Event from Nango",
+        "start": {
+          "dateTime": "2026-08-12T07:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-12T08:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=Y25scG5tOWwydXVmY3FuZW1lajh0bTF0NjBfMjAyNjA4MTJUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:34:26.000Z",
+        "updated": "2026-08-11T21:34:26.458Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "cnlpnm9l2uufcqnemej8tm1t60",
+        "eventType": "default"
+      },
+      {
+        "id": "18lq7g5iptgknquk5rkgh8339c",
+        "summary": "Quick test meeting",
+        "start": {
+          "dateTime": "2026-08-12T15:00:00-03:00",
+          "timeZone": "America/Sao_Paulo"
+        },
+        "end": {
+          "dateTime": "2026-08-12T16:00:00-03:00",
+          "timeZone": "America/Sao_Paulo"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=MThscTdnNWlwdGdrbnF1azVya2doODMzOWMgYXBpQG5hbmdvLmRldg",
+        "created": "2026-08-11T21:34:30.000Z",
+        "updated": "2026-08-11T21:34:30.477Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "eventType": "default"
+      },
+      {
+        "id": "88gu8gvncmt950g5fuqc7sn9fc",
+        "summary": "Quick test meeting",
+        "start": {
+          "dateTime": "2026-08-12T15:00:00-03:00",
+          "timeZone": "America/Sao_Paulo"
+        },
+        "end": {
+          "dateTime": "2026-08-12T16:00:00-03:00",
+          "timeZone": "America/Sao_Paulo"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=ODhndThndm5jbXQ5NTBnNWZ1cWM3c245ZmMgYXBpQG5hbmdvLmRldg",
+        "created": "2026-08-11T21:34:23.000Z",
+        "updated": "2026-08-11T21:34:24.265Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "eventType": "default"
+      },
+      {
+        "id": "6eb01k6ii55n54hcpvg5bpvj8k_20260812T213511Z",
+        "summary": "Nango Test Recurring Event",
+        "start": {
+          "dateTime": "2026-08-12T18:35:11-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-12T19:35:11-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NmViMDFrNmlpNTVuNTRoY3B2ZzVicHZqOGtfMjAyNjA4MTJUMjEzNTExWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:35:11.000Z",
+        "updated": "2026-08-11T21:35:12.211Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "6eb01k6ii55n54hcpvg5bpvj8k",
+        "eventType": "default"
+      },
+      {
+        "id": "bih9pvn3704kf6l68cf7tu84fk_20260813T100000Z",
+        "summary": "Test Recurring Event from Nango",
+        "start": {
+          "dateTime": "2026-08-13T07:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-13T08:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=YmloOXB2bjM3MDRrZjZsNjhjZjd0dTg0ZmtfMjAyNjA4MTNUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:34:33.000Z",
+        "updated": "2026-08-11T21:34:33.351Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "bih9pvn3704kf6l68cf7tu84fk",
+        "eventType": "default"
+      },
+      {
+        "id": "cnlpnm9l2uufcqnemej8tm1t60_20260813T100000Z",
+        "summary": "Test Recurring Event from Nango",
+        "start": {
+          "dateTime": "2026-08-13T07:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-13T08:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=Y25scG5tOWwydXVmY3FuZW1lajh0bTF0NjBfMjAyNjA4MTNUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:34:26.000Z",
+        "updated": "2026-08-11T21:34:26.458Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "cnlpnm9l2uufcqnemej8tm1t60",
+        "eventType": "default"
+      },
+      {
+        "id": "6eb01k6ii55n54hcpvg5bpvj8k_20260813T213511Z",
+        "summary": "Nango Test Recurring Event",
+        "start": {
+          "dateTime": "2026-08-13T18:35:11-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-13T19:35:11-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NmViMDFrNmlpNTVuNTRoY3B2ZzVicHZqOGtfMjAyNjA4MTNUMjEzNTExWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:35:11.000Z",
+        "updated": "2026-08-11T21:35:12.211Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "6eb01k6ii55n54hcpvg5bpvj8k",
+        "eventType": "default"
+      },
+      {
+        "id": "bih9pvn3704kf6l68cf7tu84fk_20260814T100000Z",
+        "summary": "Test Recurring Event from Nango",
+        "start": {
+          "dateTime": "2026-08-14T07:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-14T08:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=YmloOXB2bjM3MDRrZjZsNjhjZjd0dTg0ZmtfMjAyNjA4MTRUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:34:33.000Z",
+        "updated": "2026-08-11T21:34:33.351Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "bih9pvn3704kf6l68cf7tu84fk",
+        "eventType": "default"
+      },
+      {
+        "id": "cnlpnm9l2uufcqnemej8tm1t60_20260814T100000Z",
+        "summary": "Test Recurring Event from Nango",
+        "start": {
+          "dateTime": "2026-08-14T07:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-14T08:00:00-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=Y25scG5tOWwydXVmY3FuZW1lajh0bTF0NjBfMjAyNjA4MTRUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:34:26.000Z",
+        "updated": "2026-08-11T21:34:26.458Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "cnlpnm9l2uufcqnemej8tm1t60",
+        "eventType": "default"
+      },
+      {
+        "id": "6eb01k6ii55n54hcpvg5bpvj8k_20260814T213511Z",
+        "summary": "Nango Test Recurring Event",
+        "start": {
+          "dateTime": "2026-08-14T18:35:11-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-14T19:35:11-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NmViMDFrNmlpNTVuNTRoY3B2ZzVicHZqOGtfMjAyNjA4MTRUMjEzNTExWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:35:11.000Z",
+        "updated": "2026-08-11T21:35:12.211Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "6eb01k6ii55n54hcpvg5bpvj8k",
+        "eventType": "default"
+      },
+      {
+        "id": "6eb01k6ii55n54hcpvg5bpvj8k_20260815T213511Z",
+        "summary": "Nango Test Recurring Event",
+        "start": {
+          "dateTime": "2026-08-15T18:35:11-03:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-08-15T19:35:11-03:00",
+          "timeZone": "UTC"
+        },
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NmViMDFrNmlpNTVuNTRoY3B2ZzVicHZqOGtfMjAyNjA4MTVUMjEzNTExWiBhcGlAbmFuZ28uZGV2",
+        "created": "2026-08-11T21:35:11.000Z",
+        "updated": "2026-08-11T21:35:12.211Z",
+        "creator": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "organizer": {
+          "email": "api@nango.dev",
+          "self": true
+        },
+        "recurringEventId": "6eb01k6ii55n54hcpvg5bpvj8k",
+        "eventType": "default"
+      }
+    ]
+  },
+  "nango": {},
+  "api": {
+    "get": {
+      "/calendar/v3/calendars/primary/events": {
+        "response": {
+          "kind": "calendar#events",
+          "etag": "\"p33fpfhfnoecpc0o\"",
+          "summary": "Updated Test Calendar",
+          "description": "",
+          "updated": "2026-08-11T21:35:12.837Z",
+          "timeZone": "America/Sao_Paulo",
+          "accessRole": "owner",
+          "defaultReminders": [],
+          "items": [
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968224423006\"",
+              "id": "6eb01k6ii55n54hcpvg5bpvj8k_20260811T213511Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=NmViMDFrNmlpNTVuNTRoY3B2ZzVicHZqOGtfMjAyNjA4MTFUMjEzNTExWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:35:11.000Z",
+              "updated": "2026-08-11T21:35:12.211Z",
+              "summary": "Nango Test Recurring Event",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-11T18:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-11T19:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "6eb01k6ii55n54hcpvg5bpvj8k",
+              "originalStartTime": {
+                "dateTime": "2026-08-11T18:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "6eb01k6ii55n54hcpvg5bpvj8k@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968197001758\"",
+              "id": "sahnf496juql3am7ac5p1bvsts",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=c2FobmY0OTZqdXFsM2FtN2FjNXAxYnZzdHMgYXBpQG5hbmdvLmRldg",
+              "created": "2026-08-11T21:34:58.000Z",
+              "updated": "2026-08-11T21:34:58.500Z",
+              "summary": "Nango Test Event - Add Attendee Prerequisite",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-11T18:39:58-03:00",
+                "timeZone": "America/Sao_Paulo"
+              },
+              "end": {
+                "dateTime": "2026-08-11T19:09:58-03:00",
+                "timeZone": "America/Sao_Paulo"
+              },
+              "iCalUID": "sahnf496juql3am7ac5p1bvsts@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968146702462\"",
+              "id": "bih9pvn3704kf6l68cf7tu84fk_20260812T100000Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=YmloOXB2bjM3MDRrZjZsNjhjZjd0dTg0ZmtfMjAyNjA4MTJUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:34:33.000Z",
+              "updated": "2026-08-11T21:34:33.351Z",
+              "summary": "Test Recurring Event from Nango",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-12T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-12T08:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "bih9pvn3704kf6l68cf7tu84fk",
+              "originalStartTime": {
+                "dateTime": "2026-08-12T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "bih9pvn3704kf6l68cf7tu84fk@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968132917822\"",
+              "id": "cnlpnm9l2uufcqnemej8tm1t60_20260812T100000Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=Y25scG5tOWwydXVmY3FuZW1lajh0bTF0NjBfMjAyNjA4MTJUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:34:26.000Z",
+              "updated": "2026-08-11T21:34:26.458Z",
+              "summary": "Test Recurring Event from Nango",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-12T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-12T08:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "cnlpnm9l2uufcqnemej8tm1t60",
+              "originalStartTime": {
+                "dateTime": "2026-08-12T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "cnlpnm9l2uufcqnemej8tm1t60@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968140955070\"",
+              "id": "18lq7g5iptgknquk5rkgh8339c",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=MThscTdnNWlwdGdrbnF1azVya2doODMzOWMgYXBpQG5hbmdvLmRldg",
+              "created": "2026-08-11T21:34:30.000Z",
+              "updated": "2026-08-11T21:34:30.477Z",
+              "summary": "Quick test meeting",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-12T15:00:00-03:00",
+                "timeZone": "America/Sao_Paulo"
+              },
+              "end": {
+                "dateTime": "2026-08-12T16:00:00-03:00",
+                "timeZone": "America/Sao_Paulo"
+              },
+              "iCalUID": "18lq7g5iptgknquk5rkgh8339c@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968128531486\"",
+              "id": "88gu8gvncmt950g5fuqc7sn9fc",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=ODhndThndm5jbXQ5NTBnNWZ1cWM3c245ZmMgYXBpQG5hbmdvLmRldg",
+              "created": "2026-08-11T21:34:23.000Z",
+              "updated": "2026-08-11T21:34:24.265Z",
+              "summary": "Quick test meeting",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-12T15:00:00-03:00",
+                "timeZone": "America/Sao_Paulo"
+              },
+              "end": {
+                "dateTime": "2026-08-12T16:00:00-03:00",
+                "timeZone": "America/Sao_Paulo"
+              },
+              "iCalUID": "88gu8gvncmt950g5fuqc7sn9fc@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968224423006\"",
+              "id": "6eb01k6ii55n54hcpvg5bpvj8k_20260812T213511Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=NmViMDFrNmlpNTVuNTRoY3B2ZzVicHZqOGtfMjAyNjA4MTJUMjEzNTExWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:35:11.000Z",
+              "updated": "2026-08-11T21:35:12.211Z",
+              "summary": "Nango Test Recurring Event",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-12T18:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-12T19:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "6eb01k6ii55n54hcpvg5bpvj8k",
+              "originalStartTime": {
+                "dateTime": "2026-08-12T18:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "6eb01k6ii55n54hcpvg5bpvj8k@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968146702462\"",
+              "id": "bih9pvn3704kf6l68cf7tu84fk_20260813T100000Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=YmloOXB2bjM3MDRrZjZsNjhjZjd0dTg0ZmtfMjAyNjA4MTNUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:34:33.000Z",
+              "updated": "2026-08-11T21:34:33.351Z",
+              "summary": "Test Recurring Event from Nango",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-13T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-13T08:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "bih9pvn3704kf6l68cf7tu84fk",
+              "originalStartTime": {
+                "dateTime": "2026-08-13T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "bih9pvn3704kf6l68cf7tu84fk@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968132917822\"",
+              "id": "cnlpnm9l2uufcqnemej8tm1t60_20260813T100000Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=Y25scG5tOWwydXVmY3FuZW1lajh0bTF0NjBfMjAyNjA4MTNUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:34:26.000Z",
+              "updated": "2026-08-11T21:34:26.458Z",
+              "summary": "Test Recurring Event from Nango",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-13T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-13T08:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "cnlpnm9l2uufcqnemej8tm1t60",
+              "originalStartTime": {
+                "dateTime": "2026-08-13T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "cnlpnm9l2uufcqnemej8tm1t60@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968224423006\"",
+              "id": "6eb01k6ii55n54hcpvg5bpvj8k_20260813T213511Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=NmViMDFrNmlpNTVuNTRoY3B2ZzVicHZqOGtfMjAyNjA4MTNUMjEzNTExWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:35:11.000Z",
+              "updated": "2026-08-11T21:35:12.211Z",
+              "summary": "Nango Test Recurring Event",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-13T18:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-13T19:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "6eb01k6ii55n54hcpvg5bpvj8k",
+              "originalStartTime": {
+                "dateTime": "2026-08-13T18:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "6eb01k6ii55n54hcpvg5bpvj8k@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968146702462\"",
+              "id": "bih9pvn3704kf6l68cf7tu84fk_20260814T100000Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=YmloOXB2bjM3MDRrZjZsNjhjZjd0dTg0ZmtfMjAyNjA4MTRUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:34:33.000Z",
+              "updated": "2026-08-11T21:34:33.351Z",
+              "summary": "Test Recurring Event from Nango",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-14T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-14T08:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "bih9pvn3704kf6l68cf7tu84fk",
+              "originalStartTime": {
+                "dateTime": "2026-08-14T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "bih9pvn3704kf6l68cf7tu84fk@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968132917822\"",
+              "id": "cnlpnm9l2uufcqnemej8tm1t60_20260814T100000Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=Y25scG5tOWwydXVmY3FuZW1lajh0bTF0NjBfMjAyNjA4MTRUMTAwMDAwWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:34:26.000Z",
+              "updated": "2026-08-11T21:34:26.458Z",
+              "summary": "Test Recurring Event from Nango",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-14T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-14T08:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "cnlpnm9l2uufcqnemej8tm1t60",
+              "originalStartTime": {
+                "dateTime": "2026-08-14T07:00:00-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "cnlpnm9l2uufcqnemej8tm1t60@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968224423006\"",
+              "id": "6eb01k6ii55n54hcpvg5bpvj8k_20260814T213511Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=NmViMDFrNmlpNTVuNTRoY3B2ZzVicHZqOGtfMjAyNjA4MTRUMjEzNTExWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:35:11.000Z",
+              "updated": "2026-08-11T21:35:12.211Z",
+              "summary": "Nango Test Recurring Event",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-14T18:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-14T19:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "6eb01k6ii55n54hcpvg5bpvj8k",
+              "originalStartTime": {
+                "dateTime": "2026-08-14T18:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "6eb01k6ii55n54hcpvg5bpvj8k@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            },
+            {
+              "kind": "calendar#event",
+              "etag": "\"3572968224423006\"",
+              "id": "6eb01k6ii55n54hcpvg5bpvj8k_20260815T213511Z",
+              "status": "confirmed",
+              "htmlLink": "https://www.google.com/calendar/event?eid=NmViMDFrNmlpNTVuNTRoY3B2ZzVicHZqOGtfMjAyNjA4MTVUMjEzNTExWiBhcGlAbmFuZ28uZGV2",
+              "created": "2026-08-11T21:35:11.000Z",
+              "updated": "2026-08-11T21:35:12.211Z",
+              "summary": "Nango Test Recurring Event",
+              "creator": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "organizer": {
+                "email": "api@nango.dev",
+                "self": true
+              },
+              "start": {
+                "dateTime": "2026-08-15T18:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "end": {
+                "dateTime": "2026-08-15T19:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "recurringEventId": "6eb01k6ii55n54hcpvg5bpvj8k",
+              "originalStartTime": {
+                "dateTime": "2026-08-15T18:35:11-03:00",
+                "timeZone": "UTC"
+              },
+              "iCalUID": "6eb01k6ii55n54hcpvg5bpvj8k@google.com",
+              "sequence": 0,
+              "reminders": {
+                "useDefault": true
+              },
+              "eventType": "default"
+            }
+          ]
+        },
+        "status": 200,
+        "headers": {
+          "date": "Tue, 11 Aug 2026 21:35:13 GMT",
+          "content-type": "application/json; charset=UTF-8",
+          "transfer-encoding": "chunked",
+          "connection": "keep-alive",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "x-download-options": "noopen",
+          "x-frame-options": "SAMEORIGIN",
+          "x-dns-prefetch-control": "off",
+          "strict-transport-security": "max-age=5184000; includeSubDomains",
+          "content-security-policy-report-only": "default-src 'self' https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/;child-src 'self';connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://app.nango.dev https://api.nango.dev wss://api.nango.dev/ https://connect.nango.dev https://connect.nango.dev/ https://*.posthog.com https://*.stripe.com https://*.plain.com wss://*.plain.com https://raw.githubusercontent.com;font-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.cdn-plain.com;frame-src 'self' https://accounts.google.com https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/ https://www.youtube.com https://*.stripe.com;img-src 'self' data: blob: https://app.nango.dev https://api.nango.dev https://*.google-analytics.com https://*.googleapis.com https://*.posthog.com https://img.logo.dev https://*.ytimg.com https://*.plain.com;manifest-src 'self';media-src 'self';object-src 'self';script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.nango.dev https://api.nango.dev https://*.stripe.com https://*.google-analytics.com https://*.googleapis.com https://apis.google.com https://*.posthog.com https://www.youtube.com https://*.cdn-plain.com;style-src blob: 'self' 'unsafe-inline' https://*.googleapis.com https://app.nango.dev https://api.nango.dev;worker-src blob: 'self' https://app.nango.dev https://api.nango.dev https://*.googleapis.com https://*.posthog.com;base-uri 'self';form-action 'self';frame-ancestors 'self';script-src-attr 'none';upgrade-insecure-requests",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Authorization, Etag, Content-Type, Content-Length, X-Nango-Signature, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+          "x-ratelimit-limit": "2000",
+          "x-ratelimit-remaining": "1943",
+          "x-ratelimit-reset": "1786484125",
+          "cache-control": "private, max-age=0, must-revalidate, no-transform",
+          "expires": "Tue, 11 Aug 2026 21:35:13 GMT",
+          "vary": "Origin, X-Origin, Referer",
+          "server": "ESF",
+          "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+          "x-l2-request-path": "l2-managed-14"
+        },
+        "hash": "b3481ba0bb52f657e65cadd3a45c1e035df2c6c2",
+        "request": {
+          "params": {
+            "orderBy": "startTime",
+            "singleEvents": "true",
+            "timeMin": "2026-08-11T21:34:19.400Z"
+          }
+        }
+      }
+    }
+  }
+}

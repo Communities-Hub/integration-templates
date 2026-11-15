@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Checkpoint backfill — verified part 2</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+                --bg: #f7f8fb;
+                --card: #fff;
+                --text: #172033;
+                --muted: #5d6678;
+                --line: #d9deea;
+                --ok: #087a55;
+                --warn: #a35400;
+                --accent: #3157d5;
+            }
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --bg: #10131b;
+                    --card: #181d28;
+                    --text: #eef2ff;
+                    --muted: #aeb7cc;
+                    --line: #343c50;
+                    --ok: #55d6a5;
+                    --warn: #ffbd66;
+                    --accent: #91a8ff;
+                }
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                background: var(--bg);
+                color: var(--text);
+                font:
+                    15px/1.55 system-ui,
+                    -apple-system,
+                    sans-serif;
+            }
+            main {
+                max-width: 1280px;
+                margin: auto;
+                padding: 32px;
+            }
+            h1 {
+                font-size: 32px;
+                margin: 0 0 8px;
+            }
+            h2 {
+                margin-top: 34px;
+            }
+            h3 {
+                margin-top: 24px;
+            }
+            .lead {
+                font-size: 18px;
+                max-width: 900px;
+            }
+            .muted {
+                color: var(--muted);
+            }
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 12px;
+                margin: 24px 0;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--line);
+                border-radius: 12px;
+                padding: 16px;
+            }
+            .num {
+                font-size: 28px;
+                font-weight: 750;
+            }
+            .ok {
+                color: var(--ok);
+                font-weight: 700;
+            }
+            .warn {
+                color: var(--warn);
+                font-weight: 700;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                background: var(--card);
+                font-size: 13px;
+            }
+            th,
+            td {
+                text-align: left;
+                vertical-align: top;
+                border: 1px solid var(--line);
+                padding: 9px;
+            }
+            th {
+                position: sticky;
+                top: 0;
+                background: var(--card);
+            }
+            code {
+                font:
+                    12px ui-monospace,
+                    SFMono-Regular,
+                    monospace;
+            }
+            a {
+                color: var(--accent);
+            }
+            .scroll {
+                overflow: auto;
+                border-radius: 10px;
+            }
+            ul,
+            ol {
+                max-width: 900px;
+            }
+            .note {
+                border-left: 4px solid var(--accent);
+                padding: 10px 14px;
+                background: var(--card);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Checkpoint backfill — verified part 2</h1>
+            <p class="lead">
+                Only integrations whose complete changed-sync set passed real provider validation, snapshot saving, generated tests, and repository checks.
+            </p>
+            <p class="muted">
+                <code>marcin/NAN-6669/backfill-checkpoints--verified-part-2</code> · base <code>origin/main@80803b3b</code> · verified 2026-08-24 · Nango
+                <code>dev</code>
+            </p>
+            <div class="cards">
+                <div class="card">
+                    <div class="num">20</div>
+                    <div>verified integrations</div>
+                </div>
+                <div class="card">
+                    <div class="num">66</div>
+                    <div>live-verified syncs</div>
+                </div>
+                <div class="card">
+                    <div class="num">65</div>
+                    <div>real checkpoints</div>
+                </div>
+                <div class="card">
+                    <div class="num">66</div>
+                    <div>successful saves</div>
+                </div>
+                <div class="card">
+                    <div class="num">53</div>
+                    <div>changed/new snapshots</div>
+                </div>
+                <div class="card">
+                    <div class="num">0</div>
+                    <div>broken connections included</div>
+                </div>
+            </div>
+            <h2>Verification policy</h2>
+            <ol>
+                <li>Compile.</li>
+                <li>Real <code>dryrun --validate</code> provider call.</li>
+                <li>Successful <code>dryrun --save</code>.</li>
+                <li>Snapshot/test regeneration.</li>
+                <li>Affected integration test suite passes.</li>
+            </ol>
+            <p>
+                All 66 syncs passed those gates. Thirteen regenerated snapshots and eleven regenerated tests were byte-identical, so Git records 53 snapshot and
+                55 test-file changes/additions.
+            </p>
+            <p class="muted">
+                Freshdesk is not part of this final branch because newer templates landed independently in
+                <a href="https://github.com/NangoHQ/integration-templates/pull/646">PR #646</a>. Cal.com was removed from the speculative branch after its newer
+                implementation landed in <a href="https://github.com/NangoHQ/integration-templates/pull/643">PR #643</a>. These counts cover only changes still
+                present relative to the current base.
+            </p>
+            <h2>Included integrations</h2>
+            <div class="scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Integration</th>
+                            <th>Syncs</th>
+                            <th>Changed syncs</th>
+                            <th>Connection</th>
+                            <th>Owner</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>canva</code></td>
+                            <td>2</td>
+                            <td><code>brand-templates</code>, <code>designs</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>chargebee</code></td>
+                            <td>2</td>
+                            <td><code>coupon-sets</code>, <code>item-families</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>datadog</code></td>
+                            <td>2</td>
+                            <td><code>roles</code>, <code>teams</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>dynatrace-oauth</code></td>
+                            <td>1</td>
+                            <td><code>service-users</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>github-app-oauth</code></td>
+                            <td>3</td>
+                            <td><code>branches</code>, <code>deployments</code>, <code>releases</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>google-drive</code></td>
+                            <td>1</td>
+                            <td><code>folders</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>klaviyo</code></td>
+                            <td>12</td>
+                            <td>
+                                <code>catalog-categories</code>, <code>catalog-items</code>, <code>coupon-codes</code>, <code>coupons</code>,
+                                <code>forms</code>, <code>images</code>, <code>lists</code>, <code>metrics</code>, <code>reviews</code>, <code>segments</code>,
+                                <code>tags</code>, <code>templates</code>
+                            </td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>api@nango.dev org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>lever</code></td>
+                            <td>6</td>
+                            <td>
+                                <code>opportunities-applications</code>, <code>opportunities-feedbacks</code>, <code>opportunities-interviews</code>,
+                                <code>opportunities-notes</code>, <code>postings-questions</code>, <code>stages</code>
+                            </td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>api@nango.dev org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>mandrill</code></td>
+                            <td>1</td>
+                            <td><code>inbound-routes</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>microsoft-dynamics-365-finance-and-operations-cc</code></td>
+                            <td>2</td>
+                            <td><code>legal-entities</code>, <code>warehouses</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>microsoft-excel-oauth2-cc</code></td>
+                            <td>1</td>
+                            <td><code>worksheets</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>millionverifier</code></td>
+                            <td>1</td>
+                            <td><code>bulk-files</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>one-drive</code></td>
+                            <td>2</td>
+                            <td><code>recent-items</code>, <code>user-files-selection</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>outlook</code></td>
+                            <td>1</td>
+                            <td><code>calendars</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>api@nango.dev org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>pinterest</code></td>
+                            <td>3</td>
+                            <td><code>ad-accounts</code>, <code>boards</code>, <code>pins</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>api@nango.dev org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>todoist</code></td>
+                            <td>3</td>
+                            <td><code>labels</code>, <code>projects</code>, <code>sections</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>tripletex</code></td>
+                            <td>7</td>
+                            <td>
+                                <code>contacts</code>, <code>customers</code>, <code>employees</code>, <code>ledger-accounts</code>, <code>products</code>,
+                                <code>projects</code>, <code>suppliers</code>
+                            </td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>workable</code></td>
+                            <td>8</td>
+                            <td>
+                                <code>candidates-offer</code>, <code>employees</code>, <code>jobs-candidates</code>, <code>jobs-questions</code>,
+                                <code>jobs-stages</code>, <code>members</code>, <code>stages</code>, <code>timeoff-balances</code>
+                            </td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>youtube</code></td>
+                            <td>1</td>
+                            <td><code>channels</code></td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>zendesk</code></td>
+                            <td>7</td>
+                            <td>
+                                <code>categories</code>, <code>groups</code>, <code>macros</code>, <code>sections</code>, <code>ticket-fields</code>,
+                                <code>ticket-forms</code>, <code>views</code>
+                            </td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td><span class="ok">Passed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>Manual snapshot sanitization</h2>
+            <p class="note">
+                <strong>Real response data was preserved.</strong> Only credential-bearing request and signed-URL values were replaced with deterministic
+                placeholders.
+            </p>
+            <div class="scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Snapshot</th>
+                            <th>Sanitization</th>
+                            <th>Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>canva/tests/designs.test.json</code></td>
+                            <td>40 encoded AWS credential/signature values</td>
+                            <td>Temporary signed asset URLs.</td>
+                        </tr>
+                        <tr>
+                            <td><code>workable/tests/employees.test.json</code></td>
+                            <td>288 AWS credential/signature values</td>
+                            <td>Temporary signed asset URLs in responses and mapped records.</td>
+                        </tr>
+                        <tr>
+                            <td><code>workable/tests/timeoff-balances.test.json</code></td>
+                            <td>144 AWS credential/signature values</td>
+                            <td>Temporary signed asset URLs.</td>
+                        </tr>
+                        <tr>
+                            <td><code>millionverifier/tests/bulk-files.test.json</code></td>
+                            <td>Recorded API-key request parameter</td>
+                            <td>The recorder captured the live provider key; the test uses <code>&lt;REDACTED_API_KEY&gt;</code>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>No-checkpoint exception: <code>workable/stages</code></h2>
+            <p>
+                The old empty checkpoint could not resume work and was removed. The
+                <a href="https://workable.readme.io/reference/stages">official endpoint documentation</a> describes a single
+                <code>GET /spi/v3/stages</code> request and lists <strong>no request parameters</strong>. Supported pagination/time-window parameters:
+                <strong>none</strong>. The sync retains response validation and deletion tracking.
+            </p>
+            <h2>Active connections excluded from this PR</h2>
+            <p>These remain speculative because at least one changed sync failed an end-to-end gate.</p>
+            <div class="scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Integration</th>
+                            <th>Changed syncs</th>
+                            <th>Connection</th>
+                            <th>Owner</th>
+                            <th>Blocking result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>connectsecure</code></td>
+                            <td>5</td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td>All five changed endpoints returned 403.</td>
+                        </tr>
+                        <tr>
+                            <td><code>github</code></td>
+                            <td>1</td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td>The repository traversal timed out through the proxy with 504, including the retry.</td>
+                        </tr>
+                        <tr>
+                            <td><code>gong</code></td>
+                            <td>4</td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td>`library-folders` returned 400 Bad request; the other three changed syncs passed.</td>
+                        </tr>
+                        <tr>
+                            <td><code>google-ads</code></td>
+                            <td>2</td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td>Required connection metadata (`developerToken` and customer IDs) is absent.</td>
+                        </tr>
+                        <tr>
+                            <td><code>hubstaff</code></td>
+                            <td>3</td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td>All three changed endpoints returned 401 `invalid_token`.</td>
+                        </tr>
+                        <tr>
+                            <td><code>microsoft-teams</code></td>
+                            <td>5</td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td>Four changed endpoints returned 401 because the account has no valid Teams license.</td>
+                        </tr>
+                        <tr>
+                            <td><code>ninety-io</code></td>
+                            <td>2</td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td>Both changed endpoints returned 429 tier rate-limit errors, including a cooldown retry.</td>
+                        </tr>
+                        <tr>
+                            <td><code>okta</code></td>
+                            <td>8</td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td>`policies` returned 400 because the account lacks the `ENTITY_RISK_POLICY` feature; seven other changed syncs passed.</td>
+                        </tr>
+                        <tr>
+                            <td><code>pipelinecrm</code></td>
+                            <td>2</td>
+                            <td>
+                                <span class="muted">Redacted</span>
+                            </td>
+                            <td>admin-key org</td>
+                            <td>Both changed endpoints returned 403 because the provider account is cancelled.</td>
+                        </tr>
+                        <tr>
+                            <td><code>tiktok-ads</code></td>
+                            <td>4</td>
+                            <td><span class="muted">Redacted</span></td>
+                            <td>api@nango.dev org</td>
+                            <td>`pixels` returned a payload without the required `data` object; three other changed syncs passed.</td>
+                        </tr>
+                        <tr>
+                            <td><code>tiktok-personal</code></td>
+                            <td>1</td>
+                            <td><span class="muted">Redacted</span></td>
+                            <td>api@nango.dev org</td>
+                            <td>`videos` returned 404 from `/v2/video/list/`.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>Repository checks</h2>
+            <ul>
+                <li><span class="ok">Passed:</span> full compilation of 6,410 functions.</li>
+                <li><span class="ok">Passed:</span> 1,164 affected test files / 1,371 tests.</li>
+                <li><span class="ok">Passed:</span> lifecycle audit for all 65 checkpointed syncs.</li>
+                <li><span class="ok">Reviewed:</span> <code>workable/stages</code> as the sole unpageable exception.</li>
+                <li><span class="ok">Sanitized:</span> signed-URL credentials/signatures and the MillionVerifier API key before commit.</li>
+            </ul>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,261 @@
+{
+  "input": {
+    "owner": "nango-provisioned-apps",
+    "repo": "nango",
+    "ref": "master"
+  },
+  "output": {
+    "sha": "f506f3df04c832fe159c829c862e733f42177111",
+    "node_id": "C_kwDOT1NNv9oAKGY1MDZmM2RmMDRjODMyZmUxNTljODI5Yzg2MmU3MzNmNDIxNzcxMTE",
+    "url": "https://api.github.com/repos/nango-provisioned-apps/nango/commits/f506f3df04c832fe159c829c862e733f42177111",
+    "html_url": "https://github.com/nango-provisioned-apps/nango/commit/f506f3df04c832fe159c829c862e733f42177111",
+    "comments_url": "https://api.github.com/repos/nango-provisioned-apps/nango/commits/f506f3df04c832fe159c829c862e733f42177111/comments",
+    "commit": {
+      "url": "https://api.github.com/repos/nango-provisioned-apps/nango/git/commits/f506f3df04c832fe159c829c862e733f42177111",
+      "author": {
+        "name": "testnangoapi[bot]",
+        "email": "280313874+testnangoapi[bot]@users.noreply.github.com",
+        "date": "2026-08-11T18:26:17Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-08-11T18:26:17Z"
+      },
+      "message": "Merge pull request #14 from nango-provisioned-apps/merge-test-branch-2\n\nMerge test PR 2",
+      "comment_count": 0,
+      "tree": {
+        "sha": "7a1e43b7223d47618251336186247c1980b3bf28",
+        "url": "https://api.github.com/repos/nango-provisioned-apps/nango/git/trees/7a1e43b7223d47618251336186247c1980b3bf28"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqe2lJCRC1aQ7uu5UhlAAA5LoQACkt7LTMqCkAjM9r23WGEmF5\nEaFi9ilQ0PWVbfkeoLLpxGTonNLxEb5yiuMefENGaAMnWhHcq0Hsi15UoBhsouR1\n6DDqkZNS2I1nVuGPVmS9uLLzQWIp9fiAlU4DztJRl9xO90EWb4kNiDGzuUj5hVPz\nYSyoNMvMJZi790y4nKfhsW+jHgSj6d6ZRpGLd3jOL+kyt6j27rUlLsxKXnWhHgMP\nQJ3FalYbG1FBOEduONtuyvxG0hKGll0Pnp/E5d/wFYKNL2SfxCpweqNMYzJV+2UB\nLgo1x6oG8mllI9xvT7Jx7sgLSnbNyYoF4sWWu2bWsJlHi8+aHBu1SkmPTECEHjDW\n3b40GN6fcQk5P28/Bpnbbf1eWEo1wy2RQo/pci+lk5TbyViukZYem9ivWsqDLt+V\nMNblCtVYL3KsQSGEottZmEOH0ljSs/VThDPdgMHXouwvX4CDAcBv1blGJyHCDe80\nJMhnb4PWgorfxxQWvVUo3YEAYCbyxLR2lh/v4BXZIf3cJ/Om47+L/32s6PIAP/4H\nOPdZPaiKyzuwbUZE2rnbNT9ZJm/WCDVbkg+QHqvyK2YN4o5KEVJZFXZqAfIcYb1M\nYnCnWtH64nF924bBmiBBtXaa8Q4sUGNKQf/pBRAJB5CL/vKLmNWA/DSFUikpTcXK\n2TLQyFQb0vukUh3iSWIT\n=721Q\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 7a1e43b7223d47618251336186247c1980b3bf28\nparent 1234449dad84864a879bb39dd0ca80b44e01dc5e\nparent 5dc6b0ae50c7baf916ad655a67001a782c7cc0cd\nauthor testnangoapi[bot] <280313874+testnangoapi[bot]@users.noreply.github.com> 1786472777 +0000\ncommitter GitHub <noreply@github.com> 1786472777 +0000\n\nMerge pull request #14 from nango-provisioned-apps/merge-test-branch-2\n\nMerge test PR 2",
+        "verified_at": "2026-08-11T18:26:50Z"
+      }
+    },
+    "author": {
+      "login": "nangoapp1[bot]",
+      "id": 280313874,
+      "node_id": "BOT_kgDOELVAEg",
+      "avatar_url": "https://avatars.githubusercontent.com/in/3541661?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nangoapp1%5Bbot%5D",
+      "html_url": "https://github.com/apps/nangoapp1",
+      "type": "Bot",
+      "site_admin": false,
+      "followers_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/received_events",
+      "user_view_type": "public"
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "type": "User",
+      "site_admin": false,
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "user_view_type": "public"
+    },
+    "parents": [
+      {
+        "sha": "1234449dad84864a879bb39dd0ca80b44e01dc5e",
+        "url": "https://api.github.com/repos/nango-provisioned-apps/nango/commits/1234449dad84864a879bb39dd0ca80b44e01dc5e",
+        "html_url": "https://github.com/nango-provisioned-apps/nango/commit/1234449dad84864a879bb39dd0ca80b44e01dc5e"
+      },
+      {
+        "sha": "5dc6b0ae50c7baf916ad655a67001a782c7cc0cd",
+        "url": "https://api.github.com/repos/nango-provisioned-apps/nango/commits/5dc6b0ae50c7baf916ad655a67001a782c7cc0cd",
+        "html_url": "https://github.com/nango-provisioned-apps/nango/commit/5dc6b0ae50c7baf916ad655a67001a782c7cc0cd"
+      }
+    ],
+    "stats": {
+      "additions": 1,
+      "deletions": 0,
+      "total": 1
+    },
+    "files": [
+      {
+        "sha": "e1c7555f39622cc4b1ab3a4fd9f4ec13eaf7d8d4",
+        "filename": "MERGE_TEST_2.md",
+        "status": "added",
+        "additions": 1,
+        "deletions": 0,
+        "changes": 1,
+        "blob_url": "https://github.com/nango-provisioned-apps/nango/blob/f506f3df04c832fe159c829c862e733f42177111/MERGE_TEST_2.md",
+        "raw_url": "https://github.com/nango-provisioned-apps/nango/raw/f506f3df04c832fe159c829c862e733f42177111/MERGE_TEST_2.md",
+        "contents_url": "https://api.github.com/repos/nango-provisioned-apps/nango/contents/MERGE_TEST_2.md?ref=f506f3df04c832fe159c829c862e733f42177111",
+        "patch": "@@ -0,0 +1 @@\n+merge-test-file-2\n\\ No newline at end of file"
+      }
+    ]
+  },
+  "nango": {},
+  "api": {
+    "get": {
+      "/repos/nango-provisioned-apps/nango/commits/master": {
+        "response": {
+          "sha": "f506f3df04c832fe159c829c862e733f42177111",
+          "node_id": "C_kwDOT1NNv9oAKGY1MDZmM2RmMDRjODMyZmUxNTljODI5Yzg2MmU3MzNmNDIxNzcxMTE",
+          "commit": {
+            "author": {
+              "name": "testnangoapi[bot]",
+              "email": "280313874+testnangoapi[bot]@users.noreply.github.com",
+              "date": "2026-08-11T18:26:17Z"
+            },
+            "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "date": "2026-08-11T18:26:17Z"
+            },
+            "message": "Merge pull request #14 from nango-provisioned-apps/merge-test-branch-2\n\nMerge test PR 2",
+            "tree": {
+              "sha": "7a1e43b7223d47618251336186247c1980b3bf28",
+              "url": "https://api.github.com/repos/nango-provisioned-apps/nango/git/trees/7a1e43b7223d47618251336186247c1980b3bf28"
+            },
+            "url": "https://api.github.com/repos/nango-provisioned-apps/nango/git/commits/f506f3df04c832fe159c829c862e733f42177111",
+            "comment_count": 0,
+            "verification": {
+              "verified": true,
+              "reason": "valid",
+              "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqe2lJCRC1aQ7uu5UhlAAA5LoQACkt7LTMqCkAjM9r23WGEmF5\nEaFi9ilQ0PWVbfkeoLLpxGTonNLxEb5yiuMefENGaAMnWhHcq0Hsi15UoBhsouR1\n6DDqkZNS2I1nVuGPVmS9uLLzQWIp9fiAlU4DztJRl9xO90EWb4kNiDGzuUj5hVPz\nYSyoNMvMJZi790y4nKfhsW+jHgSj6d6ZRpGLd3jOL+kyt6j27rUlLsxKXnWhHgMP\nQJ3FalYbG1FBOEduONtuyvxG0hKGll0Pnp/E5d/wFYKNL2SfxCpweqNMYzJV+2UB\nLgo1x6oG8mllI9xvT7Jx7sgLSnbNyYoF4sWWu2bWsJlHi8+aHBu1SkmPTECEHjDW\n3b40GN6fcQk5P28/Bpnbbf1eWEo1wy2RQo/pci+lk5TbyViukZYem9ivWsqDLt+V\nMNblCtVYL3KsQSGEottZmEOH0ljSs/VThDPdgMHXouwvX4CDAcBv1blGJyHCDe80\nJMhnb4PWgorfxxQWvVUo3YEAYCbyxLR2lh/v4BXZIf3cJ/Om47+L/32s6PIAP/4H\nOPdZPaiKyzuwbUZE2rnbNT9ZJm/WCDVbkg+QHqvyK2YN4o5KEVJZFXZqAfIcYb1M\nYnCnWtH64nF924bBmiBBtXaa8Q4sUGNKQf/pBRAJB5CL/vKLmNWA/DSFUikpTcXK\n2TLQyFQb0vukUh3iSWIT\n=721Q\n-----END PGP SIGNATURE-----\n",
+              "payload": "tree 7a1e43b7223d47618251336186247c1980b3bf28\nparent 1234449dad84864a879bb39dd0ca80b44e01dc5e\nparent 5dc6b0ae50c7baf916ad655a67001a782c7cc0cd\nauthor testnangoapi[bot] <280313874+testnangoapi[bot]@users.noreply.github.com> 1786472777 +0000\ncommitter GitHub <noreply@github.com> 1786472777 +0000\n\nMerge pull request #14 from nango-provisioned-apps/merge-test-branch-2\n\nMerge test PR 2",
+              "verified_at": "2026-08-11T18:26:50Z"
+            }
+          },
+          "url": "https://api.github.com/repos/nango-provisioned-apps/nango/commits/f506f3df04c832fe159c829c862e733f42177111",
+          "html_url": "https://github.com/nango-provisioned-apps/nango/commit/f506f3df04c832fe159c829c862e733f42177111",
+          "comments_url": "https://api.github.com/repos/nango-provisioned-apps/nango/commits/f506f3df04c832fe159c829c862e733f42177111/comments",
+          "author": {
+            "login": "nangoapp1[bot]",
+            "id": 280313874,
+            "node_id": "BOT_kgDOELVAEg",
+            "avatar_url": "https://avatars.githubusercontent.com/in/3541661?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nangoapp1%5Bbot%5D",
+            "html_url": "https://github.com/apps/nangoapp1",
+            "followers_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/followers",
+            "following_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/subscriptions",
+            "organizations_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/orgs",
+            "repos_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/repos",
+            "events_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nangoapp1%5Bbot%5D/received_events",
+            "type": "Bot",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "committer": {
+            "login": "web-flow",
+            "id": 19864447,
+            "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/web-flow",
+            "html_url": "https://github.com/web-flow",
+            "followers_url": "https://api.github.com/users/web-flow/followers",
+            "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+            "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+            "organizations_url": "https://api.github.com/users/web-flow/orgs",
+            "repos_url": "https://api.github.com/users/web-flow/repos",
+            "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/web-flow/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "parents": [
+            {
+              "sha": "1234449dad84864a879bb39dd0ca80b44e01dc5e",
+              "url": "https://api.github.com/repos/nango-provisioned-apps/nango/commits/1234449dad84864a879bb39dd0ca80b44e01dc5e",
+              "html_url": "https://github.com/nango-provisioned-apps/nango/commit/1234449dad84864a879bb39dd0ca80b44e01dc5e"
+            },
+            {
+              "sha": "5dc6b0ae50c7baf916ad655a67001a782c7cc0cd",
+              "url": "https://api.github.com/repos/nango-provisioned-apps/nango/commits/5dc6b0ae50c7baf916ad655a67001a782c7cc0cd",
+              "html_url": "https://github.com/nango-provisioned-apps/nango/commit/5dc6b0ae50c7baf916ad655a67001a782c7cc0cd"
+            }
+          ],
+          "stats": {
+            "total": 1,
+            "additions": 1,
+            "deletions": 0
+          },
+          "files": [
+            {
+              "sha": "e1c7555f39622cc4b1ab3a4fd9f4ec13eaf7d8d4",
+              "filename": "MERGE_TEST_2.md",
+              "status": "added",
+              "additions": 1,
+              "deletions": 0,
+              "changes": 1,
+              "blob_url": "https://github.com/nango-provisioned-apps/nango/blob/f506f3df04c832fe159c829c862e733f42177111/MERGE_TEST_2.md",
+              "raw_url": "https://github.com/nango-provisioned-apps/nango/raw/f506f3df04c832fe159c829c862e733f42177111/MERGE_TEST_2.md",
+              "contents_url": "https://api.github.com/repos/nango-provisioned-apps/nango/contents/MERGE_TEST_2.md?ref=f506f3df04c832fe159c829c862e733f42177111",
+              "patch": "@@ -0,0 +1 @@\n+merge-test-file-2\n\\ No newline at end of file"
+            }
+          ]
+        },
+        "status": 200,
+        "headers": {
+          "date": "Fri, 25 Sep 2026 13:35:49 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "transfer-encoding": "chunked",
+          "connection": "keep-alive",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "x-download-options": "noopen",
+          "x-frame-options": "deny",
+          "x-dns-prefetch-control": "off",
+          "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+          "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+          "content-security-policy-report-only": "default-src 'self' https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/;child-src 'self';connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://app.nango.dev https://api.nango.dev wss://api.nango.dev/ https://connect.nango.dev https://connect.nango.dev/ https://api.nango.dev https://*.posthog.com https://*.stripe.com https://*.plain.com wss://*.plain.com https://raw.githubusercontent.com;font-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.cdn-plain.com;form-action 'self' https://api.nango.dev;frame-src 'self' https://accounts.google.com https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/ https://www.youtube.com https://*.stripe.com;img-src 'self' data: blob: https://app.nango.dev https://api.nango.dev https://*.google-analytics.com https://*.googleapis.com https://*.posthog.com https://img.logo.dev https://*.ytimg.com https://*.plain.com;manifest-src 'self';media-src 'self';object-src 'self';script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.nango.dev https://api.nango.dev https://*.stripe.com https://*.google-analytics.com https://*.googleapis.com https://apis.google.com https://*.posthog.com https://www.youtube.com https://*.cdn-plain.com;style-src blob: 'self' 'unsafe-inline' https://*.googleapis.com https://app.nango.dev https://api.nango.dev;worker-src blob: 'self' https://app.nango.dev https://api.nango.dev https://*.googleapis.com https://*.posthog.com;base-uri 'self';frame-ancestors 'self';script-src-attr 'none';upgrade-insecure-requests",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Authorization, Etag, Content-Type, Content-Length, X-Nango-Signature, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+          "x-ratelimit-limit": "5000",
+          "x-ratelimit-remaining": "4900",
+          "x-ratelimit-reset": "1790346775",
+          "cache-control": "private, max-age=60, s-maxage=60",
+          "vary": "Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With",
+          "etag": "W/\"3b2fbe5b4a98f3a71c430a9431f13b9e170b6aa9a26e9138219f3f399fc58c0f\"",
+          "last-modified": "Tue, 11 Aug 2026 18:26:17 GMT",
+          "x-github-media-type": "github.v3",
+          "x-accepted-github-permissions": "contents=read",
+          "x-github-api-version-selected": "2022-11-28",
+          "content-security-policy": "default-src 'none'",
+          "server": "github.com",
+          "x-ratelimit-used": "100",
+          "x-ratelimit-resource": "core",
+          "x-github-request-id": "73C7:187125:6848:98E0:6AB678AF",
+          "x-github-edge-region": "westus2"
+        },
+        "hash": "44ec3c121d79aea9c942d8a93e0501805b9a062b",
+        "request": {}
+      }
+    }
+  }
+}

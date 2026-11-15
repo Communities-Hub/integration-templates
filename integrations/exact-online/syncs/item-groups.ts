@@ -1,0 +1,127 @@
+import { createSync } from 'nango';
+import { z } from 'zod';
+
+const ItemGroupSchema = z.object({
+    id: z.string(),
+    code: z.string().optional(),
+    description: z.string().optional(),
+    modified: z.string().optional()
+});
+
+const MeResponseSchema = z.object({
+    d: z.object({
+        results: z.array(
+            z.object({
+                CurrentDivision: z.number()
+            })
+        )
+    })
+});
+
+const ItemGroupRecordSchema = z.object({
+    ID: z.string(),
+    Code: z.string().optional(),
+    Description: z.string().optional(),
+    Modified: z.string().optional()
+});
+
+const ItemGroupsResponseSchema = z.union([
+    z.object({
+        d: z.array(ItemGroupRecordSchema)
+    }),
+    z.object({
+        d: z.object({
+            results: z.array(ItemGroupRecordSchema)
+        })
+    })
+]);
+
+const CheckpointSchema = z.object({
+    skip: z.number().int().min(0)
+});
+
+const sync = createSync({
+    description: 'Sync item groups as full snapshot (small static dataset).',
+    version: '1.0.2',
+    frequency: 'every hour',
+    autoStart: true,
+    checkpoint: CheckpointSchema,
+    models: {
+        ItemGroup: ItemGroupSchema
+    },
+    endpoints: [
+        {
+            method: 'GET',
+            path: '/syncs/item-groups'
+        }
+    ],
+    scopes: [],
+
+    exec: async (nango) => {
+        // https://start.exactonline.fr/docs/HlpRestAPIResourcesDetails.aspx?name=SystemSystemMe
+        const meResponse = await nango.get({
+            endpoint: '/api/v1/current/Me',
+            retries: 3
+        });
+
+        const meData = MeResponseSchema.parse(meResponse.data);
+        const meResult = meData.d.results[0];
+        if (!meResult) {
+            throw new Error('No results returned from Me endpoint');
+        }
+        const currentDivision = meResult.CurrentDivision;
+
+        // Blocker: Exact Online ItemGroups is a small static dataset.
+        // Full refresh is used because the dataset is small and static.
+        const rawCheckpoint = await nango.getCheckpoint();
+        const checkpoint = rawCheckpoint ? CheckpointSchema.parse(rawCheckpoint) : { skip: 0 };
+        const limit = 100;
+        let skip = checkpoint['skip'];
+        let hasMore = true;
+
+        await nango.trackDeletesStart('ItemGroup');
+
+        while (hasMore) {
+            // https://start.exactonline.fr/docs/HlpRestAPIResourcesDetails.aspx?name=LogisticsItemGroups
+            const response = await nango.get({
+                endpoint: `/api/v1/${encodeURIComponent(currentDivision)}/logistics/ItemGroups`,
+                params: {
+                    $select: 'ID,Code,Description,Modified',
+                    $orderby: 'ID asc',
+                    $top: String(limit),
+                    $skip: String(skip)
+                },
+                retries: 3
+            });
+
+            const data = ItemGroupsResponseSchema.parse(response.data);
+            const items = 'results' in data.d ? data.d.results : data.d;
+            const records = items.map((record) => ({
+                id: record.ID,
+                ...(record.Code != null && { code: record.Code }),
+                ...(record.Description != null && { description: record.Description }),
+                ...(record.Modified != null && { modified: record.Modified })
+            }));
+
+            if (records.length > 0) {
+                await nango.batchSave(records, 'ItemGroup');
+            }
+
+            if (items.length < limit) {
+                hasMore = false;
+            }
+
+            skip += limit;
+
+            if (hasMore) {
+                await nango.saveCheckpoint({ skip });
+            }
+        }
+
+        await nango.clearCheckpoint();
+        await nango.trackDeletesEnd('ItemGroup');
+    }
+});
+
+export type NangoSyncLocal = Parameters<(typeof sync)['exec']>[0];
+export default sync;

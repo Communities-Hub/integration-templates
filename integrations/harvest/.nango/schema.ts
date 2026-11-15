@@ -1,0 +1,39 @@
+export interface User {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+};
+
+export interface SyncMetadata_harvest_users {
+};
+
+export interface ActionInput_harvest_createuser {
+  first_name: string;
+  last_name: string;
+  email: string;
+  timezone?: string | undefined;
+  has_access_to_all_future_projects?: boolean | undefined;
+  is_contractor?: boolean | undefined;
+  is_active?: boolean | undefined;
+  weekly_capacity?: number | undefined;
+  default_hourly_rate?: 'decimal' | undefined;
+  cost_rate?: 'decimal' | undefined;
+  roles: string[];
+  access_roles?: 'administrator' | 'manager' | 'member' | 'project_creator' | 'billable_rates_manager' | 'managed_projects_invoice_drafter' | 'managed_projects_invoice_manager' | 'client_and_task_manager' | 'time_and_expenses_manager' | 'estimates_manager' | undefined;
+};
+
+export interface ActionOutput_harvest_createuser {
+  id: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+};
+
+export interface ActionInput_harvest_deleteuser {
+  id: string;
+};
+
+export interface ActionOutput_harvest_deleteuser {
+  success: boolean;
+};

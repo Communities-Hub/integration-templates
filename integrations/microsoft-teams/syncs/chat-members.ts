@@ -1,0 +1,185 @@
+import { createSync } from 'nango';
+import { z } from 'zod';
+
+const ChatSchema = z.object({
+    id: z.string()
+});
+
+const ChatMemberSchema = z.object({
+    id: z.string(),
+    userId: z.string().optional().nullable(),
+    displayName: z.string().optional().nullable(),
+    roles: z.array(z.string()).optional().nullable()
+});
+
+const ChatMemberRecordSchema = z.object({
+    id: z.string(),
+    chatId: z.string(),
+    userId: z.string().optional(),
+    displayName: z.string().optional(),
+    roles: z.array(z.string()).optional()
+});
+
+const CheckpointSchema = z.object({
+    chatsPageEndpoint: z.string(),
+    chatIndex: z.number().int().min(-1),
+    membersNextLink: z.string()
+});
+
+const ChatListResponseSchema = z.object({
+    value: z.array(ChatSchema),
+    '@odata.nextLink': z.string().optional()
+});
+
+const ChatMemberListResponseSchema = z.object({
+    value: z.array(ChatMemberSchema),
+    '@odata.nextLink': z.string().optional()
+});
+
+const ErrorResponseSchema = z.object({
+    response: z.object({
+        status: z.number()
+    })
+});
+
+// Only 403 is confirmed (via live testing against Microsoft Graph) to be returned for
+// the per-chat roster ACL failure. 412 is a conditional-request/precondition status
+// unrelated to that failure mode, so treating it as skippable here risks silently
+// swallowing a real, possibly transient error.
+function isRosterAclError(err: unknown): boolean {
+    const parsed = ErrorResponseSchema.safeParse(err);
+    return parsed.success && parsed.data.response.status === 403;
+}
+
+function buildGraphRequest(endpointOrUrl: string, defaultParams?: Record<string, string>) {
+    if (!endpointOrUrl.includes('?')) {
+        return {
+            endpoint: endpointOrUrl,
+            ...(defaultParams ? { params: defaultParams } : {})
+        };
+    }
+
+    const url = new URL(endpointOrUrl.startsWith('http') ? endpointOrUrl : `https://graph.microsoft.com${endpointOrUrl}`);
+    const params = Object.fromEntries(url.searchParams.entries());
+
+    return {
+        endpoint: endpointOrUrl.startsWith('http') ? `${url.origin}${url.pathname}` : url.pathname,
+        ...(Object.keys(params).length > 0 ? { params } : {})
+    };
+}
+
+const sync = createSync({
+    description: 'Sync member rosters for chats',
+    version: '1.2.1',
+    frequency: 'every hour',
+    autoStart: true,
+    checkpoint: CheckpointSchema,
+    scopes: ['Chat.ReadBasic'],
+    models: {
+        ChatMember: ChatMemberRecordSchema
+    },
+    endpoints: [
+        {
+            method: 'GET',
+            path: '/syncs/chat-members'
+        }
+    ],
+
+    exec: async (nango) => {
+        // Blocker: Microsoft Graph /chats/{id}/members does not support delta,
+        // change notifications, modified_since, or a deleted-record endpoint.
+        // Membership rosters must be fully enumerated as snapshots.
+
+        // Reset pagination so a resumed run always scans from the first chat/page —
+        // skipping earlier chats would cause trackDeletesEnd to falsely delete them.
+        await nango.saveCheckpoint({ chatsPageEndpoint: '', chatIndex: -1, membersNextLink: '' });
+        await nango.trackDeletesStart('ChatMember');
+
+        const batch: z.infer<typeof ChatMemberRecordSchema>[] = [];
+        const batchSize = 100;
+        let anyChatSkipped = false;
+
+        const flushBatch = async () => {
+            if (batch.length > 0) {
+                await nango.batchSave([...batch], 'ChatMember');
+                batch.length = 0;
+            }
+        };
+
+        let chatsPageEndpoint = '/v1.0/me/chats';
+
+        while (chatsPageEndpoint) {
+            // https://learn.microsoft.com/graph/api/chat-list
+            const chatsRequest = buildGraphRequest(chatsPageEndpoint, chatsPageEndpoint === '/v1.0/me/chats' ? { $top: '50' } : undefined);
+            const chatResponse = await nango.get({
+                ...chatsRequest,
+                retries: 3
+            });
+
+            const chatData = ChatListResponseSchema.parse(chatResponse.data);
+            const chats = chatData.value;
+
+            for (let chatIndex = 0; chatIndex < chats.length; chatIndex += 1) {
+                const chat = chats[chatIndex]!;
+                let membersNextLink: string | undefined;
+
+                // @allowTryCatch Some chats (e.g. certain meeting chats) fail Teams' backend
+                // roster ACL check with 403 even with valid delegated permissions. Skip just
+                // that chat instead of aborting the whole sync.
+                try {
+                    do {
+                        // https://learn.microsoft.com/graph/api/chat-list-members
+                        const membersRequest = buildGraphRequest(membersNextLink || `/v1.0/chats/${chat.id}/members`);
+                        const memberResponse = await nango.get({
+                            ...membersRequest,
+                            retries: 3
+                        });
+
+                        const memberData = ChatMemberListResponseSchema.parse(memberResponse.data);
+                        const members = memberData.value;
+
+                        for (const member of members) {
+                            const record = {
+                                id: `${chat.id}_${member.id}`,
+                                chatId: chat.id,
+                                ...(member.userId != null && { userId: member.userId }),
+                                ...(member.displayName != null && { displayName: member.displayName }),
+                                ...(member.roles != null && { roles: member.roles })
+                            };
+                            batch.push(record);
+
+                            if (batch.length >= batchSize) {
+                                await flushBatch();
+                            }
+                        }
+
+                        membersNextLink = memberData['@odata.nextLink'];
+                    } while (membersNextLink);
+                } catch (error) {
+                    if (!isRosterAclError(error)) {
+                        throw error;
+                    }
+                    anyChatSkipped = true;
+                    await nango.log(`Skipping chat ${chat.id}: insufficient privileges to list members`, { level: 'warn' });
+                }
+            }
+
+            chatsPageEndpoint = chatData['@odata.nextLink'] || '';
+        }
+
+        await flushBatch();
+
+        if (anyChatSkipped) {
+            // At least one chat's roster could not be re-enumerated this run, so its
+            // existing records would look deleted to a full-refresh diff. Leave delete
+            // tracking open rather than finalize on an incomplete enumeration.
+            await nango.log('Not finalizing ChatMember delete tracking: one or more chats were skipped this run', { level: 'warn' });
+            return;
+        }
+
+        await nango.trackDeletesEnd('ChatMember');
+    }
+});
+
+export type NangoSyncLocal = Parameters<(typeof sync)['exec']>[0];
+export default sync;

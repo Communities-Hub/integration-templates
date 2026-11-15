@@ -1,0 +1,507 @@
+{
+  "nango": {
+    "batchSave": {
+      "ScimUser": [
+        {
+          "id": "2ZC2XO6BQ5FETAF7AIQNFC73MM",
+          "userName": "delete-test-3@nango.dev",
+          "displayName": "Delete Test3",
+          "name": {
+            "givenName": "Delete",
+            "familyName": "Test3",
+            "formatted": "Delete Test3"
+          },
+          "emails": [
+            {
+              "value": "delete-test-3@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": false
+        },
+        {
+          "id": "FHNN6ANJUZF3FFXYHEE6EWPHSM",
+          "userName": "victor@nango.dev",
+          "displayName": "Victor Nango",
+          "name": {
+            "givenName": "Victor",
+            "familyName": "Nango",
+            "formatted": "Victor Nango"
+          },
+          "emails": [
+            {
+              "value": "victor@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": true
+        },
+        {
+          "id": "I3CPWGZZEJESNNEPKKLGIPFQTE",
+          "userName": "tmp-delete-test@nango.dev",
+          "displayName": "Tmp Delete Test",
+          "name": {
+            "givenName": "Tmp",
+            "familyName": "Delete Test",
+            "formatted": "Tmp Delete Test"
+          },
+          "emails": [
+            {
+              "value": "tmp-delete-test@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": false
+        },
+        {
+          "id": "6AQDNV7JBNHCJNX6QOS7Z6DYOI",
+          "userName": "delete-test-4@nango.dev",
+          "displayName": "Delete Test4",
+          "name": {
+            "givenName": "Delete",
+            "familyName": "Test4",
+            "formatted": "Delete Test4"
+          },
+          "emails": [
+            {
+              "value": "delete-test-4@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": false
+        },
+        {
+          "id": "TUUWOM3BINHPRMYTZOI3H224DM",
+          "userName": "create-scim-user-test-20260522@nango.dev",
+          "displayName": "Create Test",
+          "name": {
+            "givenName": "Create",
+            "familyName": "Test",
+            "formatted": "Create Test"
+          },
+          "emails": [
+            {
+              "value": "create-scim-user-test-20260522@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": true
+        },
+        {
+          "id": "WHIVOG5WFFDGJODAWIGRVZZU5A",
+          "userName": "api@nango.dev",
+          "displayName": "Nango Developer",
+          "name": {
+            "givenName": "Nango",
+            "familyName": "Developer",
+            "formatted": "Nango Developer"
+          },
+          "emails": [
+            {
+              "value": "api@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": true
+        },
+        {
+          "id": "6NF7ZWCFBBHUXBSGZM5YXY2OSU",
+          "userName": "test@nango.dev",
+          "displayName": "Test User",
+          "name": {
+            "givenName": "Test",
+            "familyName": "User",
+            "formatted": "Test User"
+          },
+          "emails": [
+            {
+              "value": "test@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": true
+        },
+        {
+          "id": "Z54GW3SPDZBJJPCEBMEOO2HQPE",
+          "userName": "scim-test-action@nango.dev",
+          "displayName": "SCIM Test Updated",
+          "name": {
+            "givenName": "SCIM",
+            "familyName": "Test Updated",
+            "formatted": "SCIM Test Updated"
+          },
+          "emails": [
+            {
+              "value": "scim-test-action@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": true
+        },
+        {
+          "id": "TDJZWGRBQRAWTG2APQFSIY5RBY",
+          "userName": "tmp-delete-test-2@nango.dev",
+          "displayName": "Tmp Delete Test 2",
+          "name": {
+            "givenName": "Tmp Delete",
+            "familyName": "Test 2",
+            "formatted": "Tmp Delete Test 2"
+          },
+          "emails": [
+            {
+              "value": "tmp-delete-test-2@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": false
+        },
+        {
+          "id": "NFAPLXW3PFA6NJKAV7IAD63BQI",
+          "userName": "delete-test-1@nango.dev",
+          "displayName": "Patched Delete Test",
+          "name": {
+            "givenName": "Patched",
+            "familyName": "Delete Test",
+            "formatted": "Patched Delete Test"
+          },
+          "emails": [
+            {
+              "value": "delete-test-1@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": false
+        },
+        {
+          "id": "EUFSZIJJQZFV7LWRGYMIJFTR2U",
+          "userName": "delete-test-2@nango.dev",
+          "displayName": "Delete Test2",
+          "name": {
+            "givenName": "Delete",
+            "familyName": "Test2",
+            "formatted": "Delete Test2"
+          },
+          "emails": [
+            {
+              "value": "delete-test-2@nango.dev",
+              "primary": true
+            }
+          ],
+          "active": false
+        }
+      ]
+    },
+    "batchDelete": {
+      "ScimUser": []
+    }
+  },
+  "api": {
+    "get": {
+      "/Users": {
+        "response": {
+          "Resources": [
+            {
+              "active": false,
+              "displayName": "Delete Test3",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "delete-test-3@nango.dev"
+                }
+              ],
+              "id": "2ZC2XO6BQ5FETAF7AIQNFC73MM",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "Test3",
+                "formatted": "Delete Test3",
+                "givenName": "Delete"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "delete-test-3@nango.dev"
+            },
+            {
+              "active": true,
+              "displayName": "Victor Nango",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "victor@nango.dev"
+                }
+              ],
+              "id": "FHNN6ANJUZF3FFXYHEE6EWPHSM",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "Nango",
+                "formatted": "Victor Nango",
+                "givenName": "Victor"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "victor@nango.dev"
+            },
+            {
+              "active": false,
+              "displayName": "Tmp Delete Test",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "tmp-delete-test@nango.dev"
+                }
+              ],
+              "id": "I3CPWGZZEJESNNEPKKLGIPFQTE",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "Delete Test",
+                "formatted": "Tmp Delete Test",
+                "givenName": "Tmp"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "tmp-delete-test@nango.dev"
+            },
+            {
+              "active": false,
+              "displayName": "Delete Test4",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "delete-test-4@nango.dev"
+                }
+              ],
+              "id": "6AQDNV7JBNHCJNX6QOS7Z6DYOI",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "Test4",
+                "formatted": "Delete Test4",
+                "givenName": "Delete"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "delete-test-4@nango.dev"
+            },
+            {
+              "active": true,
+              "displayName": "Create Test",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "create-scim-user-test-20260522@nango.dev"
+                }
+              ],
+              "id": "TUUWOM3BINHPRMYTZOI3H224DM",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "Test",
+                "formatted": "Create Test",
+                "givenName": "Create"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "create-scim-user-test-20260522@nango.dev"
+            },
+            {
+              "active": true,
+              "displayName": "Nango Developer",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "api@nango.dev"
+                }
+              ],
+              "id": "WHIVOG5WFFDGJODAWIGRVZZU5A",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "Developer",
+                "formatted": "Nango Developer",
+                "givenName": "Nango"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "api@nango.dev"
+            },
+            {
+              "active": true,
+              "displayName": "Test User",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "test@nango.dev"
+                }
+              ],
+              "id": "6NF7ZWCFBBHUXBSGZM5YXY2OSU",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "User",
+                "formatted": "Test User",
+                "givenName": "Test"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "test@nango.dev"
+            },
+            {
+              "active": true,
+              "displayName": "SCIM Test Updated",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "scim-test-action@nango.dev"
+                }
+              ],
+              "id": "Z54GW3SPDZBJJPCEBMEOO2HQPE",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "Test Updated",
+                "formatted": "SCIM Test Updated",
+                "givenName": "SCIM"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "scim-test-action@nango.dev"
+            },
+            {
+              "active": false,
+              "displayName": "Tmp Delete Test 2",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "tmp-delete-test-2@nango.dev"
+                }
+              ],
+              "id": "TDJZWGRBQRAWTG2APQFSIY5RBY",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "Test 2",
+                "formatted": "Tmp Delete Test 2",
+                "givenName": "Tmp Delete"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "tmp-delete-test-2@nango.dev"
+            },
+            {
+              "active": false,
+              "displayName": "Patched Delete Test",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "delete-test-1@nango.dev"
+                }
+              ],
+              "id": "NFAPLXW3PFA6NJKAV7IAD63BQI",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "Delete Test",
+                "formatted": "Patched Delete Test",
+                "givenName": "Patched"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "delete-test-1@nango.dev"
+            },
+            {
+              "active": false,
+              "displayName": "Delete Test2",
+              "emails": [
+                {
+                  "primary": true,
+                  "value": "delete-test-2@nango.dev"
+                }
+              ],
+              "id": "EUFSZIJJQZFV7LWRGYMIJFTR2U",
+              "meta": {
+                "resourceType": "User"
+              },
+              "name": {
+                "familyName": "Test2",
+                "formatted": "Delete Test2",
+                "givenName": "Delete"
+              },
+              "preferredLanguage": "en",
+              "schemas": [
+                "urn:ietf:params:scim:schemas:core:2.0:User"
+              ],
+              "userName": "delete-test-2@nango.dev"
+            }
+          ],
+          "itemsPerPage": 11,
+          "schemas": [
+            "urn:ietf:params:scim:api:messages:2.0:ListResponse"
+          ],
+          "startIndex": 1,
+          "totalResults": 11
+        },
+        "status": 200,
+        "headers": {
+          "date": "Sun, 24 May 2026 23:02:57 GMT",
+          "content-type": "application/scim+json",
+          "transfer-encoding": "chunked",
+          "connection": "keep-alive",
+          "x-xss-protection": "1; mode=block",
+          "x-content-type-options": "nosniff",
+          "x-download-options": "noopen",
+          "x-frame-options": "DENY",
+          "x-dns-prefetch-control": "off",
+          "strict-transport-security": "max-age=5184000; includeSubDomains",
+          "content-security-policy-report-only": "default-src 'self' https://app.nango.dev https://api.nango.dev https://connect.nango.dev;child-src 'self';connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://app.nango.dev https://api.nango.dev wss://api.nango.dev/ https://connect.nango.dev https://*.posthog.com https://*.stripe.com;font-src 'self' https://*.googleapis.com https://*.gstatic.com;frame-src 'self' https://accounts.google.com https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://www.youtube.com https://*.stripe.com;img-src 'self' data: https://app.nango.dev https://api.nango.dev https://*.google-analytics.com https://*.googleapis.com https://*.posthog.com https://img.logo.dev https://*.ytimg.com;manifest-src 'self';media-src 'self';object-src 'self';script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.nango.dev https://api.nango.dev https://*.stripe.com https://*.google-analytics.com https://*.googleapis.com https://apis.google.com https://*.posthog.com https://www.youtube.com;style-src blob: 'self' 'unsafe-inline' https://*.googleapis.com https://app.nango.dev https://api.nango.dev;worker-src blob: 'self' https://app.nango.dev https://api.nango.dev https://*.googleapis.com https://*.posthog.com;base-uri 'self';form-action 'self';frame-ancestors 'self';script-src-attr 'none';upgrade-insecure-requests",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Authorization, Etag, Content-Type, Content-Length, X-Nango-Signature, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+          "x-ratelimit-limit": "1000",
+          "x-ratelimit-remaining": "998",
+          "x-ratelimit-reset": "1779663835",
+          "content-security-policy": "default-src 'none'; connect-src 'self' https:; script-src 'self'; img-src 'self' data: https://w3.org; style-src 'self'; frame-ancestors 'none'; form-action 'none'; manifest-src 'self'",
+          "referrer-policy": "no-referrer",
+          "x-robots-tag": "none"
+        },
+        "hash": "687a5f97c6aad99aea3ed30bffd23191904eea99",
+        "request": {
+          "params": {
+            "count": "100",
+            "startIndex": "1"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+export interface SyncMetadata_checkr_partner_backgroundchecks {
+};
+
+export interface BackgroundCheck {
+  id: string;
+  status: string;
+  service_key: string;
+  url: string;
+  candidate_id: string;
+  created_at: string;
+  expires_at?: string | undefined;
+};
+
+export interface ActionInput_checkr_partner_backgroundcheckparameters {
+  service_key: string;
+};
+
+export interface ActionOutput_checkr_partner_backgroundcheckparameters {
+  parameters: ({  key: string;
+  type: string;
+  title: string;
+  description: string;
+  required: boolean;})[];
+};
+
+export type ActionInput_checkr_partner_backgroundcheckservices = void
+
+export interface ActionOutput_checkr_partner_backgroundcheckservices {
+  services: ({  id: string;
+  price: number;
+  drug_screening_price: number | null;
+  enabled_examples: string[];
+  requires_observed_drug_test: boolean;
+  object: string;
+  apply_url: string;
+  created_at: string;
+  deleted_at: string | null;
+  name: string;
+  screenings: ({  type: string;
+  subtype: string | null;})[];
+  slug: string;
+  uri: string;
+  node?: string | undefined;})[];
+};
+
+export interface ActionInput_checkr_partner_createcandidate {
+  city?: string | undefined;
+  country: string;
+  state?: string | undefined;
+  first_name: string;
+  middle_name?: string | undefined;
+  no_middle_name?: boolean | undefined;
+  last_name: string;
+  email: string;
+  phone: string;
+  zipcode: string;
+  dob: string;
+  ssn: string;
+  driver_license_number: string;
+  driver_license_state: string;
+  work_locations: ({  city?: string | undefined;
+  country: string;
+  state?: string | undefined;})[];
+};
+
+export interface ActionOutput_checkr_partner_createcandidate {
+  id: string;
+  object: string;
+  uri: string;
+  first_name: string;
+  middle_name: string | null;
+  last_name: string;
+  mother_maiden_name: string;
+  email: string;
+  phone: number;
+  zipcode: number;
+  dob: string;
+  ssn: string;
+  driver_license_number: string;
+  driver_license_state: string;
+  previous_driver_license_number: string;
+  previous_driver_license_state: string;
+  copy_requested: boolean;
+  custom_id: string;
+  report_ids: string[];
+  geo_ids: string[];
+  adjudication: string;
+  metadata: {};
+};
+
+export interface ActionInput_checkr_partner_triggerbackgroundcheck {
+  city?: string | undefined;
+  country: string;
+  state?: string | undefined;
+  service_key: string;
+  candidate_id: string;
+  node?: string | undefined;
+  tags: string[];
+};
+
+export interface ActionOutput_checkr_partner_triggerbackgroundcheck {
+  created_at: string;
+  updated_at: string;
+  applicationId?: any | undefined;
+  url: string;
+  status: string;
+  completed_at: string | null;
+  candidate_id: string;
+  service_key: string;
+  deleted_at: string | null;
+};

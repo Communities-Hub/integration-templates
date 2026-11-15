@@ -1,0 +1,55 @@
+{
+  "input": {
+    "workspaceId": "7273476131570014205"
+  },
+  "output": {
+    "requestId": "6kmwv64snyts7py7qza",
+    "folders": [
+      {
+        "id": "3492543238968030478",
+        "name": "Public Folders",
+        "createdBy": null,
+        "updated": "2023-10-17T21:21:31.816562+02:00"
+      },
+      {
+        "id": "2419919964868474395",
+        "name": "Win/Loss",
+        "parentFolderId": "3492543238968030478",
+        "createdBy": null,
+        "updated": "2023-10-17T21:21:31.816562+02:00"
+      }
+    ]
+  },
+  "nango": {},
+  "api": {
+    "get": {
+      "/v2/library/folders": {
+        "response": {
+          "requestId": "6kmwv64snyts7py7qza",
+          "folders": [
+            {
+              "id": "3492543238968030478",
+              "name": "Public Folders",
+              "parentFolderId": null,
+              "createdBy": null,
+              "updated": "2023-10-17T21:21:31.816562+02:00"
+            },
+            {
+              "id": "2419919964868474395",
+              "name": "Win/Loss",
+              "parentFolderId": "3492543238968030478",
+              "createdBy": null,
+              "updated": "2023-10-17T21:21:31.816562+02:00"
+            }
+          ]
+        },
+        "status": 200,
+        "request": {
+          "params": {
+            "workspaceId": "7273476131570014205"
+          }
+        }
+      }
+    }
+  }
+}

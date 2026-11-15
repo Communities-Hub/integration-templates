@@ -1,0 +1,284 @@
+export interface SyncMetadata_recruiterflow_candidateactivitytypes {
+};
+
+export interface RecruiterFlowCandidateActivityType {
+  category: string;
+  id: string;
+  is_archived: boolean;
+  is_custom: boolean;
+  name: string;
+  rank: number;
+  track_last_contacted: boolean;
+  track_last_engaged: boolean;
+};
+
+export interface SyncMetadata_recruiterflow_candidates {
+};
+
+export interface RecruiterFlowCandidate {
+  id: string;
+  full_name: string;
+  first_name: string;
+  last_name: string;
+  profile_picture_link?: string | undefined;
+  added_by_name: string;
+  added_by_id: number;
+  added_time: string;
+  latest_activity_time?: string | undefined;
+  last_contacted_time?: string | undefined;
+  email_addresses: string[];
+  phone_numbers: string[];
+  current_designation?: string | undefined;
+  current_organization?: string | undefined;
+  location_city?: string | undefined;
+  location_country?: string | undefined;
+  location_full_string?: string | undefined;
+  source: string | null;
+  status_name?: string | undefined;
+  linkedin_profile_url?: string | undefined;
+  github_profile_url?: string | undefined;
+  twitter_profile_url?: string | undefined;
+  angellist_profile_url?: string | undefined;
+  behance_profile_url?: string | undefined;
+  dribbble_profile_url?: string | undefined;
+  facebook_profile_url?: string | undefined;
+  xing_profile_url?: string | undefined;
+  resume_links?: ({  filename: string;
+  link: string;})[] | undefined;
+  associated_jobs?: ({  job_id: number;
+  job_name: string;
+  client_company_name: string | null;
+  current_stage_name: string;
+  is_open: boolean;})[] | undefined;
+  custom_fields?: ({})[] | undefined;
+};
+
+export interface SyncMetadata_recruiterflow_employmenttypes {
+};
+
+export interface RecruiterFlowEmploymentType {
+  id: string;
+  name: string;
+};
+
+export interface SyncMetadata_recruiterflow_jobdepartments {
+};
+
+export interface RecruiterFlowJobDepartment {
+  id: string;
+  name: string;
+  count: number;
+};
+
+export interface SyncMetadata_recruiterflow_jobremotestatuses {
+};
+
+export interface RecruiterFlowJobRemoteStatus {
+  id: string;
+  name: string;
+};
+
+export interface SyncMetadata_recruiterflow_jobstagenames {
+};
+
+export interface RecruiterFlowLeanJobStageName {
+  id: string;
+  name: string;
+};
+
+export interface SyncMetadata_recruiterflow_jobstatuses {
+};
+
+export interface RecruiterFlowJobStatus {
+  id: string;
+  name: string;
+  color: string;
+};
+
+export interface SyncMetadata_recruiterflow_jobs {
+};
+
+export interface RecruiterFlowJob {
+  id: string;
+  title: string;
+  apply_link?: string | undefined;
+  company_name?: string | undefined;
+  company_logo_link?: string | null | undefined;
+  locations: ({  id?: number | undefined;
+  name?: string | undefined;
+  city?: string | undefined;
+  country?: string | undefined;})[];
+  department: string;
+  employment_type: string;
+  job_type_name: string | null;
+  experience_range_start: number | null;
+  experience_range_end: number | null;
+  is_open: boolean;
+  job_status_name: string | null;
+  number_of_openings: number;
+  salary_range_end?: number | null | undefined;
+  salary_range_start?: number | null | undefined;
+  salary_range_currency?: string | undefined;
+  salary_frequency?: string | null | undefined;
+  pay_rate_number?: string | undefined;
+  pay_rate_currency?: string | undefined;
+  pay_rate_frequency_display_name?: string | undefined;
+  bill_rate_number?: string | undefined;
+  bill_rate_currency?: string | undefined;
+  bill_rate_frequency_display_name?: string | undefined;
+  contract_start_date?: string | null | undefined;
+  contract_end_date?: string | null | undefined;
+  work_quantum_number?: string | undefined;
+  work_quantum_unit_display_name?: string | undefined;
+  work_quantum_frequency_display_name?: string | undefined;
+  work_quantum_is_full_time?: boolean | undefined;
+  expected_salary_number?: number | undefined;
+  expected_salary_currency?: string | undefined;
+  expected_fee_number?: number | undefined;
+  expected_fee_currency?: string | undefined;
+  commission_rate?: number | null | undefined;
+  expected_start_date?: string | undefined;
+  expected_end_date?: string | undefined;
+  custom_fields?: ({})[] | undefined;
+  files_links?: string[] | undefined;
+};
+
+export interface SyncMetadata_recruiterflow_locations {
+};
+
+export interface RecruiterFlowLocation {
+  id: string;
+  name: string;
+  city?: string | undefined;
+  country?: string | undefined;
+  details?: string | undefined;
+  iso_3166_1_alpha_2_code?: string | undefined;
+  location_type: string;
+  location_type_id: number;
+  postal_code?: string | undefined;
+  state?: string | undefined;
+  zipcode?: string | undefined;
+};
+
+export interface SyncMetadata_recruiterflow_organizationlocations {
+};
+
+export interface RecruiterFlowOrganizationLocation {
+  id: string;
+  name: string;
+  address?: string | undefined;
+  city?: string | undefined;
+  state?: string | undefined;
+  country?: string | undefined;
+  postal_code?: string | undefined;
+};
+
+export interface SyncMetadata_recruiterflow_users {
+};
+
+export interface RecruiterFlowUser {
+  id: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  role?: string[] | undefined;
+  img_link: string | null;
+};
+
+export interface ActionInput_recruiterflow_candidateactivitieslist {
+  id: string;
+};
+
+export interface ActionOutput_recruiterflow_candidateactivitieslist {
+  data: ({  activity_id: number | null;
+  associated_entities?: {  candidates: ({  id: number;
+  name: string;
+  first_name?: string | undefined;})[];
+  clients: any[];
+  contacts: any[];
+  deals: any[];
+  jobs: ({  id: number;
+  name: string;})[];
+  placements: any[];} | null;
+  candidate_id: number | null;
+  contact_id: number | null;
+  interview_plan_id: number | null;
+  is_custom: boolean;
+  job_id: number | null;
+  subject: string;
+  text: string;
+  time: string;
+  type: {  id: number;
+  name: string | null;};
+  user: {  email: string | null;
+  first_name: string | null;
+  id: number | null;
+  last_name: string | null;
+  name: string;};})[];
+};
+
+export interface ActionInput_recruiterflow_candidateactivitiesstagemovements {
+  id: string;
+  after?: string | undefined;
+  before?: string | undefined;
+};
+
+export interface ActionOutput_recruiterflow_candidateactivitiesstagemovements {
+  data: ({  id: number;
+  name: string;
+  added_by: {  email: string;
+  id: number;
+  name: string;};
+  transitions: ({  entered: string;
+  from: string | null;
+  left: string | null;
+  stage_moved_by: {  email: string;
+  id: number;
+  name: string;};
+  to: string;})[];})[];
+};
+
+export interface ActionInput_recruiterflow_candidatescorecards {
+  id: string;
+  job_id: string;
+};
+
+export interface ActionOutput_recruiterflow_candidatescorecards {
+  candidate: {  id: number;
+  name: string;
+  first_name?: string | undefined;};
+  job: ({  id: number;
+  name: string;
+  stages: ({  id: number;
+  name: string;
+  scorecard: ({  attributes: ({  category: {  name: string;};
+  name: string;
+  notes: string;
+  rank: number;
+  rating: number;})[];
+  bottomline: string;
+  first_name: string;
+  id: number;
+  last_name: string;
+  middle_name: string;
+  name: string;
+  notes: string;
+  questions: ({  category_name: string;
+  id: number;
+  response: string;
+  text: string;})[];
+  result_id: number;
+  submission_time: string;
+  user_id: number;})[];})[];})[];
+};
+
+export interface ActionInput_recruiterflow_jobpipelines {
+  job_id: string;
+};
+
+export interface ActionOutput_recruiterflow_jobpipelines {
+  detail: any[];
+  summary: ({  id: number;
+  name: string;
+  count: number;})[];
+};

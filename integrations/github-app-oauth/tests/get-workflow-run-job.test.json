@@ -1,0 +1,148 @@
+{
+  "input": {
+    "owner": "nango-provisioned-apps",
+    "repo": "nango",
+    "job_id": 93883811102
+  },
+  "output": {
+    "id": 93883811102,
+    "run_id": 31522802177,
+    "run_url": "https://api.github.com/repos/nango-provisioned-apps/nango/actions/runs/31522802177",
+    "node_id": "CR_kwDOT1NNv88AAAAV2-lFHg",
+    "head_sha": "f506f3df04c832fe159c829c862e733f42177111",
+    "url": "https://api.github.com/repos/nango-provisioned-apps/nango/actions/jobs/93883811102",
+    "html_url": "https://github.com/nango-provisioned-apps/nango/actions/runs/31522802177/job/93883811102",
+    "status": "completed",
+    "name": "test",
+    "check_run_url": "https://api.github.com/repos/nango-provisioned-apps/nango/check-runs/93883811102",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "conclusion": "success",
+    "started_at": "2026-08-11T18:28:38Z",
+    "completed_at": "2026-08-11T18:28:41Z",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "number": 1,
+        "conclusion": "success",
+        "started_at": "2026-08-11T18:28:38Z",
+        "completed_at": "2026-08-11T18:28:39Z"
+      },
+      {
+        "name": "Run echo \"hello from nango registry test\"",
+        "status": "completed",
+        "number": 2,
+        "conclusion": "success",
+        "started_at": "2026-08-11T18:28:39Z",
+        "completed_at": "2026-08-11T18:28:39Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "number": 3,
+        "conclusion": "success",
+        "started_at": "2026-08-11T18:28:39Z",
+        "completed_at": "2026-08-11T18:28:39Z"
+      }
+    ],
+    "runner_id": 1000000455,
+    "runner_name": "GitHub Actions 1000000455",
+    "runner_group_id": 0,
+    "runner_group_name": "GitHub Actions"
+  },
+  "nango": {},
+  "api": {
+    "get": {
+      "/repos/nango-provisioned-apps/nango/actions/jobs/93883811102": {
+        "response": {
+          "id": 93883811102,
+          "run_id": 31522802177,
+          "workflow_name": "Nango Registry Test",
+          "head_branch": "master",
+          "run_url": "https://api.github.com/repos/nango-provisioned-apps/nango/actions/runs/31522802177",
+          "run_attempt": 1,
+          "node_id": "CR_kwDOT1NNv88AAAAV2-lFHg",
+          "head_sha": "f506f3df04c832fe159c829c862e733f42177111",
+          "url": "https://api.github.com/repos/nango-provisioned-apps/nango/actions/jobs/93883811102",
+          "html_url": "https://github.com/nango-provisioned-apps/nango/actions/runs/31522802177/job/93883811102",
+          "status": "completed",
+          "conclusion": "success",
+          "created_at": "2026-08-11T18:27:25Z",
+          "started_at": "2026-08-11T18:28:38Z",
+          "completed_at": "2026-08-11T18:28:41Z",
+          "name": "test",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-08-11T18:28:38Z",
+              "completed_at": "2026-08-11T18:28:39Z"
+            },
+            {
+              "name": "Run echo \"hello from nango registry test\"",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-08-11T18:28:39Z",
+              "completed_at": "2026-08-11T18:28:39Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-08-11T18:28:39Z",
+              "completed_at": "2026-08-11T18:28:39Z"
+            }
+          ],
+          "check_run_url": "https://api.github.com/repos/nango-provisioned-apps/nango/check-runs/93883811102",
+          "labels": [
+            "ubuntu-latest"
+          ],
+          "runner_id": 1000000455,
+          "runner_name": "GitHub Actions 1000000455",
+          "runner_group_id": 0,
+          "runner_group_name": "GitHub Actions"
+        },
+        "status": 200,
+        "headers": {
+          "date": "Fri, 25 Sep 2026 13:37:00 GMT",
+          "content-type": "application/json; charset=utf-8",
+          "transfer-encoding": "chunked",
+          "connection": "keep-alive",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "x-download-options": "noopen",
+          "x-frame-options": "deny",
+          "x-dns-prefetch-control": "off",
+          "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+          "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+          "content-security-policy-report-only": "default-src 'self' https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/;child-src 'self';connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://app.nango.dev https://api.nango.dev wss://api.nango.dev/ https://connect.nango.dev https://connect.nango.dev/ https://api.nango.dev https://*.posthog.com https://*.stripe.com https://*.plain.com wss://*.plain.com https://raw.githubusercontent.com;font-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.cdn-plain.com;form-action 'self' https://api.nango.dev;frame-src 'self' https://accounts.google.com https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/ https://www.youtube.com https://*.stripe.com;img-src 'self' data: blob: https://app.nango.dev https://api.nango.dev https://*.google-analytics.com https://*.googleapis.com https://*.posthog.com https://img.logo.dev https://*.ytimg.com https://*.plain.com;manifest-src 'self';media-src 'self';object-src 'self';script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.nango.dev https://api.nango.dev https://*.stripe.com https://*.google-analytics.com https://*.googleapis.com https://apis.google.com https://*.posthog.com https://www.youtube.com https://*.cdn-plain.com;style-src blob: 'self' 'unsafe-inline' https://*.googleapis.com https://app.nango.dev https://api.nango.dev;worker-src blob: 'self' https://app.nango.dev https://api.nango.dev https://*.googleapis.com https://*.posthog.com;base-uri 'self';frame-ancestors 'self';script-src-attr 'none';upgrade-insecure-requests",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Authorization, Etag, Content-Type, Content-Length, X-Nango-Signature, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+          "x-ratelimit-limit": "5000",
+          "x-ratelimit-remaining": "4863",
+          "x-ratelimit-reset": "1790346775",
+          "cache-control": "private, max-age=60, s-maxage=60",
+          "vary": "Accept, Authorization, Cookie, X-GitHub-OTP,Accept-Encoding, Accept, X-Requested-With",
+          "etag": "W/\"392fa1138ea228ae2897883e20faedc9b40aadcff28688e478039cbf2acdcda9\"",
+          "x-github-media-type": "github.v3",
+          "x-accepted-github-permissions": "actions=read",
+          "x-github-api-version-selected": "2022-11-28",
+          "content-security-policy": "default-src 'none'",
+          "server": "github.com",
+          "x-ratelimit-used": "137",
+          "x-ratelimit-resource": "core",
+          "x-github-request-id": "7F82:A662B:576DA:5AD3A:6AB678FA",
+          "x-github-edge-region": "sea"
+        },
+        "hash": "5abd601b765877a326796d631e745561ac2f760c",
+        "request": {}
+      }
+    }
+  }
+}

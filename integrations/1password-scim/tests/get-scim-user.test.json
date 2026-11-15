@@ -1,0 +1,82 @@
+{
+  "input": {
+    "id": "FHNN6ANJUZF3FFXYHEE6EWPHSM"
+  },
+  "output": {
+    "schemas": [
+      "urn:ietf:params:scim:schemas:core:2.0:User"
+    ],
+    "id": "FHNN6ANJUZF3FFXYHEE6EWPHSM",
+    "userName": "victor@nango.dev",
+    "name": {
+      "formatted": "Victor Nango",
+      "familyName": "Nango",
+      "givenName": "Victor"
+    },
+    "displayName": "Victor Nango",
+    "preferredLanguage": "en",
+    "active": true,
+    "emails": [
+      {
+        "value": "victor@nango.dev",
+        "primary": true
+      }
+    ],
+    "meta": {
+      "resourceType": "User"
+    }
+  },
+  "nango": {},
+  "api": {
+    "get": {
+      "/Users/FHNN6ANJUZF3FFXYHEE6EWPHSM": {
+        "response": {
+          "active": true,
+          "displayName": "Victor Nango",
+          "emails": [
+            {
+              "primary": true,
+              "value": "victor@nango.dev"
+            }
+          ],
+          "id": "FHNN6ANJUZF3FFXYHEE6EWPHSM",
+          "meta": {
+            "resourceType": "User"
+          },
+          "name": {
+            "familyName": "Nango",
+            "formatted": "Victor Nango",
+            "givenName": "Victor"
+          },
+          "preferredLanguage": "en",
+          "schemas": [
+            "urn:ietf:params:scim:schemas:core:2.0:User"
+          ],
+          "userName": "victor@nango.dev"
+        },
+        "status": 200,
+        "headers": {
+          "date": "Fri, 22 May 2026 18:03:54 GMT",
+          "content-type": "application/scim+json",
+          "content-length": "355",
+          "connection": "keep-alive",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "x-download-options": "noopen",
+          "x-frame-options": "SAMEORIGIN",
+          "x-dns-prefetch-control": "off",
+          "strict-transport-security": "max-age=5184000; includeSubDomains",
+          "content-security-policy-report-only": "default-src 'self' https://app.nango.dev https://api.nango.dev https://connect.nango.dev;child-src 'self';connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://app.nango.dev https://api.nango.dev wss://api.nango.dev/ https://connect.nango.dev https://*.posthog.com https://*.stripe.com;font-src 'self' https://*.googleapis.com https://*.gstatic.com;frame-src 'self' https://accounts.google.com https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://www.youtube.com https://*.stripe.com;img-src 'self' data: https://app.nango.dev https://api.nango.dev https://*.google-analytics.com https://*.googleapis.com https://*.posthog.com https://img.logo.dev https://*.ytimg.com;manifest-src 'self';media-src 'self';object-src 'self';script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.nango.dev https://api.nango.dev https://*.stripe.com https://*.google-analytics.com https://*.googleapis.com https://apis.google.com https://*.posthog.com https://www.youtube.com;style-src blob: 'self' 'unsafe-inline' https://*.googleapis.com https://app.nango.dev https://api.nango.dev;worker-src blob: 'self' https://app.nango.dev https://api.nango.dev https://*.googleapis.com https://*.posthog.com;base-uri 'self';form-action 'self';frame-ancestors 'self';script-src-attr 'none';upgrade-insecure-requests",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Authorization, Etag, Content-Type, Content-Length, X-Nango-Signature, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+          "x-ratelimit-limit": "5000",
+          "x-ratelimit-remaining": "4992",
+          "x-ratelimit-reset": "1779473081",
+          "etag": "W/\"163-IIDdehP5Zemb1uqZGkkmRgMeEbk\""
+        },
+        "hash": "35953810abf9712711678043713a705f7b1d080c",
+        "request": {}
+      }
+    }
+  }
+}

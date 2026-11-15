@@ -1,0 +1,85 @@
+export interface SyncMetadata_front_conversations {
+};
+
+export interface Conversation {
+  id: string;
+  created_at: string;
+  updated_at: string;
+  waiting_since: string | null;
+  snoozed_until: string | null;
+  title: string | null;
+  contacts: ({  contact_id: string;})[];
+  state: string;
+  open: boolean;
+  read: boolean;
+  priority: string;
+};
+
+export interface ActionInput_front_conversation {
+  id: string;
+  query: {  limit?: number | undefined;
+  page_token?: string | undefined;
+  sort_by?: string | undefined;
+  sort_order?: 'asc' | 'desc' | undefined;};
+};
+
+export interface ActionOutput_front_conversation {
+  messages: ({  _links: {  self: string;
+  related: {  conversation: string;
+  message_replied_to?: string | undefined;
+  message_seen: string;};};
+  id: string;
+  version?: string | null | undefined;
+  blurb: string;
+  error_type: string | null;
+  type: 'call' | 'custom' | 'email' | 'facebook' | 'front_chat' | 'googleplay' | 'intercom' | 'internal' | 'phone-call' | 'sms' | 'tweet' | 'tweet_dm' | 'whatsapp' | 'yalo_wha';
+  is_draft: boolean;
+  is_inbound: boolean;
+  draft_mode: string | null;
+  created_at: number;
+  subject: string;
+  author: {  _links: {  self: string;
+  related: {  inboxes: string;
+  conversations: string;};};
+  id: string;
+  email: string;
+  username: string;
+  first_name: string;
+  last_name: string;
+  is_admin: boolean;
+  is_blocked: boolean;
+  custom_fields: {  [key: string]: any | undefined;};} | null;
+  recipients: ({  _links: {  related: {  contact: string;};};
+  name: string;
+  handle: string;
+  role: 'from' | 'to' | 'cc' | 'bcc';})[];
+  body: string;
+  text: string;
+  attachments?: ({  id: string;
+  filename: string;
+  url: string;
+  content_type: string;
+  size: number;
+  metadata: {  is_inline: boolean;
+  cid: string;};})[] | undefined;
+  signature?: {  _links?: {  related?: {  owner?: string | undefined;};};
+  id?: string | undefined;
+  name?: string | undefined;
+  body?: string | undefined;
+  sender_info?: string | undefined;
+  is_visible_for_all_teammate_channels?: boolean | undefined;
+  is_default?: boolean | undefined;
+  is_private?: boolean | undefined;
+  channel_ids?: string[] | undefined;} | null;
+  metadata?: {  intercom_url?: string | undefined;
+  duration?: number | undefined;
+  have_been_answered?: boolean | undefined;
+  external_id?: string | undefined;
+  twitter_url?: string | undefined;
+  is_retweet?: boolean | undefined;
+  have_been_retweeted?: boolean | undefined;
+  have_been_favorited?: boolean | undefined;
+  thread_ref?: string | undefined;
+  headers?: {  [key: string]: any | undefined;};
+  chat_visitor_url?: string | undefined;};})[];
+};

@@ -1,0 +1,274 @@
+{
+  "nango": {
+    "batchSave": {
+      "Group": [
+        {
+          "id": "133164821",
+          "name": "Test Group 1779888773",
+          "path": "test-group-1779888773",
+          "visibility": "private",
+          "web_url": "https://gitlab.com/groups/nangodev-group/test-group-1779888773",
+          "full_name": "nangoDev-group / Test Group 1779888773",
+          "full_path": "nangodev-group/test-group-1779888773",
+          "created_at": "2026-05-27T13:33:00.762Z",
+          "parent_id": "133159324",
+          "archived": false,
+          "lfs_enabled": true,
+          "request_access_enabled": true
+        },
+        {
+          "id": "133164882",
+          "name": "Test Group 1779888792",
+          "path": "test-group-1779888792",
+          "visibility": "private",
+          "web_url": "https://gitlab.com/groups/nangodev-group/test-group-1779888792",
+          "full_name": "nangoDev-group / Test Group 1779888792",
+          "full_path": "nangodev-group/test-group-1779888792",
+          "created_at": "2026-05-27T13:33:19.689Z",
+          "parent_id": "133159324",
+          "archived": false,
+          "lfs_enabled": true,
+          "request_access_enabled": true
+        },
+        {
+          "id": "133159324",
+          "name": "nangoDev-group",
+          "path": "nangodev-group",
+          "description": "Updated via Nango action test",
+          "visibility": "private",
+          "web_url": "https://gitlab.com/groups/nangodev-group",
+          "full_name": "nangoDev-group",
+          "full_path": "nangodev-group",
+          "created_at": "2026-05-27T12:41:57.507Z",
+          "archived": false,
+          "lfs_enabled": true,
+          "request_access_enabled": true
+        }
+      ]
+    },
+    "batchDelete": {
+      "Group": []
+    }
+  },
+  "api": {
+    "get": {
+      "/api/v4/groups": {
+        "response": [
+          {
+            "id": 133164821,
+            "web_url": "https://gitlab.com/groups/nangodev-group/test-group-1779888773",
+            "name": "Test Group 1779888773",
+            "path": "test-group-1779888773",
+            "description": null,
+            "visibility": "private",
+            "share_with_group_lock": false,
+            "require_two_factor_authentication": false,
+            "two_factor_grace_period": 48,
+            "project_creation_level": "developer",
+            "auto_devops_enabled": null,
+            "subgroup_creation_level": "maintainer",
+            "emails_disabled": false,
+            "emails_enabled": true,
+            "show_diff_preview_in_email": true,
+            "mentions_disabled": null,
+            "lfs_enabled": true,
+            "archived": false,
+            "math_rendering_limits_enabled": true,
+            "lock_math_rendering_limits_enabled": false,
+            "crm_enabled": true,
+            "resource_access_token_notify_inherited": false,
+            "lock_resource_access_token_notify_inherited": false,
+            "default_branch": null,
+            "default_branch_protection": 2,
+            "default_branch_protection_defaults": {
+              "allowed_to_push": [
+                {
+                  "access_level": 40
+                }
+              ],
+              "allow_force_push": false,
+              "allowed_to_merge": [
+                {
+                  "access_level": 40
+                }
+              ]
+            },
+            "avatar_url": null,
+            "request_access_enabled": true,
+            "full_name": "nangoDev-group / Test Group 1779888773",
+            "full_path": "nangodev-group/test-group-1779888773",
+            "created_at": "2026-05-27T13:33:00.762Z",
+            "parent_id": 133159324,
+            "organization_id": 1,
+            "shared_runners_setting": "enabled",
+            "max_artifacts_size": null,
+            "marked_for_deletion_on": null,
+            "ldap_cn": null,
+            "ldap_access": null,
+            "wiki_access_level": "enabled",
+            "web_based_commit_signing_enabled": false
+          },
+          {
+            "id": 133164882,
+            "web_url": "https://gitlab.com/groups/nangodev-group/test-group-1779888792",
+            "name": "Test Group 1779888792",
+            "path": "test-group-1779888792",
+            "description": null,
+            "visibility": "private",
+            "share_with_group_lock": false,
+            "require_two_factor_authentication": false,
+            "two_factor_grace_period": 48,
+            "project_creation_level": "developer",
+            "auto_devops_enabled": null,
+            "subgroup_creation_level": "maintainer",
+            "emails_disabled": false,
+            "emails_enabled": true,
+            "show_diff_preview_in_email": true,
+            "mentions_disabled": null,
+            "lfs_enabled": true,
+            "archived": false,
+            "math_rendering_limits_enabled": true,
+            "lock_math_rendering_limits_enabled": false,
+            "crm_enabled": true,
+            "resource_access_token_notify_inherited": false,
+            "lock_resource_access_token_notify_inherited": false,
+            "default_branch": null,
+            "default_branch_protection": 2,
+            "default_branch_protection_defaults": {
+              "allowed_to_push": [
+                {
+                  "access_level": 40
+                }
+              ],
+              "allow_force_push": false,
+              "allowed_to_merge": [
+                {
+                  "access_level": 40
+                }
+              ]
+            },
+            "avatar_url": null,
+            "request_access_enabled": true,
+            "full_name": "nangoDev-group / Test Group 1779888792",
+            "full_path": "nangodev-group/test-group-1779888792",
+            "created_at": "2026-05-27T13:33:19.689Z",
+            "parent_id": 133159324,
+            "organization_id": 1,
+            "shared_runners_setting": "enabled",
+            "max_artifacts_size": null,
+            "marked_for_deletion_on": null,
+            "ldap_cn": null,
+            "ldap_access": null,
+            "wiki_access_level": "enabled",
+            "web_based_commit_signing_enabled": false
+          },
+          {
+            "id": 133159324,
+            "web_url": "https://gitlab.com/groups/nangodev-group",
+            "name": "nangoDev-group",
+            "path": "nangodev-group",
+            "description": "Updated via Nango action test",
+            "visibility": "private",
+            "share_with_group_lock": false,
+            "require_two_factor_authentication": false,
+            "two_factor_grace_period": 48,
+            "project_creation_level": "developer",
+            "auto_devops_enabled": null,
+            "subgroup_creation_level": "maintainer",
+            "emails_disabled": false,
+            "emails_enabled": true,
+            "show_diff_preview_in_email": true,
+            "mentions_disabled": null,
+            "lfs_enabled": true,
+            "archived": false,
+            "math_rendering_limits_enabled": true,
+            "lock_math_rendering_limits_enabled": false,
+            "crm_enabled": true,
+            "resource_access_token_notify_inherited": false,
+            "lock_resource_access_token_notify_inherited": false,
+            "default_branch": null,
+            "default_branch_protection": 2,
+            "default_branch_protection_defaults": {
+              "allowed_to_push": [
+                {
+                  "access_level": 40
+                }
+              ],
+              "allow_force_push": false,
+              "allowed_to_merge": [
+                {
+                  "access_level": 40
+                }
+              ]
+            },
+            "avatar_url": null,
+            "request_access_enabled": true,
+            "full_name": "nangoDev-group",
+            "full_path": "nangodev-group",
+            "created_at": "2026-05-27T12:41:57.507Z",
+            "parent_id": null,
+            "organization_id": 1,
+            "shared_runners_setting": "enabled",
+            "max_artifacts_size": null,
+            "marked_for_deletion_on": null,
+            "ldap_cn": null,
+            "ldap_access": null,
+            "wiki_access_level": "enabled",
+            "web_based_commit_signing_enabled": false,
+            "duo_namespace_access_rules": []
+          }
+        ],
+        "status": 200,
+        "headers": {
+          "date": "Tue, 18 Aug 2026 09:05:19 GMT",
+          "content-type": "application/json",
+          "transfer-encoding": "chunked",
+          "connection": "keep-alive",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "x-download-options": "noopen",
+          "x-frame-options": "SAMEORIGIN",
+          "x-dns-prefetch-control": "off",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "strict-transport-security": "max-age=31536000",
+          "content-security-policy-report-only": "default-src 'self' https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/;child-src 'self';connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://app.nango.dev https://api.nango.dev wss://api.nango.dev/ https://connect.nango.dev https://connect.nango.dev/ https://*.posthog.com https://*.stripe.com https://*.plain.com wss://*.plain.com https://raw.githubusercontent.com;font-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.cdn-plain.com;frame-src 'self' https://accounts.google.com https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/ https://www.youtube.com https://*.stripe.com;img-src 'self' data: blob: https://app.nango.dev https://api.nango.dev https://*.google-analytics.com https://*.googleapis.com https://*.posthog.com https://img.logo.dev https://*.ytimg.com https://*.plain.com;manifest-src 'self';media-src 'self';object-src 'self';script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.nango.dev https://api.nango.dev https://*.stripe.com https://*.google-analytics.com https://*.googleapis.com https://apis.google.com https://*.posthog.com https://www.youtube.com https://*.cdn-plain.com;style-src blob: 'self' 'unsafe-inline' https://*.googleapis.com https://app.nango.dev https://api.nango.dev;worker-src blob: 'self' https://app.nango.dev https://api.nango.dev https://*.googleapis.com https://*.posthog.com;base-uri 'self';form-action 'self';frame-ancestors 'self';script-src-attr 'none';upgrade-insecure-requests",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Authorization, Etag, Content-Type, Content-Length, X-Nango-Signature, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+          "x-ratelimit-limit": "5000",
+          "x-ratelimit-remaining": "4985",
+          "x-ratelimit-reset": "1787043931",
+          "cf-ray": "a2cfc1901fb55ed4-PDX",
+          "cf-cache-status": "BYPASS",
+          "cache-control": "max-age=0, private, must-revalidate",
+          "etag": "W/\"d0771ba84e6a26123f129ee261d790f4\"",
+          "link": "<https://gitlab.com/api/v4/groups?order_by=name&owned=false&page=1&per_page=100&sort=asc&statistics=false&with_custom_attributes=false>; rel=\"first\", <https://gitlab.com/api/v4/groups?order_by=name&owned=false&page=1&per_page=100&sort=asc&statistics=false&with_custom_attributes=false>; rel=\"last\"",
+          "server": "cloudflare",
+          "vary": "Origin",
+          "content-security-policy": "default-src 'none'",
+          "gitlab-lb": "haproxy-main-24-lb-gprd",
+          "gitlab-sv": "api-gke-us-east1-d",
+          "nel": "{\"max_age\": 0}",
+          "ratelimit-limit": "2000",
+          "ratelimit-name": "throttle_authenticated_api",
+          "ratelimit-observed": "2",
+          "ratelimit-remaining": "1998",
+          "ratelimit-reset": "1787043960",
+          "x-gitlab-meta": "{\"correlation_id\":\"a2cfc1901fb55ed4-PDX\",\"version\":\"1\"}",
+          "x-page": "1",
+          "x-per-page": "100",
+          "x-request-id": "a2cfc1901fb55ed4-PDX",
+          "x-runtime": "0.207739",
+          "x-total": "3",
+          "x-total-pages": "1"
+        },
+        "hash": "886f633f007784c463bb165f87e5f3d006603121",
+        "request": {
+          "params": {
+            "page": "1",
+            "per_page": "100"
+          }
+        }
+      }
+    }
+  }
+}

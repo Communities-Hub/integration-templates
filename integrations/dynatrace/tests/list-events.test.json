@@ -1,0 +1,1847 @@
+{
+  "input": {
+    "from": "now-2h",
+    "pageSize": 10
+  },
+  "output": {
+    "events": [
+      {
+        "correlationId": "C70FDE7BBAB0C2BA",
+        "endTime": -1,
+        "entityId": {
+          "entityId": {
+            "id": "APPLICATION-F9D25E95F25AFE0A",
+            "type": "APPLICATION"
+          },
+          "name": "Astroshop"
+        },
+        "entityTags": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "SLO_APP",
+            "stringRepresentation": "SLO_APP:astroshop",
+            "value": "astroshop"
+          }
+        ],
+        "eventId": "-5301772197560753067_1785946260000",
+        "eventType": "APPLICATION_SLOWDOWN",
+        "frequentEvent": false,
+        "managementZones": [],
+        "properties": [
+          {
+            "key": "dt.event.baseline.affected_load",
+            "value": "16.8"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p50_abnormal",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p90_abnormal",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50",
+            "value": "873000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50_reference",
+            "value": "311000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90",
+            "value": "1691199.9"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90_reference",
+            "value": "1104999.8"
+          },
+          {
+            "key": "dt.event.baseline.static_user_override",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.total_load",
+            "value": "142.0"
+          },
+          {
+            "key": "dt.event.description",
+            "value": "The current response time (873 ms) exceeds the auto-detected baseline (311 ms) by 180.71 %.\nIncident occurred with user action Xhr in Oceania."
+          },
+          {
+            "key": "dt.event.group_label",
+            "value": "Application slowdown"
+          },
+          {
+            "key": "dt.event.impact_level",
+            "value": "Application"
+          },
+          {
+            "key": "dt.event.is_rootcause_relevant",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.timeout",
+            "value": "9"
+          }
+        ],
+        "startTime": 1785946260000,
+        "status": "OPEN",
+        "suppressAlert": false,
+        "suppressProblem": false,
+        "title": "User action duration degradation",
+        "underMaintenance": false
+      },
+      {
+        "correlationId": "cfc05415fe1c5bb3",
+        "endTime": -1,
+        "entityId": {
+          "entityId": {
+            "id": "PROCESS_GROUP_INSTANCE-F8A40CDF81B78A24",
+            "type": "PROCESS_GROUP_INSTANCE"
+          },
+          "name": "server.js (frontend) frontend-* (frontend-959449d4d-4ggvv)"
+        },
+        "entityTags": [
+          {
+            "context": "KUBERNETES",
+            "key": "app.kubernetes.io/name",
+            "stringRepresentation": "[Kubernetes]app.kubernetes.io/name:frontend",
+            "value": "frontend"
+          },
+          {
+            "context": "KUBERNETES",
+            "key": "stage",
+            "stringRepresentation": "[Kubernetes]stage:prod",
+            "value": "prod"
+          },
+          {
+            "context": "KUBERNETES",
+            "key": "opentelemetry.io/name",
+            "stringRepresentation": "[Kubernetes]opentelemetry.io/name:frontend",
+            "value": "frontend"
+          },
+          {
+            "context": "CONTEXTLESS",
+            "key": "[Kubernetes]namespace",
+            "stringRepresentation": "[Kubernetes]namespace:astroshop",
+            "value": "astroshop"
+          },
+          {
+            "context": "ENVIRONMENT",
+            "key": "DT_RELEASE_PRODUCT",
+            "stringRepresentation": "[Environment]DT_RELEASE_PRODUCT"
+          },
+          {
+            "context": "KUBERNETES",
+            "key": "astroshop.org/owner",
+            "stringRepresentation": "[Kubernetes]astroshop.org/owner:Team-UI",
+            "value": "Team-UI"
+          },
+          {
+            "context": "ENVIRONMENT",
+            "key": "DT_RELEASE_VERSION",
+            "stringRepresentation": "[Environment]DT_RELEASE_VERSION"
+          },
+          {
+            "context": "KUBERNETES",
+            "key": "app.kubernetes.io/component",
+            "stringRepresentation": "[Kubernetes]app.kubernetes.io/component:frontend",
+            "value": "frontend"
+          }
+        ],
+        "eventId": "6853744532401203457_1785946260000",
+        "eventType": "PROCESS_HIGH_GC_ACTIVITY",
+        "frequentEvent": false,
+        "managementZones": [],
+        "properties": [
+          {
+            "key": "dt.event.allow_davis_merge",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.description",
+            "value": "Garbage collection is suspending process server.js (frontend) frontend-* (frontend-959449d4d-4ggvv) on host aks-default-18490522-vmss000000.x1fxmamr1tou3djw0rchix4hre.bx.internal.cloudapp.net"
+          },
+          {
+            "key": "dt.event.group_label",
+            "value": "Long garbage-collection time"
+          },
+          {
+            "key": "dt.event.impact_level",
+            "value": "Infrastructure"
+          },
+          {
+            "key": "dt.event.is_rootcause_relevant",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.metric_selector",
+            "value": "(builtin:tech.jvm.memory.gc.collectionTime:value):filter(eq(\"dt.entity.process_group_instance\",PROCESS_GROUP_INSTANCE-F8A40CDF81B78A24))"
+          },
+          {
+            "key": "dt.event.metric_threshold",
+            "value": "24000.0"
+          },
+          {
+            "key": "dt.event.release_version",
+            "value": ""
+          },
+          {
+            "key": "dt.event.timeout",
+            "value": "15"
+          }
+        ],
+        "startTime": 1785946260000,
+        "status": "OPEN",
+        "suppressAlert": false,
+        "suppressProblem": false,
+        "title": "Long garbage-collection time",
+        "underMaintenance": false
+      },
+      {
+        "correlationId": "2817D53A63410C0D",
+        "endTime": -1,
+        "entityId": {
+          "entityId": {
+            "id": "APPLICATION-F9D25E95F25AFE0A",
+            "type": "APPLICATION"
+          },
+          "name": "Astroshop"
+        },
+        "entityTags": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "SLO_APP",
+            "stringRepresentation": "SLO_APP:astroshop",
+            "value": "astroshop"
+          }
+        ],
+        "eventId": "7968101807393807135_1785946260000",
+        "eventType": "APPLICATION_SLOWDOWN",
+        "frequentEvent": false,
+        "managementZones": [],
+        "properties": [
+          {
+            "key": "dt.event.baseline.affected_load",
+            "value": "16.8"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p50_abnormal",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p90_abnormal",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50",
+            "value": "873000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50_reference",
+            "value": "311000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90",
+            "value": "1691199.9"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90_reference",
+            "value": "1104999.8"
+          },
+          {
+            "key": "dt.event.baseline.static_user_override",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.total_load",
+            "value": "142.0"
+          },
+          {
+            "key": "dt.event.description",
+            "value": "The current response time (873 ms) exceeds the auto-detected baseline (311 ms) by 180.71 %.\nIncident occurred with user action Xhr in Australia."
+          },
+          {
+            "key": "dt.event.group_label",
+            "value": "Application slowdown"
+          },
+          {
+            "key": "dt.event.impact_level",
+            "value": "Application"
+          },
+          {
+            "key": "dt.event.is_rootcause_relevant",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.timeout",
+            "value": "9"
+          }
+        ],
+        "startTime": 1785946260000,
+        "status": "OPEN",
+        "suppressAlert": false,
+        "suppressProblem": false,
+        "title": "User action duration degradation",
+        "underMaintenance": false
+      },
+      {
+        "correlationId": "04FF51C6EA762459",
+        "endTime": -1,
+        "entityId": {
+          "entityId": {
+            "id": "APPLICATION-F9D25E95F25AFE0A",
+            "type": "APPLICATION"
+          },
+          "name": "Astroshop"
+        },
+        "entityTags": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "SLO_APP",
+            "stringRepresentation": "SLO_APP:astroshop",
+            "value": "astroshop"
+          }
+        ],
+        "eventId": "-3153016581030927776_1785946080000",
+        "eventType": "APPLICATION_SLOWDOWN",
+        "frequentEvent": false,
+        "managementZones": [],
+        "properties": [
+          {
+            "key": "dt.event.baseline.affected_load",
+            "value": "21.6"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p50_abnormal",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p90_abnormal",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50",
+            "value": "806000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50_reference",
+            "value": "273000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90",
+            "value": "1800999.9"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90_reference",
+            "value": "949199.94"
+          },
+          {
+            "key": "dt.event.baseline.static_user_override",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.total_load",
+            "value": "142.4"
+          },
+          {
+            "key": "dt.event.description",
+            "value": "The current response time (806 ms) exceeds the auto-detected baseline (273 ms) by 195.24 %.\nIncident occurred with user action Xhr and Firefox 125."
+          },
+          {
+            "key": "dt.event.group_label",
+            "value": "Application slowdown"
+          },
+          {
+            "key": "dt.event.impact_level",
+            "value": "Application"
+          },
+          {
+            "key": "dt.event.is_rootcause_relevant",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.timeout",
+            "value": "9"
+          }
+        ],
+        "startTime": 1785946080000,
+        "status": "OPEN",
+        "suppressAlert": false,
+        "suppressProblem": false,
+        "title": "User action duration degradation",
+        "underMaintenance": false
+      },
+      {
+        "correlationId": "1BD8548E20725DEE",
+        "endTime": -1,
+        "entityId": {
+          "entityId": {
+            "id": "APPLICATION-F9D25E95F25AFE0A",
+            "type": "APPLICATION"
+          },
+          "name": "Astroshop"
+        },
+        "entityTags": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "SLO_APP",
+            "stringRepresentation": "SLO_APP:astroshop",
+            "value": "astroshop"
+          }
+        ],
+        "eventId": "609788756598443306_1785946020000",
+        "eventType": "APPLICATION_SLOWDOWN",
+        "frequentEvent": false,
+        "managementZones": [],
+        "properties": [
+          {
+            "key": "dt.event.baseline.affected_load",
+            "value": "34.6"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p50_abnormal",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p90_abnormal",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50",
+            "value": "716000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50_reference",
+            "value": "261000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90",
+            "value": "1622999.9"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90_reference",
+            "value": "944999.94"
+          },
+          {
+            "key": "dt.event.baseline.static_user_override",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.total_load",
+            "value": "146.4"
+          },
+          {
+            "key": "dt.event.description",
+            "value": "The current response time (716 ms) exceeds the auto-detected baseline (261 ms) by 174.33 %.\nIncident occurred with user action Xhr and operating system macOS 15 Sequoia."
+          },
+          {
+            "key": "dt.event.group_label",
+            "value": "Application slowdown"
+          },
+          {
+            "key": "dt.event.impact_level",
+            "value": "Application"
+          },
+          {
+            "key": "dt.event.is_rootcause_relevant",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.timeout",
+            "value": "9"
+          }
+        ],
+        "startTime": 1785946020000,
+        "status": "OPEN",
+        "suppressAlert": false,
+        "suppressProblem": false,
+        "title": "User action duration degradation",
+        "underMaintenance": false
+      },
+      {
+        "correlationId": "098B50671680BBD5",
+        "endTime": -1,
+        "entityId": {
+          "entityId": {
+            "id": "APPLICATION-F9D25E95F25AFE0A",
+            "type": "APPLICATION"
+          },
+          "name": "Astroshop"
+        },
+        "entityTags": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "SLO_APP",
+            "stringRepresentation": "SLO_APP:astroshop",
+            "value": "astroshop"
+          }
+        ],
+        "eventId": "-4483174894726461841_1785945960000",
+        "eventType": "APPLICATION_SLOWDOWN",
+        "frequentEvent": false,
+        "managementZones": [],
+        "properties": [
+          {
+            "key": "dt.event.baseline.affected_load",
+            "value": "11.6"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p50_abnormal",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p90_abnormal",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50",
+            "value": "726000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50_reference",
+            "value": "288000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90",
+            "value": "2104000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90_reference",
+            "value": "1069799.9"
+          },
+          {
+            "key": "dt.event.baseline.static_user_override",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.total_load",
+            "value": "147.0"
+          },
+          {
+            "key": "dt.event.description",
+            "value": "The current response time (726 ms) exceeds the auto-detected baseline (288 ms) by 152.08 %.\nIncident occurred with user action Xhr and Firefox 124."
+          },
+          {
+            "key": "dt.event.group_label",
+            "value": "Application slowdown"
+          },
+          {
+            "key": "dt.event.impact_level",
+            "value": "Application"
+          },
+          {
+            "key": "dt.event.is_rootcause_relevant",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.timeout",
+            "value": "9"
+          }
+        ],
+        "startTime": 1785945960000,
+        "status": "OPEN",
+        "suppressAlert": false,
+        "suppressProblem": false,
+        "title": "User action duration degradation",
+        "underMaintenance": false
+      },
+      {
+        "correlationId": "041A50A31D3C8087",
+        "endTime": -1,
+        "entityId": {
+          "entityId": {
+            "id": "APPLICATION-F9D25E95F25AFE0A",
+            "type": "APPLICATION"
+          },
+          "name": "Astroshop"
+        },
+        "entityTags": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "SLO_APP",
+            "stringRepresentation": "SLO_APP:astroshop",
+            "value": "astroshop"
+          }
+        ],
+        "eventId": "-7310418575949161942_1785945960000",
+        "eventType": "APPLICATION_SLOWDOWN",
+        "frequentEvent": false,
+        "managementZones": [],
+        "properties": [
+          {
+            "key": "dt.event.baseline.affected_load",
+            "value": "15.8"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p50_abnormal",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p90_abnormal",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50",
+            "value": "719000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50_reference",
+            "value": "303500.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90",
+            "value": "1997199.8"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90_reference",
+            "value": "1065799.8"
+          },
+          {
+            "key": "dt.event.baseline.static_user_override",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.total_load",
+            "value": "147.0"
+          },
+          {
+            "key": "dt.event.description",
+            "value": "The current response time (719 ms) exceeds the auto-detected baseline (303.5 ms) by 136.9 %.\nIncident occurred with user action Xhr and Microsoft Edge 123."
+          },
+          {
+            "key": "dt.event.group_label",
+            "value": "Application slowdown"
+          },
+          {
+            "key": "dt.event.impact_level",
+            "value": "Application"
+          },
+          {
+            "key": "dt.event.is_rootcause_relevant",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.timeout",
+            "value": "9"
+          }
+        ],
+        "startTime": 1785945960000,
+        "status": "OPEN",
+        "suppressAlert": false,
+        "suppressProblem": false,
+        "title": "User action duration degradation",
+        "underMaintenance": false
+      },
+      {
+        "correlationId": "36587013DA1460BE",
+        "endTime": -1,
+        "entityId": {
+          "entityId": {
+            "id": "APPLICATION-F9D25E95F25AFE0A",
+            "type": "APPLICATION"
+          },
+          "name": "Astroshop"
+        },
+        "entityTags": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "SLO_APP",
+            "stringRepresentation": "SLO_APP:astroshop",
+            "value": "astroshop"
+          }
+        ],
+        "eventId": "-7826552416007253789_1785945960000",
+        "eventType": "APPLICATION_SLOWDOWN",
+        "frequentEvent": false,
+        "managementZones": [],
+        "properties": [
+          {
+            "key": "dt.event.baseline.affected_load",
+            "value": "17.4"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p50_abnormal",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p90_abnormal",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50",
+            "value": "789000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50_reference",
+            "value": "281000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90",
+            "value": "2208999.5"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90_reference",
+            "value": "974600.0"
+          },
+          {
+            "key": "dt.event.baseline.static_user_override",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.total_load",
+            "value": "147.0"
+          },
+          {
+            "key": "dt.event.description",
+            "value": "The current response time (789 ms) exceeds the auto-detected baseline (281 ms) by 180.78 %.\nIncident occurred with user action Xhr and Safari 17."
+          },
+          {
+            "key": "dt.event.group_label",
+            "value": "Application slowdown"
+          },
+          {
+            "key": "dt.event.impact_level",
+            "value": "Application"
+          },
+          {
+            "key": "dt.event.is_rootcause_relevant",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.timeout",
+            "value": "9"
+          }
+        ],
+        "startTime": 1785945960000,
+        "status": "OPEN",
+        "suppressAlert": false,
+        "suppressProblem": false,
+        "title": "User action duration degradation",
+        "underMaintenance": false
+      },
+      {
+        "correlationId": "B2C72C47C76CDAFB",
+        "endTime": -1,
+        "entityId": {
+          "entityId": {
+            "id": "APPLICATION-F9D25E95F25AFE0A",
+            "type": "APPLICATION"
+          },
+          "name": "Astroshop"
+        },
+        "entityTags": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "SLO_APP",
+            "stringRepresentation": "SLO_APP:astroshop",
+            "value": "astroshop"
+          }
+        ],
+        "eventId": "898370822755934936_1785945960000",
+        "eventType": "APPLICATION_SLOWDOWN",
+        "frequentEvent": false,
+        "managementZones": [],
+        "properties": [
+          {
+            "key": "dt.event.baseline.affected_load",
+            "value": "34.0"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p50_abnormal",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p90_abnormal",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50",
+            "value": "702500.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50_reference",
+            "value": "266000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90",
+            "value": "1751899.8"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90_reference",
+            "value": "981399.9"
+          },
+          {
+            "key": "dt.event.baseline.static_user_override",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.total_load",
+            "value": "147.0"
+          },
+          {
+            "key": "dt.event.description",
+            "value": "The current response time (702.5 ms) exceeds the auto-detected baseline (266 ms) by 164.1 %.\nIncident occurred with user action Xhr in Europe."
+          },
+          {
+            "key": "dt.event.group_label",
+            "value": "Application slowdown"
+          },
+          {
+            "key": "dt.event.impact_level",
+            "value": "Application"
+          },
+          {
+            "key": "dt.event.is_rootcause_relevant",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.timeout",
+            "value": "9"
+          }
+        ],
+        "startTime": 1785945960000,
+        "status": "OPEN",
+        "suppressAlert": false,
+        "suppressProblem": false,
+        "title": "User action duration degradation",
+        "underMaintenance": false
+      },
+      {
+        "correlationId": "B7D0DC6A1D198BCD",
+        "endTime": -1,
+        "entityId": {
+          "entityId": {
+            "id": "APPLICATION-F9D25E95F25AFE0A",
+            "type": "APPLICATION"
+          },
+          "name": "Astroshop"
+        },
+        "entityTags": [
+          {
+            "context": "CONTEXTLESS",
+            "key": "SLO_APP",
+            "stringRepresentation": "SLO_APP:astroshop",
+            "value": "astroshop"
+          }
+        ],
+        "eventId": "-2202366050688628757_1785945900000",
+        "eventType": "APPLICATION_SLOWDOWN",
+        "frequentEvent": false,
+        "managementZones": [],
+        "properties": [
+          {
+            "key": "dt.event.baseline.affected_load",
+            "value": "36.2"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p50_abnormal",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.baseline.is_response_time_p90_abnormal",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50",
+            "value": "709000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p50_reference",
+            "value": "255000.0"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90",
+            "value": "1852199.9"
+          },
+          {
+            "key": "dt.event.baseline.response_time_p90_reference",
+            "value": "917999.8"
+          },
+          {
+            "key": "dt.event.baseline.static_user_override",
+            "value": "false"
+          },
+          {
+            "key": "dt.event.baseline.total_load",
+            "value": "148.4"
+          },
+          {
+            "key": "dt.event.description",
+            "value": "The current response time (709 ms) exceeds the auto-detected baseline (255 ms) by 178.04 %.\nIncident occurred with user action Xhr and Firefox."
+          },
+          {
+            "key": "dt.event.group_label",
+            "value": "Application slowdown"
+          },
+          {
+            "key": "dt.event.impact_level",
+            "value": "Application"
+          },
+          {
+            "key": "dt.event.is_rootcause_relevant",
+            "value": "true"
+          },
+          {
+            "key": "dt.event.timeout",
+            "value": "9"
+          }
+        ],
+        "startTime": 1785945900000,
+        "status": "OPEN",
+        "suppressAlert": false,
+        "suppressProblem": false,
+        "title": "User action duration degradation",
+        "underMaintenance": false
+      }
+    ],
+    "nextPageKey": "AQANMTc4NTkzOTU4MTUzNQEADTE3ODU5NDY3ODE1MzUBADtTdHJpbmcoVDFCRlRnPT0pLUxvbmcoMTlmZDJhYmMzZTApLUxvbmcoZTE2ZjlmYmVkYjUzMDdlYiktYQEAAAAKAAAA",
+    "pageSize": 10,
+    "totalCount": 175,
+    "warnings": []
+  },
+  "nango": {},
+  "api": {
+    "get": {
+      "/api/v2/events": {
+        "response": {
+          "totalCount": 175,
+          "pageSize": 10,
+          "nextPageKey": "AQANMTc4NTkzOTU4MTUzNQEADTE3ODU5NDY3ODE1MzUBADtTdHJpbmcoVDFCRlRnPT0pLUxvbmcoMTlmZDJhYmMzZTApLUxvbmcoZTE2ZjlmYmVkYjUzMDdlYiktYQEAAAAKAAAA",
+          "events": [
+            {
+              "eventId": "-5301772197560753067_1785946260000",
+              "startTime": 1785946260000,
+              "endTime": -1,
+              "eventType": "APPLICATION_SLOWDOWN",
+              "title": "User action duration degradation",
+              "entityId": {
+                "entityId": {
+                  "id": "APPLICATION-F9D25E95F25AFE0A",
+                  "type": "APPLICATION"
+                },
+                "name": "Astroshop"
+              },
+              "properties": [
+                {
+                  "key": "dt.event.baseline.affected_load",
+                  "value": "16.8"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p50_abnormal",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p90_abnormal",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50",
+                  "value": "873000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50_reference",
+                  "value": "311000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90",
+                  "value": "1691199.9"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90_reference",
+                  "value": "1104999.8"
+                },
+                {
+                  "key": "dt.event.baseline.static_user_override",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.total_load",
+                  "value": "142.0"
+                },
+                {
+                  "key": "dt.event.description",
+                  "value": "The current response time (873 ms) exceeds the auto-detected baseline (311 ms) by 180.71 %.\nIncident occurred with user action Xhr in Oceania."
+                },
+                {
+                  "key": "dt.event.group_label",
+                  "value": "Application slowdown"
+                },
+                {
+                  "key": "dt.event.impact_level",
+                  "value": "Application"
+                },
+                {
+                  "key": "dt.event.is_rootcause_relevant",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.timeout",
+                  "value": "9"
+                }
+              ],
+              "status": "OPEN",
+              "correlationId": "C70FDE7BBAB0C2BA",
+              "entityTags": [
+                {
+                  "context": "CONTEXTLESS",
+                  "key": "SLO_APP",
+                  "value": "astroshop",
+                  "stringRepresentation": "SLO_APP:astroshop"
+                }
+              ],
+              "managementZones": [],
+              "underMaintenance": false,
+              "suppressAlert": false,
+              "suppressProblem": false,
+              "frequentEvent": false
+            },
+            {
+              "eventId": "6853744532401203457_1785946260000",
+              "startTime": 1785946260000,
+              "endTime": -1,
+              "eventType": "PROCESS_HIGH_GC_ACTIVITY",
+              "title": "Long garbage-collection time",
+              "entityId": {
+                "entityId": {
+                  "id": "PROCESS_GROUP_INSTANCE-F8A40CDF81B78A24",
+                  "type": "PROCESS_GROUP_INSTANCE"
+                },
+                "name": "server.js (frontend) frontend-* (frontend-959449d4d-4ggvv)"
+              },
+              "properties": [
+                {
+                  "key": "dt.event.allow_davis_merge",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.description",
+                  "value": "Garbage collection is suspending process server.js (frontend) frontend-* (frontend-959449d4d-4ggvv) on host aks-default-18490522-vmss000000.x1fxmamr1tou3djw0rchix4hre.bx.internal.cloudapp.net"
+                },
+                {
+                  "key": "dt.event.group_label",
+                  "value": "Long garbage-collection time"
+                },
+                {
+                  "key": "dt.event.impact_level",
+                  "value": "Infrastructure"
+                },
+                {
+                  "key": "dt.event.is_rootcause_relevant",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.metric_selector",
+                  "value": "(builtin:tech.jvm.memory.gc.collectionTime:value):filter(eq(\"dt.entity.process_group_instance\",PROCESS_GROUP_INSTANCE-F8A40CDF81B78A24))"
+                },
+                {
+                  "key": "dt.event.metric_threshold",
+                  "value": "24000.0"
+                },
+                {
+                  "key": "dt.event.release_version",
+                  "value": ""
+                },
+                {
+                  "key": "dt.event.timeout",
+                  "value": "15"
+                }
+              ],
+              "status": "OPEN",
+              "correlationId": "cfc05415fe1c5bb3",
+              "entityTags": [
+                {
+                  "context": "KUBERNETES",
+                  "key": "app.kubernetes.io/name",
+                  "value": "frontend",
+                  "stringRepresentation": "[Kubernetes]app.kubernetes.io/name:frontend"
+                },
+                {
+                  "context": "KUBERNETES",
+                  "key": "stage",
+                  "value": "prod",
+                  "stringRepresentation": "[Kubernetes]stage:prod"
+                },
+                {
+                  "context": "KUBERNETES",
+                  "key": "opentelemetry.io/name",
+                  "value": "frontend",
+                  "stringRepresentation": "[Kubernetes]opentelemetry.io/name:frontend"
+                },
+                {
+                  "context": "CONTEXTLESS",
+                  "key": "[Kubernetes]namespace",
+                  "value": "astroshop",
+                  "stringRepresentation": "[Kubernetes]namespace:astroshop"
+                },
+                {
+                  "context": "ENVIRONMENT",
+                  "key": "DT_RELEASE_PRODUCT",
+                  "stringRepresentation": "[Environment]DT_RELEASE_PRODUCT"
+                },
+                {
+                  "context": "KUBERNETES",
+                  "key": "astroshop.org/owner",
+                  "value": "Team-UI",
+                  "stringRepresentation": "[Kubernetes]astroshop.org/owner:Team-UI"
+                },
+                {
+                  "context": "ENVIRONMENT",
+                  "key": "DT_RELEASE_VERSION",
+                  "stringRepresentation": "[Environment]DT_RELEASE_VERSION"
+                },
+                {
+                  "context": "KUBERNETES",
+                  "key": "app.kubernetes.io/component",
+                  "value": "frontend",
+                  "stringRepresentation": "[Kubernetes]app.kubernetes.io/component:frontend"
+                }
+              ],
+              "managementZones": [],
+              "underMaintenance": false,
+              "suppressAlert": false,
+              "suppressProblem": false,
+              "frequentEvent": false
+            },
+            {
+              "eventId": "7968101807393807135_1785946260000",
+              "startTime": 1785946260000,
+              "endTime": -1,
+              "eventType": "APPLICATION_SLOWDOWN",
+              "title": "User action duration degradation",
+              "entityId": {
+                "entityId": {
+                  "id": "APPLICATION-F9D25E95F25AFE0A",
+                  "type": "APPLICATION"
+                },
+                "name": "Astroshop"
+              },
+              "properties": [
+                {
+                  "key": "dt.event.baseline.affected_load",
+                  "value": "16.8"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p50_abnormal",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p90_abnormal",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50",
+                  "value": "873000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50_reference",
+                  "value": "311000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90",
+                  "value": "1691199.9"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90_reference",
+                  "value": "1104999.8"
+                },
+                {
+                  "key": "dt.event.baseline.static_user_override",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.total_load",
+                  "value": "142.0"
+                },
+                {
+                  "key": "dt.event.description",
+                  "value": "The current response time (873 ms) exceeds the auto-detected baseline (311 ms) by 180.71 %.\nIncident occurred with user action Xhr in Australia."
+                },
+                {
+                  "key": "dt.event.group_label",
+                  "value": "Application slowdown"
+                },
+                {
+                  "key": "dt.event.impact_level",
+                  "value": "Application"
+                },
+                {
+                  "key": "dt.event.is_rootcause_relevant",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.timeout",
+                  "value": "9"
+                }
+              ],
+              "status": "OPEN",
+              "correlationId": "2817D53A63410C0D",
+              "entityTags": [
+                {
+                  "context": "CONTEXTLESS",
+                  "key": "SLO_APP",
+                  "value": "astroshop",
+                  "stringRepresentation": "SLO_APP:astroshop"
+                }
+              ],
+              "managementZones": [],
+              "underMaintenance": false,
+              "suppressAlert": false,
+              "suppressProblem": false,
+              "frequentEvent": false
+            },
+            {
+              "eventId": "-3153016581030927776_1785946080000",
+              "startTime": 1785946080000,
+              "endTime": -1,
+              "eventType": "APPLICATION_SLOWDOWN",
+              "title": "User action duration degradation",
+              "entityId": {
+                "entityId": {
+                  "id": "APPLICATION-F9D25E95F25AFE0A",
+                  "type": "APPLICATION"
+                },
+                "name": "Astroshop"
+              },
+              "properties": [
+                {
+                  "key": "dt.event.baseline.affected_load",
+                  "value": "21.6"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p50_abnormal",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p90_abnormal",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50",
+                  "value": "806000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50_reference",
+                  "value": "273000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90",
+                  "value": "1800999.9"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90_reference",
+                  "value": "949199.94"
+                },
+                {
+                  "key": "dt.event.baseline.static_user_override",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.total_load",
+                  "value": "142.4"
+                },
+                {
+                  "key": "dt.event.description",
+                  "value": "The current response time (806 ms) exceeds the auto-detected baseline (273 ms) by 195.24 %.\nIncident occurred with user action Xhr and Firefox 125."
+                },
+                {
+                  "key": "dt.event.group_label",
+                  "value": "Application slowdown"
+                },
+                {
+                  "key": "dt.event.impact_level",
+                  "value": "Application"
+                },
+                {
+                  "key": "dt.event.is_rootcause_relevant",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.timeout",
+                  "value": "9"
+                }
+              ],
+              "status": "OPEN",
+              "correlationId": "04FF51C6EA762459",
+              "entityTags": [
+                {
+                  "context": "CONTEXTLESS",
+                  "key": "SLO_APP",
+                  "value": "astroshop",
+                  "stringRepresentation": "SLO_APP:astroshop"
+                }
+              ],
+              "managementZones": [],
+              "underMaintenance": false,
+              "suppressAlert": false,
+              "suppressProblem": false,
+              "frequentEvent": false
+            },
+            {
+              "eventId": "609788756598443306_1785946020000",
+              "startTime": 1785946020000,
+              "endTime": -1,
+              "eventType": "APPLICATION_SLOWDOWN",
+              "title": "User action duration degradation",
+              "entityId": {
+                "entityId": {
+                  "id": "APPLICATION-F9D25E95F25AFE0A",
+                  "type": "APPLICATION"
+                },
+                "name": "Astroshop"
+              },
+              "properties": [
+                {
+                  "key": "dt.event.baseline.affected_load",
+                  "value": "34.6"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p50_abnormal",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p90_abnormal",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50",
+                  "value": "716000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50_reference",
+                  "value": "261000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90",
+                  "value": "1622999.9"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90_reference",
+                  "value": "944999.94"
+                },
+                {
+                  "key": "dt.event.baseline.static_user_override",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.total_load",
+                  "value": "146.4"
+                },
+                {
+                  "key": "dt.event.description",
+                  "value": "The current response time (716 ms) exceeds the auto-detected baseline (261 ms) by 174.33 %.\nIncident occurred with user action Xhr and operating system macOS 15 Sequoia."
+                },
+                {
+                  "key": "dt.event.group_label",
+                  "value": "Application slowdown"
+                },
+                {
+                  "key": "dt.event.impact_level",
+                  "value": "Application"
+                },
+                {
+                  "key": "dt.event.is_rootcause_relevant",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.timeout",
+                  "value": "9"
+                }
+              ],
+              "status": "OPEN",
+              "correlationId": "1BD8548E20725DEE",
+              "entityTags": [
+                {
+                  "context": "CONTEXTLESS",
+                  "key": "SLO_APP",
+                  "value": "astroshop",
+                  "stringRepresentation": "SLO_APP:astroshop"
+                }
+              ],
+              "managementZones": [],
+              "underMaintenance": false,
+              "suppressAlert": false,
+              "suppressProblem": false,
+              "frequentEvent": false
+            },
+            {
+              "eventId": "-4483174894726461841_1785945960000",
+              "startTime": 1785945960000,
+              "endTime": -1,
+              "eventType": "APPLICATION_SLOWDOWN",
+              "title": "User action duration degradation",
+              "entityId": {
+                "entityId": {
+                  "id": "APPLICATION-F9D25E95F25AFE0A",
+                  "type": "APPLICATION"
+                },
+                "name": "Astroshop"
+              },
+              "properties": [
+                {
+                  "key": "dt.event.baseline.affected_load",
+                  "value": "11.6"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p50_abnormal",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p90_abnormal",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50",
+                  "value": "726000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50_reference",
+                  "value": "288000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90",
+                  "value": "2104000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90_reference",
+                  "value": "1069799.9"
+                },
+                {
+                  "key": "dt.event.baseline.static_user_override",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.total_load",
+                  "value": "147.0"
+                },
+                {
+                  "key": "dt.event.description",
+                  "value": "The current response time (726 ms) exceeds the auto-detected baseline (288 ms) by 152.08 %.\nIncident occurred with user action Xhr and Firefox 124."
+                },
+                {
+                  "key": "dt.event.group_label",
+                  "value": "Application slowdown"
+                },
+                {
+                  "key": "dt.event.impact_level",
+                  "value": "Application"
+                },
+                {
+                  "key": "dt.event.is_rootcause_relevant",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.timeout",
+                  "value": "9"
+                }
+              ],
+              "status": "OPEN",
+              "correlationId": "098B50671680BBD5",
+              "entityTags": [
+                {
+                  "context": "CONTEXTLESS",
+                  "key": "SLO_APP",
+                  "value": "astroshop",
+                  "stringRepresentation": "SLO_APP:astroshop"
+                }
+              ],
+              "managementZones": [],
+              "underMaintenance": false,
+              "suppressAlert": false,
+              "suppressProblem": false,
+              "frequentEvent": false
+            },
+            {
+              "eventId": "-7310418575949161942_1785945960000",
+              "startTime": 1785945960000,
+              "endTime": -1,
+              "eventType": "APPLICATION_SLOWDOWN",
+              "title": "User action duration degradation",
+              "entityId": {
+                "entityId": {
+                  "id": "APPLICATION-F9D25E95F25AFE0A",
+                  "type": "APPLICATION"
+                },
+                "name": "Astroshop"
+              },
+              "properties": [
+                {
+                  "key": "dt.event.baseline.affected_load",
+                  "value": "15.8"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p50_abnormal",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p90_abnormal",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50",
+                  "value": "719000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50_reference",
+                  "value": "303500.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90",
+                  "value": "1997199.8"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90_reference",
+                  "value": "1065799.8"
+                },
+                {
+                  "key": "dt.event.baseline.static_user_override",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.total_load",
+                  "value": "147.0"
+                },
+                {
+                  "key": "dt.event.description",
+                  "value": "The current response time (719 ms) exceeds the auto-detected baseline (303.5 ms) by 136.9 %.\nIncident occurred with user action Xhr and Microsoft Edge 123."
+                },
+                {
+                  "key": "dt.event.group_label",
+                  "value": "Application slowdown"
+                },
+                {
+                  "key": "dt.event.impact_level",
+                  "value": "Application"
+                },
+                {
+                  "key": "dt.event.is_rootcause_relevant",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.timeout",
+                  "value": "9"
+                }
+              ],
+              "status": "OPEN",
+              "correlationId": "041A50A31D3C8087",
+              "entityTags": [
+                {
+                  "context": "CONTEXTLESS",
+                  "key": "SLO_APP",
+                  "value": "astroshop",
+                  "stringRepresentation": "SLO_APP:astroshop"
+                }
+              ],
+              "managementZones": [],
+              "underMaintenance": false,
+              "suppressAlert": false,
+              "suppressProblem": false,
+              "frequentEvent": false
+            },
+            {
+              "eventId": "-7826552416007253789_1785945960000",
+              "startTime": 1785945960000,
+              "endTime": -1,
+              "eventType": "APPLICATION_SLOWDOWN",
+              "title": "User action duration degradation",
+              "entityId": {
+                "entityId": {
+                  "id": "APPLICATION-F9D25E95F25AFE0A",
+                  "type": "APPLICATION"
+                },
+                "name": "Astroshop"
+              },
+              "properties": [
+                {
+                  "key": "dt.event.baseline.affected_load",
+                  "value": "17.4"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p50_abnormal",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p90_abnormal",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50",
+                  "value": "789000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50_reference",
+                  "value": "281000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90",
+                  "value": "2208999.5"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90_reference",
+                  "value": "974600.0"
+                },
+                {
+                  "key": "dt.event.baseline.static_user_override",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.total_load",
+                  "value": "147.0"
+                },
+                {
+                  "key": "dt.event.description",
+                  "value": "The current response time (789 ms) exceeds the auto-detected baseline (281 ms) by 180.78 %.\nIncident occurred with user action Xhr and Safari 17."
+                },
+                {
+                  "key": "dt.event.group_label",
+                  "value": "Application slowdown"
+                },
+                {
+                  "key": "dt.event.impact_level",
+                  "value": "Application"
+                },
+                {
+                  "key": "dt.event.is_rootcause_relevant",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.timeout",
+                  "value": "9"
+                }
+              ],
+              "status": "OPEN",
+              "correlationId": "36587013DA1460BE",
+              "entityTags": [
+                {
+                  "context": "CONTEXTLESS",
+                  "key": "SLO_APP",
+                  "value": "astroshop",
+                  "stringRepresentation": "SLO_APP:astroshop"
+                }
+              ],
+              "managementZones": [],
+              "underMaintenance": false,
+              "suppressAlert": false,
+              "suppressProblem": false,
+              "frequentEvent": false
+            },
+            {
+              "eventId": "898370822755934936_1785945960000",
+              "startTime": 1785945960000,
+              "endTime": -1,
+              "eventType": "APPLICATION_SLOWDOWN",
+              "title": "User action duration degradation",
+              "entityId": {
+                "entityId": {
+                  "id": "APPLICATION-F9D25E95F25AFE0A",
+                  "type": "APPLICATION"
+                },
+                "name": "Astroshop"
+              },
+              "properties": [
+                {
+                  "key": "dt.event.baseline.affected_load",
+                  "value": "34.0"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p50_abnormal",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p90_abnormal",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50",
+                  "value": "702500.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50_reference",
+                  "value": "266000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90",
+                  "value": "1751899.8"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90_reference",
+                  "value": "981399.9"
+                },
+                {
+                  "key": "dt.event.baseline.static_user_override",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.total_load",
+                  "value": "147.0"
+                },
+                {
+                  "key": "dt.event.description",
+                  "value": "The current response time (702.5 ms) exceeds the auto-detected baseline (266 ms) by 164.1 %.\nIncident occurred with user action Xhr in Europe."
+                },
+                {
+                  "key": "dt.event.group_label",
+                  "value": "Application slowdown"
+                },
+                {
+                  "key": "dt.event.impact_level",
+                  "value": "Application"
+                },
+                {
+                  "key": "dt.event.is_rootcause_relevant",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.timeout",
+                  "value": "9"
+                }
+              ],
+              "status": "OPEN",
+              "correlationId": "B2C72C47C76CDAFB",
+              "entityTags": [
+                {
+                  "context": "CONTEXTLESS",
+                  "key": "SLO_APP",
+                  "value": "astroshop",
+                  "stringRepresentation": "SLO_APP:astroshop"
+                }
+              ],
+              "managementZones": [],
+              "underMaintenance": false,
+              "suppressAlert": false,
+              "suppressProblem": false,
+              "frequentEvent": false
+            },
+            {
+              "eventId": "-2202366050688628757_1785945900000",
+              "startTime": 1785945900000,
+              "endTime": -1,
+              "eventType": "APPLICATION_SLOWDOWN",
+              "title": "User action duration degradation",
+              "entityId": {
+                "entityId": {
+                  "id": "APPLICATION-F9D25E95F25AFE0A",
+                  "type": "APPLICATION"
+                },
+                "name": "Astroshop"
+              },
+              "properties": [
+                {
+                  "key": "dt.event.baseline.affected_load",
+                  "value": "36.2"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p50_abnormal",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.baseline.is_response_time_p90_abnormal",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50",
+                  "value": "709000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p50_reference",
+                  "value": "255000.0"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90",
+                  "value": "1852199.9"
+                },
+                {
+                  "key": "dt.event.baseline.response_time_p90_reference",
+                  "value": "917999.8"
+                },
+                {
+                  "key": "dt.event.baseline.static_user_override",
+                  "value": "false"
+                },
+                {
+                  "key": "dt.event.baseline.total_load",
+                  "value": "148.4"
+                },
+                {
+                  "key": "dt.event.description",
+                  "value": "The current response time (709 ms) exceeds the auto-detected baseline (255 ms) by 178.04 %.\nIncident occurred with user action Xhr and Firefox."
+                },
+                {
+                  "key": "dt.event.group_label",
+                  "value": "Application slowdown"
+                },
+                {
+                  "key": "dt.event.impact_level",
+                  "value": "Application"
+                },
+                {
+                  "key": "dt.event.is_rootcause_relevant",
+                  "value": "true"
+                },
+                {
+                  "key": "dt.event.timeout",
+                  "value": "9"
+                }
+              ],
+              "status": "OPEN",
+              "correlationId": "B7D0DC6A1D198BCD",
+              "entityTags": [
+                {
+                  "context": "CONTEXTLESS",
+                  "key": "SLO_APP",
+                  "value": "astroshop",
+                  "stringRepresentation": "SLO_APP:astroshop"
+                }
+              ],
+              "managementZones": [],
+              "underMaintenance": false,
+              "suppressAlert": false,
+              "suppressProblem": false,
+              "frequentEvent": false
+            }
+          ],
+          "warnings": []
+        },
+        "status": 200,
+        "headers": {
+          "date": "Wed, 05 Aug 2026 16:19:41 GMT",
+          "content-type": "application/json;charset=utf-8",
+          "content-length": "16743",
+          "connection": "keep-alive",
+          "x-xss-protection": "0",
+          "x-content-type-options": "nosniff",
+          "x-download-options": "noopen",
+          "x-frame-options": "SAMEORIGIN",
+          "x-dns-prefetch-control": "off",
+          "strict-transport-security": "max-age=31536000;includeSubDomains",
+          "content-security-policy-report-only": "default-src 'self' https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/;child-src 'self';connect-src 'self' https://*.google-analytics.com https://*.sentry.io https://app.nango.dev https://api.nango.dev wss://api.nango.dev/ https://connect.nango.dev https://connect.nango.dev/ https://*.posthog.com https://*.stripe.com https://*.plain.com wss://*.plain.com https://raw.githubusercontent.com;font-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.cdn-plain.com;frame-src 'self' https://accounts.google.com https://app.nango.dev https://api.nango.dev https://connect.nango.dev https://connect.nango.dev/ https://www.youtube.com https://*.stripe.com;img-src 'self' data: blob: https://app.nango.dev https://api.nango.dev https://*.google-analytics.com https://*.googleapis.com https://*.posthog.com https://img.logo.dev https://*.ytimg.com https://*.plain.com;manifest-src 'self';media-src 'self';object-src 'self';script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.nango.dev https://api.nango.dev https://*.stripe.com https://*.google-analytics.com https://*.googleapis.com https://apis.google.com https://*.posthog.com https://www.youtube.com https://*.cdn-plain.com;style-src blob: 'self' 'unsafe-inline' https://*.googleapis.com https://app.nango.dev https://api.nango.dev;worker-src blob: 'self' https://app.nango.dev https://api.nango.dev https://*.googleapis.com https://*.posthog.com;base-uri 'self';form-action 'self';frame-ancestors 'self';script-src-attr 'none';upgrade-insecure-requests",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Authorization, Etag, Content-Type, Content-Length, X-Nango-Signature, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset",
+          "x-ratelimit-limit": "2000",
+          "x-ratelimit-remaining": "1971",
+          "x-ratelimit-reset": "1785946818",
+          "vary": "Accept-Encoding",
+          "set-cookie": "<redacted>",
+          "x-oneagent-js-injection": "true",
+          "server-timing": "dtTrId;desc=\"6a73629d0000000078feefc8edcd0590\", dtSInfo;desc=\"0\", dtRpid;desc=\"-543007041\"",
+          "traceresponse": "00-6a73629d0000000078feefc8edcd0590-c1830e40061a6ea2-01",
+          "x-dt-tracestate": "ec907795-f23c233@dt",
+          "cache-control": "no-store, no-cache",
+          "pragma": "no-cache",
+          "dynatrace-response-source": "Cluster",
+          "x-robots-tag": "noindex",
+          "server": "ruxit server",
+          "etag": "W/\"4167-/XHLhNY3jSQ9PHr5SK84cT8S1Hg\""
+        },
+        "hash": "0841b9412d9811eaf2dce0b393db09fcd40965a6",
+        "request": {
+          "params": {
+            "from": "now-2h",
+            "pageSize": "10"
+          }
+        }
+      }
+    }
+  }
+}

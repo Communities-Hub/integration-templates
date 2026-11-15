@@ -1,0 +1,54 @@
+export interface SyncMetadata_linkedin_messages {
+};
+
+export interface LinkedInMessage {
+  id: string;
+  resourceId: string;
+  method: string;
+  owner: string;
+  actor: string;
+  activityId: string;
+  processedAt: number;
+  capturedAt: number;
+  activityStatus: string;
+  thread: string | null;
+  author: string | null;
+  createdAt: number | null;
+  isDeleted: boolean;
+  configVersion: number | null;
+  methodName?: string | undefined;
+  processedActivity?: any | undefined;
+  deletedAt?: number | undefined;
+  activityData?: {  actor: string;
+  createdAt: number;
+  attachments: string[];
+  author: string;
+  messageContexts: any[];
+  thread: string;
+  message?: string | undefined;
+  version?: number | undefined;
+  contentCertificationToken?: string | undefined;
+  extensionContent?: any | undefined;};
+  content?: {  format: string;
+  fallback: string;
+  formatVersion: number;
+  content?: {  string?: string | undefined;};} | null;
+  deliveredAt?: number | undefined;
+  mailbox?: string | undefined;
+  contentClassification?: {  classification: string;} | null | undefined;
+  attachments?: string[] | undefined;
+  contentUrns?: string[] | undefined;
+  extensionContent?: any | undefined;
+  messageContexts?: string[] | undefined;
+};
+
+export interface ActionInput_linkedin_post {
+  text: string;
+  videoURN: string;
+  videoTitle: string;
+  ownerId: string;
+};
+
+export interface ActionOutput_linkedin_post {
+  succcess: boolean;
+};

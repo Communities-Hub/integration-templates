@@ -1,0 +1,137 @@
+export interface SyncMetadata_outlook_calendars {
+};
+
+export interface OutlookCalendar {
+  id: string;
+  allowedOnlineMeetingProviders: string[];
+  canEdit: boolean;
+  canShare: boolean;
+  canViewPrivateItems: boolean;
+  changeKey: string;
+  color: 'auto' | 'lightBlue' | 'lightGreen' | 'lightOrange' | 'lightGray' | 'lightYellow' | 'lightTeal' | 'lightPink' | 'lightBrown' | 'lightRed' | 'maxColor';
+  defaultOnlineMeetingProvider: string;
+  hexColor: string;
+  isDefaultCalendar: boolean;
+  isRemovable: boolean;
+  isTallyingResponses: boolean;
+  name: string;
+  owner: {  address: string;
+  name: string;};
+};
+
+export interface SyncMetadata_outlook_emails {
+  backfillPeriodMs: number;
+};
+
+export interface OutlookEmail {
+  id: string;
+  sender?: string | undefined;
+  recipients?: string | undefined;
+  date: string;
+  subject: string;
+  body: string;
+  attachments: ({  filename: string;
+  mimeType: string;
+  size: number;
+  attachmentId: string;})[];
+  threadId: string;
+};
+
+export interface SyncMetadata_outlook_events {
+  backfillPeriodMs: number;
+};
+
+export interface OutlookCalendarEvent {
+  id: string;
+  attendees: ({  emailAddress: {  address: string;
+  name: string;};
+  proposedNewTime?: {  start: {  dateTime: string;
+  timeZone: string;};
+  end: {  dateTime: string;
+  timeZone: string;};} | undefined;
+  status: {  response: 'none' | 'organizer' | 'tentativelyAccepted' | 'accepted' | 'declined' | 'notResponded';
+  sentDateTime: string;};
+  type: 'required' | 'optional' | 'resource';})[];
+  bodyPreview: string;
+  end: {  dateTime: string;
+  timeZone: string;};
+  importance: 'low' | 'normal' | 'high';
+  isAllDay: boolean;
+  isCancelled: boolean;
+  isOrganizer: boolean;
+  location: {  address?: {  city?: string | undefined;
+  countryOrRegion?: string | undefined;
+  postalCode?: string | undefined;
+  state?: string | undefined;
+  street?: string | undefined;};
+  coordinates?: {  accuracy?: number | undefined;
+  altitude?: number | undefined;
+  altitudeAccuracy?: number | undefined;
+  latitude?: number | undefined;
+  longitude?: number | undefined;};
+  displayName?: string | undefined;
+  locationEmailAddress?: string | undefined;
+  locationUri?: string | undefined;
+  locationType?: 'default' | 'conferenceRoom' | 'homeAddress' | 'businessAddress' | 'geoCoordinates' | 'streetAddress' | 'hotel' | 'restaurant' | 'localBusiness' | 'postalAddress' | undefined;
+  uniqueId?: string | undefined;
+  uniqueIdType?: string | undefined;};
+  onlineMeeting: {  conferenceId?: string | undefined;
+  joinUrl?: string | undefined;
+  phones: ({  number: string;
+  type: 'home' | 'business' | 'mobile' | 'other' | 'assistant' | 'homeFax' | 'businessFax' | 'otherFax' | 'pager' | 'radio';})[];
+  quickDial?: string | undefined;
+  tollFreeNumbers: string[];
+  tollNumber?: string | undefined;} | null;
+  onlineMeetingProvider: string;
+  organizer: {  emailAddress: {  address: string;
+  name: string;};};
+  recurrence: {  pattern?: {  dayOfMonth?: number | undefined;
+  daysOfWeek?: string[] | undefined;
+  firstDayOfWeek?: string | undefined;
+  index?: 'first' | 'second' | 'third' | 'fourth' | 'last' | undefined;
+  interval: number;
+  month?: number | undefined;
+  type: 'daily' | 'weekly' | 'absoluteMonthly' | 'relativeMonthly' | 'absoluteYearly' | 'relativeYearly';};
+  range: {  endDate?: string | undefined;
+  numberOfOccurrences?: number | undefined;
+  recurrenceTimeZone?: string | undefined;
+  startDate: string;
+  type: 'endDate' | 'noEnd' | 'numbered';};} | null;
+  responseRequested: boolean;
+  responseStatus: {  response: string;
+  time: string;};
+  sensitivity: 'normal' | 'personal' | 'private' | 'confidential';
+  start: {  dateTime: string;
+  timeZone: string;};
+  subject: string;
+  webLink: string;
+};
+
+export interface SyncMetadata_outlook_folders {
+};
+
+export interface OutlookFolder {
+  id: string;
+  displayName: string;
+  parentFolderId: string;
+  childFolderCount: number;
+  unreadItemCount: number;
+  totalItemCount: number;
+  isHidden: boolean;
+};
+
+export interface ActionInput_outlook_fetchattachment {
+  threadId: string;
+  attachmentId: string;
+};
+
+export type ActionOutput_outlook_fetchattachment = string
+
+export interface ActionInput_outlook_fetcheventcontent {
+  id: string;
+};
+
+export interface ActionOutput_outlook_fetcheventcontent {
+  content: string;
+  contentType: 'text' | 'html';
+};

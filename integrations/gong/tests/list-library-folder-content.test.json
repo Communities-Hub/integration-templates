@@ -1,0 +1,34 @@
+{
+  "input": {
+    "folderId": "3492543238968030478"
+  },
+  "output": {
+    "requestId": "5zno9xkftk435145k6a",
+    "id": "3492543238968030478",
+    "name": "Public Folders",
+    "createdBy": null,
+    "updated": "2023-10-17T21:21:31.816562+02:00",
+    "calls": []
+  },
+  "nango": {},
+  "api": {
+    "get": {
+      "/v2/library/folder-content": {
+        "response": {
+          "requestId": "5zno9xkftk435145k6a",
+          "id": "3492543238968030478",
+          "name": "Public Folders",
+          "createdBy": null,
+          "updated": "2023-10-17T21:21:31.816562+02:00",
+          "calls": []
+        },
+        "status": 200,
+        "request": {
+          "params": {
+            "folderId": "3492543238968030478"
+          }
+        }
+      }
+    }
+  }
+}

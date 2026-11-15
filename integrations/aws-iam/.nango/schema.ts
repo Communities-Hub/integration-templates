@@ -1,0 +1,31 @@
+export interface User {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+};
+
+export interface SyncMetadata_aws_iam_users {
+};
+
+export interface ActionInput_aws_iam_createuser {
+  firstName: string;
+  lastName: string;
+  email: string;
+  userName?: string | undefined;
+};
+
+export interface ActionOutput_aws_iam_createuser {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+};
+
+export interface ActionInput_aws_iam_deleteuser {
+  userName: string;
+};
+
+export interface ActionOutput_aws_iam_deleteuser {
+  success: boolean;
+};

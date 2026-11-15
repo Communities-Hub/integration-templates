@@ -1,0 +1,81 @@
+export interface SyncMetadata_sharepoint_online_sharedsitesselection {
+  sharedSites: string[];
+  pickedFiles: ({  siteId: string;
+  fileIds: string[];})[];
+};
+
+export interface FileMetadata {
+  siteId: string;
+  id: string;
+  name: string;
+  etag: string;
+  cTag: string;
+  is_folder: boolean;
+  mime_type: string | null;
+  path: string;
+  raw_source?: any | undefined;
+  updated_at: string;
+  download_url: string | null;
+  created_at: string;
+  blob_size: number;
+};
+
+export interface SyncMetadata_sharepoint_online_userfiles {
+};
+
+export interface UserFileMetadata {
+  siteId: string;
+  id: string;
+  name: string;
+  etag: string;
+  cTag: string;
+  is_folder: boolean;
+  mime_type: string | null;
+  path: string;
+  raw_source: {};
+  updated_at: string;
+  download_url: string | null;
+  created_at: string;
+  blob_size: number;
+};
+
+export interface SyncMetadata_sharepoint_online_userfilesselection {
+  sharedSites: string[];
+  pickedFiles: ({  siteId: string;
+  fileIds: string[];})[];
+};
+
+export interface SelectedUserFileMetadata {
+  siteId: string;
+  id: string;
+  name: string;
+  etag: string;
+  cTag: string;
+  is_folder: boolean;
+  mime_type: string | null;
+  path: string;
+  raw_source: {};
+  updated_at: string;
+  download_url: string | null;
+  created_at: string;
+  blob_size: number;
+};
+
+export interface ActionInput_sharepoint_online_fetchfile {
+  siteId: string;
+  itemId: string;
+};
+
+export interface ActionOutput_sharepoint_online_fetchfile {
+  id: string;
+  download_url: string | null;
+};
+
+export type ActionInput_sharepoint_online_listsharedsites = void
+
+export interface ActionOutput_sharepoint_online_listsharedsites {
+  sitesToSync: ({  id: string;
+  name: string;
+  createdDateTime: string;
+  webUrl: string;})[];
+};

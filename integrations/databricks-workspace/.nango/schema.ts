@@ -1,0 +1,22 @@
+export type ActionInput_databricks_workspace_listwarehouses = void
+
+export interface ActionOutput_databricks_workspace_listwarehouses {
+  warehouses: ({  id: string;
+  name: string;
+  cluster_size: string;
+  min_num_clusters: number;
+  max_num_clusters: number;
+  auto_stop_mins: number;
+  creator_name: string;
+  spot_instance_policy: string;
+  enable_photon: boolean;
+  enable_serverless_compute: boolean;
+  channel: string;
+  warehouse_type: string;
+  num_active_sessions: number;
+  num_clusters: number;
+  state: string;
+  tags: {  [key: string]: string;};
+  health: {  status: string;
+  message?: string | undefined;};})[];
+};

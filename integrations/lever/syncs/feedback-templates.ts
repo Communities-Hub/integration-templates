@@ -1,0 +1,132 @@
+import { createSync, type ProxyConfiguration } from 'nango';
+import { z } from 'zod';
+
+const ProviderFieldSchema = z
+    .object({
+        id: z.string(),
+        type: z.string()
+    })
+    .passthrough();
+
+const ProviderGroupSchema = z.object({
+    id: z.string(),
+    name: z.string()
+});
+
+const ProviderStageSchema = z.object({
+    id: z.string(),
+    text: z.string()
+});
+
+const ProviderFeedbackTemplateSchema = z.object({
+    id: z.string(),
+    text: z.string(),
+    group: ProviderGroupSchema.nullable().optional(),
+    createdAt: z.number().nullable().optional(),
+    updatedAt: z.number().nullable().optional(),
+    instructions: z.string().optional(),
+    stage: ProviderStageSchema.nullable().optional(),
+    fields: z.array(ProviderFieldSchema).optional()
+});
+
+const FeedbackTemplateSchema = z.object({
+    id: z.string(),
+    text: z.string(),
+    group: z
+        .object({
+            id: z.string(),
+            name: z.string()
+        })
+        .optional(),
+    createdAt: z.number().optional(),
+    updatedAt: z.number().optional(),
+    instructions: z.string().optional(),
+    stage: z
+        .object({
+            id: z.string(),
+            text: z.string()
+        })
+        .optional(),
+    fields: z.array(z.unknown()).optional()
+});
+
+const CheckpointSchema = z.object({
+    offset: z.string()
+});
+
+const sync = createSync({
+    description: 'Fetches all feedback/interview scorecard templates on the account.',
+    version: '1.0.2',
+    frequency: 'every hour',
+    autoStart: true,
+    checkpoint: CheckpointSchema,
+    models: {
+        FeedbackTemplate: FeedbackTemplateSchema
+    },
+    scopes: ['feedback_templates:read:admin'],
+
+    exec: async (nango) => {
+        // Full refresh required because GET /v1/feedback_templates does not support
+        // updated_after or any changed-records filter, and there is no deleted-record
+        // endpoint for feedback templates.
+        const rawCheckpoint = await nango.getCheckpoint();
+        const checkpoint = rawCheckpoint ? CheckpointSchema.parse(rawCheckpoint) : undefined;
+        let offset = checkpoint?.offset ?? '';
+
+        await nango.trackDeletesStart('FeedbackTemplate');
+
+        const proxyConfig: ProxyConfiguration = {
+            // https://hire.lever.co/developer/documentation#list-all-feedback-templates
+            endpoint: '/v1/feedback_templates',
+            params: {
+                limit: 100,
+                ...(offset ? { offset } : {})
+            },
+            paginate: {
+                type: 'cursor',
+                cursor_name_in_request: 'offset',
+                cursor_path_in_response: 'next',
+                response_path: 'data',
+                limit_name_in_request: 'limit',
+                limit: 100,
+                on_page: async ({ nextPageParam }) => {
+                    offset = typeof nextPageParam === 'string' ? nextPageParam : '';
+                }
+            },
+            retries: 3
+        };
+
+        for await (const page of nango.paginate(proxyConfig)) {
+            const templates = page.map((record) => {
+                const parsed = ProviderFeedbackTemplateSchema.safeParse(record);
+                if (!parsed.success) {
+                    throw new Error(`Invalid feedback template: ${parsed.error.message}`);
+                }
+
+                const t = parsed.data;
+                return {
+                    id: t.id,
+                    text: t.text,
+                    ...(t.group != null && { group: t.group }),
+                    ...(t.createdAt != null && { createdAt: t.createdAt }),
+                    ...(t.updatedAt != null && { updatedAt: t.updatedAt }),
+                    ...(t.instructions != null && { instructions: t.instructions }),
+                    ...(t.stage != null && { stage: t.stage }),
+                    ...(t.fields != null && { fields: t.fields })
+                };
+            });
+
+            if (templates.length > 0) {
+                await nango.batchSave(templates, 'FeedbackTemplate');
+            }
+
+            await nango.saveCheckpoint({ offset });
+        }
+
+        await nango.clearCheckpoint();
+        await nango.trackDeletesEnd('FeedbackTemplate');
+    }
+});
+
+export type NangoSyncLocal = Parameters<(typeof sync)['exec']>[0];
+export default sync;

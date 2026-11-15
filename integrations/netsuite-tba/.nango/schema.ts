@@ -1,0 +1,495 @@
+export interface SyncMetadata_netsuite_tba_creditnotes {
+  timezone?: string | undefined;
+};
+
+export interface NetsuiteCreditNote {
+  id: string;
+  customerId: string;
+  currency: string;
+  description: string | null;
+  createdAt: string;
+  lines: ({  itemId: string;
+  quantity: number;
+  amount: number;
+  vatCode?: string | undefined;
+  description?: string | undefined;
+  locationId?: string | undefined;})[];
+  total: number;
+  status: string;
+};
+
+export interface SyncMetadata_netsuite_tba_customers {
+  timezone?: string | undefined;
+};
+
+export interface NetsuiteCustomer {
+  id: string;
+  externalId: string | null;
+  name: string;
+  email: string | null;
+  taxNumber: string | null;
+  phone: string | null;
+  addressLine1: string | null;
+  addressLine2: string | null;
+  city: string | null;
+  zip: string | null;
+  country: string | null;
+  state: string | null;
+};
+
+export interface SyncMetadata_netsuite_tba_generalledger {
+  timezone?: string | undefined;
+};
+
+export interface GeneralLedger {
+  id: string;
+  date: string | null;
+  number: number;
+  reference: string | null;
+  sourceId: string | null;
+  sourceType: string | null;
+  createdDate: string | null;
+  lines: ({  journalLineId: string;
+  accountId: string;
+  accountCode: string;
+  accountName: string;
+  description?: string | undefined;
+  netAmount: number;
+  grossAmount: number;
+  taxAmount: number;
+  taxType?: string | undefined;
+  taxName?: string | undefined;
+  trackingCategories: ({  name: string;
+  option: string;
+  trackingCategoryId: string;
+  trackingOptionId: string;
+  options: string[];})[];})[];
+};
+
+export interface SyncMetadata_netsuite_tba_invoices {
+  timezone?: string | undefined;
+};
+
+export interface NetsuiteInvoice {
+  id: string;
+  customerId: string;
+  currency: string;
+  description: string | null;
+  createdAt: string;
+  lines: ({  itemId: string;
+  quantity: number;
+  amount: number;
+  vatCode?: string | undefined;
+  description?: string | undefined;
+  locationId?: string | undefined;})[];
+  total: number;
+  status: string;
+};
+
+export interface SyncMetadata_netsuite_tba_locations {
+  timezone?: string | undefined;
+};
+
+export interface NetsuiteLocation {
+  id: string;
+  isInactive: boolean;
+  name: string;
+  lastModifiedDate: string;
+  address: {  address1: string;
+  addressee: string;
+  addressText: string;
+  city: string;
+  country: string;
+  state: string;
+  zip: string;};
+  returnAddress: {  addressText: string;
+  country: string;};
+  timeZone?: string | null | undefined;
+  useBins: boolean;
+};
+
+export interface SyncMetadata_netsuite_tba_payments {
+  timezone?: string | undefined;
+};
+
+export interface NetsuitePayment {
+  id: string;
+  description?: string | undefined;
+  customerId: string | null;
+  amount: number | null;
+  createdAt: string | null;
+  currency: string | null;
+  paymentReference: string | null;
+  status: string | null;
+  applyTo: string[];
+};
+
+export interface ActionInput_netsuite_tba_billcreate {
+  vendorId: string;
+  tranDate: string;
+  currency: string;
+  dueDate?: string | undefined;
+  status?: string | undefined;
+  memo?: string | undefined;
+  externalId?: string | undefined;
+  location?: string | undefined;
+  subsidiary?: string | undefined;
+  department?: string | undefined;
+  class?: string | undefined;
+  terms?: string | undefined;
+  lines: ({  itemId: string;
+  quantity: number;
+  amount: number;
+  description?: string | undefined;
+  rate?: number | undefined;
+  locationId?: string | undefined;
+  departmentId?: string | undefined;
+  classId?: string | undefined;
+  customerId?: string | undefined;
+  isBillable?: boolean | undefined;
+  taxDetails?: {  taxCode?: string | undefined;
+  taxRate?: number | undefined;};
+  inventoryDetail?: {  binNumber?: string | undefined;
+  expirationDate?: string | undefined;
+  quantity?: number | undefined;
+  serialNumber?: string | undefined;};})[];
+  billingAddress?: {  addr1?: string | undefined;
+  addr2?: string | undefined;
+  addr3?: string | undefined;
+  city?: string | undefined;
+  state?: string | undefined;
+  zip?: string | undefined;
+  country?: string | undefined;};
+  taxDetails?: {  taxCode?: string | undefined;
+  taxRate?: number | undefined;};
+};
+
+export interface ActionOutput_netsuite_tba_billcreate {
+  id: string;
+};
+
+export interface ActionInput_netsuite_tba_billupdate {
+  id: string;
+  vendorId?: string | undefined;
+  tranDate?: string | undefined;
+  currency?: string | undefined;
+  dueDate?: string | undefined;
+  status?: string | undefined;
+  memo?: string | undefined;
+  externalId?: string | undefined;
+  location?: string | undefined;
+  subsidiary?: string | undefined;
+  department?: string | undefined;
+  class?: string | undefined;
+  terms?: string | undefined;
+  lines: ({  itemId: string;
+  quantity: number;
+  amount: number;
+  description?: string | undefined;
+  rate?: number | undefined;
+  locationId?: string | undefined;
+  departmentId?: string | undefined;
+  classId?: string | undefined;
+  customerId?: string | undefined;
+  isBillable?: boolean | undefined;
+  taxDetails?: {  taxCode?: string | undefined;
+  taxRate?: number | undefined;};
+  inventoryDetail?: {  binNumber?: string | undefined;
+  expirationDate?: string | undefined;
+  quantity?: number | undefined;
+  serialNumber?: string | undefined;};})[];
+  billingAddress?: {  addr1?: string | undefined;
+  addr2?: string | undefined;
+  addr3?: string | undefined;
+  city?: string | undefined;
+  state?: string | undefined;
+  zip?: string | undefined;
+  country?: string | undefined;};
+  taxDetails?: {  taxCode?: string | undefined;
+  taxRate?: number | undefined;};
+};
+
+export interface ActionOutput_netsuite_tba_billupdate {
+  success: boolean;
+};
+
+export interface ActionInput_netsuite_tba_creditnotecreate {
+  customerId: string;
+  status: string;
+  currency: string;
+  description?: string | undefined;
+  lines: ({  itemId: string;
+  quantity: number;
+  amount: number;
+  vatCode?: string | undefined;
+  description?: string | undefined;})[];
+};
+
+export interface ActionOutput_netsuite_tba_creditnotecreate {
+  id: string;
+};
+
+export interface ActionInput_netsuite_tba_creditnoteupdate {
+  customerId: string;
+  status: string;
+  currency: string;
+  description?: string | undefined;
+  lines: ({  itemId: string;
+  quantity: number;
+  amount: number;
+  vatCode?: string | undefined;
+  description?: string | undefined;})[];
+  id: string;
+};
+
+export interface ActionOutput_netsuite_tba_creditnoteupdate {
+  success: boolean;
+};
+
+export interface ActionInput_netsuite_tba_customercreate {
+  externalId: string;
+  name: string;
+  email?: string | undefined;
+  taxNumber?: string | undefined;
+  addressLine1?: string | undefined;
+  addressLine2?: string | undefined;
+  city?: string | undefined;
+  zip?: string | undefined;
+  country?: string | undefined;
+  state?: string | undefined;
+  phone?: string | undefined;
+};
+
+export interface ActionOutput_netsuite_tba_customercreate {
+  id: string;
+};
+
+export interface ActionInput_netsuite_tba_customerupdate {
+  externalId?: string | undefined;
+  name?: string | undefined;
+  email?: string | undefined;
+  taxNumber?: string | undefined;
+  addressLine1?: string | undefined;
+  addressLine2?: string | undefined;
+  city?: string | undefined;
+  zip?: string | undefined;
+  country?: string | undefined;
+  state?: string | undefined;
+  phone?: string | undefined;
+  id: string;
+};
+
+export interface ActionOutput_netsuite_tba_customerupdate {
+  success: boolean;
+};
+
+export interface ActionInput_netsuite_tba_fetchfields {
+  name: string;
+};
+
+export interface ActionOutput_netsuite_tba_fetchfields {
+  id?: string | undefined;
+  schema?: string | undefined;
+  title?: string | undefined;
+  description?: string | undefined;
+  type?: string | string[] | undefined;
+  properties?: {} | undefined;
+  required?: string[] | undefined;
+  items?: {  id?: string | undefined;
+  schema?: string | undefined;
+  title?: string | undefined;
+  description?: string | undefined;
+  type?: string | string[] | undefined;
+  properties?: {} | undefined;
+  required?: string[] | undefined;
+  enum?: any[] | undefined;
+  definitions?: {} | undefined;
+  additionalProperties?: boolean | undefined;
+  default?: any | undefined;} | ({  id?: string | undefined;
+  schema?: string | undefined;
+  title?: string | undefined;
+  description?: string | undefined;
+  type?: string | string[] | undefined;
+  properties?: {} | undefined;
+  required?: string[] | undefined;
+  enum?: any[] | undefined;
+  definitions?: {} | undefined;
+  additionalProperties?: boolean | undefined;
+  default?: any | undefined;})[];
+  enum?: any[] | undefined;
+  definitions?: {} | undefined;
+  additionalProperties?: boolean | {  id?: string | undefined;
+  schema?: string | undefined;
+  title?: string | undefined;
+  description?: string | undefined;
+  type?: string | string[] | undefined;
+  properties?: {} | undefined;
+  required?: string[] | undefined;
+  enum?: any[] | undefined;
+  definitions?: {} | undefined;
+  additionalProperties?: boolean | undefined;
+  default?: any | undefined;};
+  default?: any | undefined;
+};
+
+export interface ActionInput_netsuite_tba_invoicecreate {
+  customerId: string;
+  currency: string;
+  description?: string | undefined;
+  status: string;
+  lines: ({  itemId: string;
+  quantity: number;
+  amount: number;
+  vatCode?: string | undefined;
+  description?: string | undefined;
+  locationId?: string | undefined;})[];
+};
+
+export interface ActionOutput_netsuite_tba_invoicecreate {
+  id: string;
+};
+
+export interface ActionInput_netsuite_tba_invoiceupdate {
+  customerId?: string | undefined;
+  currency?: string | undefined;
+  description?: string | undefined;
+  status: string;
+  lines: ({  itemId: string;
+  quantity: number;
+  amount: number;
+  vatCode?: string | undefined;
+  description?: string | undefined;
+  locationId?: string | undefined;})[];
+  id: string;
+  locationId?: string | undefined;
+};
+
+export interface ActionOutput_netsuite_tba_invoiceupdate {
+  success: boolean;
+};
+
+export interface ActionInput_netsuite_tba_paymentcreate {
+  customerId: string;
+  amount: number;
+  currency: string;
+  paymentReference: string;
+  applyTo: string[];
+  status: string;
+  description?: string | undefined;
+};
+
+export interface ActionOutput_netsuite_tba_paymentcreate {
+  id: string;
+};
+
+export interface ActionInput_netsuite_tba_paymentupdate {
+  customerId: string;
+  amount?: number | undefined;
+  currency?: string | undefined;
+  paymentReference?: string | undefined;
+  applyTo?: string[] | undefined;
+  status?: string | undefined;
+  description?: string | undefined;
+  id: string;
+};
+
+export interface ActionOutput_netsuite_tba_paymentupdate {
+  success: boolean;
+};
+
+export interface ActionInput_netsuite_tba_purchaseordercreate {
+  vendorId: string;
+  currency?: string | undefined;
+  description?: string | undefined;
+  status: string;
+  tranDate?: string | undefined;
+  dueDate?: string | undefined;
+  lines: ({  itemId: string;
+  quantity: number;
+  amount: number;
+  description?: string | undefined;
+  locationId?: string | undefined;
+  rate?: number | undefined;
+  department?: string | undefined;
+  class?: string | undefined;
+  createWorkOrder?: boolean | undefined;
+  inventoryDetail?: {  binNumber?: string | undefined;
+  expirationDate?: string | undefined;
+  quantity?: number | undefined;
+  serialNumber?: string | undefined;
+  toBinNumber?: string | undefined;} | null;})[];
+  customForm?: string | undefined;
+  location?: string | undefined;
+  subsidiary?: string | undefined;
+  department?: string | undefined;
+  class?: string | undefined;
+  taxDetails?: {  taxCode?: string | undefined;
+  taxRate?: number | undefined;} | null;
+  billingAddress: {  addr1?: string | undefined;
+  addr2?: string | undefined;
+  addr3?: string | undefined;
+  city?: string | undefined;
+  state?: string | undefined;
+  zip?: string | undefined;
+  country?: string | undefined;};
+  shippingAddress: {  addr1?: string | undefined;
+  addr2?: string | undefined;
+  addr3?: string | undefined;
+  city?: string | undefined;
+  state?: string | undefined;
+  zip?: string | undefined;
+  country?: string | undefined;};
+};
+
+export interface ActionOutput_netsuite_tba_purchaseordercreate {
+  id: string;
+};
+
+export interface ActionInput_netsuite_tba_purchaseorderupdate {
+  id: string;
+  vendorId?: string | undefined;
+  currency?: string | undefined;
+  description?: string | undefined;
+  status?: string | undefined;
+  tranDate?: string | undefined;
+  dueDate?: string | undefined;
+  lines: ({  itemId: string;
+  quantity: number;
+  amount: number;
+  description?: string | undefined;
+  locationId?: string | undefined;
+  rate?: number | undefined;
+  department?: string | undefined;
+  class?: string | undefined;
+  createWorkOrder?: boolean | undefined;
+  inventoryDetail?: {  binNumber?: string | undefined;
+  expirationDate?: string | undefined;
+  quantity?: number | undefined;
+  serialNumber?: string | undefined;
+  toBinNumber?: string | undefined;} | null;})[];
+  customForm?: string | undefined;
+  location?: string | undefined;
+  subsidiary?: string | undefined;
+  department?: string | undefined;
+  class?: string | undefined;
+  billingAddress?: {  addr1?: string | undefined;
+  addr2?: string | undefined;
+  addr3?: string | undefined;
+  city?: string | undefined;
+  state?: string | undefined;
+  zip?: string | undefined;
+  country?: string | undefined;} | null;
+  shippingAddress?: {  addr1?: string | undefined;
+  addr2?: string | undefined;
+  addr3?: string | undefined;
+  city?: string | undefined;
+  state?: string | undefined;
+  zip?: string | undefined;
+  country?: string | undefined;} | null;
+  taxDetails?: {  taxCode?: string | undefined;
+  taxRate?: number | undefined;} | null;
+};
+
+export interface ActionOutput_netsuite_tba_purchaseorderupdate {
+  success: boolean;
+};

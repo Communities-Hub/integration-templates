@@ -1,0 +1,72 @@
+{
+  "nango": {
+    "batchSave": {
+      "LibraryFolder": [
+        {
+          "id": "3492543238968030478",
+          "name": "Public Folders",
+          "updated": "2023-10-17T21:21:31.816562+02:00"
+        },
+        {
+          "id": "2419919964868474395",
+          "name": "Win/Loss",
+          "parentFolderId": "3492543238968030478",
+          "updated": "2023-10-17T21:21:31.816562+02:00"
+        }
+      ]
+    },
+    "batchDelete": {
+      "LibraryFolder": []
+    }
+  },
+  "api": {
+    "get": {
+      "/v2/workspaces": {
+        "response": {
+          "requestId": "411vcd7y2ol9lz89ddi",
+          "workspaces": [
+            {
+              "id": "7273476131570014205",
+              "name": "Initial workspace",
+              "description": "The built-in workspace"
+            }
+          ]
+        },
+        "status": 200
+      },
+      "/v2/library/folders": {
+        "response": {
+          "requestId": "6kmwv64snyts7py7qza",
+          "records": {
+            "totalRecords": 2,
+            "currentPageSize": 2,
+            "currentPageNumber": 0
+          },
+          "folders": [
+            {
+              "id": "3492543238968030478",
+              "name": "Public Folders",
+              "parentFolderId": null,
+              "createdBy": null,
+              "updated": "2023-10-17T21:21:31.816562+02:00"
+            },
+            {
+              "id": "2419919964868474395",
+              "name": "Win/Loss",
+              "parentFolderId": "3492543238968030478",
+              "createdBy": null,
+              "updated": "2023-10-17T21:21:31.816562+02:00"
+            }
+          ]
+        },
+        "status": 200,
+        "request": {
+          "params": {
+            "workspaceId": "7273476131570014205",
+            "limit": "100"
+          }
+        }
+      }
+    }
+  }
+}
